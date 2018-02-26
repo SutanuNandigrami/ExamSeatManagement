@@ -34,11 +34,11 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.lbl1.Location = new System.Drawing.Point(541, 350);
+            this.lbl1.Location = new System.Drawing.Point(584, 162);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(189, 34);
+            this.lbl1.Size = new System.Drawing.Size(224, 40);
             this.lbl1.TabIndex = 3;
             this.lbl1.Text = "DASHBOARD";
             // 
