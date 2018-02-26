@@ -73,6 +73,36 @@ namespace dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_User_Male_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("Add User Male_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Detective_96px {
+            get {
+                object obj = ResourceManager.GetObject("Detective_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit_100px {
+            get {
+                object obj = ResourceManager.GetObject("Edit_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Close_Window_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Close_Window_64", resourceCulture);
@@ -156,6 +186,16 @@ namespace dashboard.Properties {
         internal static System.Drawing.Bitmap Lock_96px {
             get {
                 object obj = ResourceManager.GetObject("Lock_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Search_100px {
+            get {
+                object obj = ResourceManager.GetObject("Search_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

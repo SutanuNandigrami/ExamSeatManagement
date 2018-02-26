@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
+using System.Data.SqlClient;
 
 namespace dashboard
 {
@@ -388,6 +389,23 @@ namespace dashboard
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void viewRoombtn_Click(object sender, EventArgs e)
+        {
+            //Load View Room User Control 
+            if (!Mainpnl.Controls.Contains(ViewRoom.Instance))
+            {
+                Mainpnl.Controls.Add(ViewRoom.Instance);
+                ViewRoom.Instance.Dock = DockStyle.Fill;
+                ViewRoom.Instance.BringToFront();
+                clean();
+
+            }
+            else
+                ViewRoom.Instance.BringToFront();
+            
 
         }
     }
