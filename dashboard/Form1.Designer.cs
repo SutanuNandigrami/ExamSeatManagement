@@ -494,6 +494,7 @@
             this.ViewDeptbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ViewDeptbtn.Textcolor = System.Drawing.Color.Silver;
             this.ViewDeptbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewDeptbtn.Click += new System.EventHandler(this.ViewDeptbtn_Click);
             // 
             // AddDeptbtn
             // 

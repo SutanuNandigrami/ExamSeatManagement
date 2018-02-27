@@ -408,5 +408,20 @@ namespace dashboard
             
 
         }
+
+        private void ViewDeptbtn_Click(object sender, EventArgs e)
+        {
+            //Load View Department User Control 
+            if (!Mainpnl.Controls.Contains(ViewDept.Instance))
+            {
+                Mainpnl.Controls.Add(ViewDept.Instance);
+                ViewDept.Instance.Dock = DockStyle.Fill;
+                ViewDept.Instance.BringToFront();
+                clean();
+
+            }
+            else
+                ViewDept.Instance.BringToFront();
+        }
     }
 }
