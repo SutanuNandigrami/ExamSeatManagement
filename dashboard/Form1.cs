@@ -295,7 +295,7 @@ namespace dashboard
             }
         }
 
-        // User Control Fetching Area
+        // User Control(ADD Templates) Fetching Area
 
         private void AddRoombtn_Click(object sender, EventArgs e)
         {
@@ -392,6 +392,7 @@ namespace dashboard
 
         }
 
+        //User Control(VIEW Templates) Fetching Area
         private void viewRoombtn_Click(object sender, EventArgs e)
         {
             //Load View Room User Control 
@@ -422,6 +423,66 @@ namespace dashboard
             }
             else
                 ViewDept.Instance.BringToFront();
+        }
+
+        private void ViewBatchbtn_Click(object sender, EventArgs e)
+        {
+            //Load View Batch User Control 
+            if (!Mainpnl.Controls.Contains(ViewBatch.Instance))
+            {
+                Mainpnl.Controls.Add(ViewBatch.Instance);
+                ViewBatch.Instance.Dock = DockStyle.Fill;
+                ViewBatch.Instance.BringToFront();
+                clean();
+
+            }
+            else
+                ViewBatch.Instance.BringToFront();
+        }
+
+        private void ViewStudentbtn_Click(object sender, EventArgs e)
+        {
+            //Load View Student User Control 
+            if (!Mainpnl.Controls.Contains(ViewStudent.Instance))
+            {
+                Mainpnl.Controls.Add(ViewStudent.Instance);
+                ViewStudent.Instance.Dock = DockStyle.Fill;
+                ViewStudent.Instance.BringToFront();
+                clean();
+
+            }
+            else
+                ViewStudent.Instance.BringToFront();
+        }
+
+        private void ViewDurbtn_Click(object sender, EventArgs e)
+        {
+            //Load View Duration User Control 
+            if (!Mainpnl.Controls.Contains(ViewDuration.Instance))
+            {
+                Mainpnl.Controls.Add(ViewDuration.Instance);
+                ViewDuration.Instance.Dock = DockStyle.Fill;
+                ViewDuration.Instance.BringToFront();
+                clean();
+
+            }
+            else
+                ViewDuration.Instance.BringToFront();
+        }
+
+        private void ViewPlanbtn_Click(object sender, EventArgs e)
+        {
+            //Load View Duration User Control 
+            if (!Mainpnl.Controls.Contains(ViewPlan.Instance))
+            {
+                Mainpnl.Controls.Add(ViewPlan.Instance);
+                //ViewPlan.Instance.Dock = ViewPlan.Fill;
+                ViewPlan.Instance.BringToFront();
+                clean();
+
+            }
+            else
+                ViewPlan.Instance.BringToFront();
         }
     }
 }

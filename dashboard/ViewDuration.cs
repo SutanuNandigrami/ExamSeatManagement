@@ -59,9 +59,6 @@ namespace dashboard
             editpnl.Visible = false;
         }
 
-        private void ViewDuration_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
