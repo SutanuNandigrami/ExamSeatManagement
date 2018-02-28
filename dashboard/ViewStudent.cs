@@ -16,6 +16,7 @@ namespace dashboard
 
         private static ViewStudent _instance;
 
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
 
         public static ViewStudent Instance
         {
@@ -34,7 +35,6 @@ namespace dashboard
 
         private void ViewStudent_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select * from Student", con);
             DataTable dt = new DataTable();
@@ -59,6 +59,25 @@ namespace dashboard
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
         {
             editpnl.Visible = false;
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "update Student set RegNo='" + textbox1.Text + "',UnivRollNo='" + textbox2.Text + "',Name='" + textbox3.Text + "',Stream='" + textbox4.Text + "',Sem='" + textbox5.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+
+            sda.SelectCommand.ExecuteNonQuery();
+            con.Close();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "delete from Student where RegNo='" + textbox1.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            sda.SelectCommand.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

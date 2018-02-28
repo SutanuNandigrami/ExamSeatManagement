@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -47,6 +47,8 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.textbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.textbox5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.textbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -57,8 +59,6 @@
             this.tESToneDataSet = new dashboard.TESToneDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.textbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.textbox5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebtn)).BeginInit();
             this.editpnl.SuspendLayout();
@@ -149,6 +149,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -184,6 +185,7 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // panel1
             // 
@@ -327,6 +329,44 @@
             this.textbox1.TabIndex = 25;
             this.textbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // textbox5
+            // 
+            this.textbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textbox5.HintForeColor = System.Drawing.Color.Empty;
+            this.textbox5.HintText = "";
+            this.textbox5.isPassword = false;
+            this.textbox5.LineFocusedColor = System.Drawing.Color.Blue;
+            this.textbox5.LineIdleColor = System.Drawing.Color.Gray;
+            this.textbox5.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.textbox5.LineThickness = 3;
+            this.textbox5.Location = new System.Drawing.Point(355, 94);
+            this.textbox5.Margin = new System.Windows.Forms.Padding(4);
+            this.textbox5.Name = "textbox5";
+            this.textbox5.Size = new System.Drawing.Size(365, 45);
+            this.textbox5.TabIndex = 26;
+            this.textbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // textbox4
+            // 
+            this.textbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textbox4.HintForeColor = System.Drawing.Color.Empty;
+            this.textbox4.HintText = "";
+            this.textbox4.isPassword = false;
+            this.textbox4.LineFocusedColor = System.Drawing.Color.Blue;
+            this.textbox4.LineIdleColor = System.Drawing.Color.Gray;
+            this.textbox4.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.textbox4.LineThickness = 3;
+            this.textbox4.Location = new System.Drawing.Point(355, 32);
+            this.textbox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textbox4.Name = "textbox4";
+            this.textbox4.Size = new System.Drawing.Size(365, 45);
+            this.textbox4.TabIndex = 26;
+            this.textbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // textbox3
             // 
             this.textbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -418,11 +458,11 @@
             // 
             // DataGrid
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -430,23 +470,23 @@
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGrid.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.DataGrid.DoubleBuffered = true;
             this.DataGrid.EnableHeadersVisualStyles = false;
             this.DataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
@@ -460,44 +500,6 @@
             this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGrid.Size = new System.Drawing.Size(1309, 642);
             this.DataGrid.TabIndex = 0;
-            // 
-            // textbox4
-            // 
-            this.textbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textbox4.HintForeColor = System.Drawing.Color.Empty;
-            this.textbox4.HintText = "";
-            this.textbox4.isPassword = false;
-            this.textbox4.LineFocusedColor = System.Drawing.Color.Blue;
-            this.textbox4.LineIdleColor = System.Drawing.Color.Gray;
-            this.textbox4.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.textbox4.LineThickness = 3;
-            this.textbox4.Location = new System.Drawing.Point(355, 32);
-            this.textbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textbox4.Name = "textbox4";
-            this.textbox4.Size = new System.Drawing.Size(365, 45);
-            this.textbox4.TabIndex = 26;
-            this.textbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // textbox5
-            // 
-            this.textbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textbox5.HintForeColor = System.Drawing.Color.Empty;
-            this.textbox5.HintText = "";
-            this.textbox5.isPassword = false;
-            this.textbox5.LineFocusedColor = System.Drawing.Color.Blue;
-            this.textbox5.LineIdleColor = System.Drawing.Color.Gray;
-            this.textbox5.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.textbox5.LineThickness = 3;
-            this.textbox5.Location = new System.Drawing.Point(355, 94);
-            this.textbox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textbox5.Name = "textbox5";
-            this.textbox5.Size = new System.Drawing.Size(365, 45);
-            this.textbox5.TabIndex = 26;
-            this.textbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // ViewStudent
             // 

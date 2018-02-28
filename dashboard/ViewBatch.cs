@@ -13,6 +13,7 @@ namespace dashboard
     public partial class ViewBatch : UserControl
     {
         private static ViewBatch _instance;
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
 
 
         public static ViewBatch Instance
@@ -46,7 +47,7 @@ namespace dashboard
             editpnl.Visible = true;
 
             Textbox1.Text = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
-            Dropdown1.Text = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
+            Textbox2.Text = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
             if (DataGrid.SelectedRows[0].Cells[3].Value.ToString() == "Active")
                 radioButton1.Select();
             else
@@ -57,6 +58,25 @@ namespace dashboard
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
         {
             editpnl.Visible = false;
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "update Batch set BatchName='" + Textbox1.Text + "',DeptName='" + Textbox2.Text + "',Status='" + radioButton1.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+
+            sda.SelectCommand.ExecuteNonQuery();
+            con.Close();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "delete from Batch where RoomNo='" + Textbox1.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            sda.SelectCommand.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

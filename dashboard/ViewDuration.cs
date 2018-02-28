@@ -15,6 +15,7 @@ namespace dashboard
     {
         private static ViewDuration _instance;
 
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
 
         public static ViewDuration Instance
         {
@@ -59,6 +60,23 @@ namespace dashboard
             editpnl.Visible = false;
         }
 
-        
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "update Duration set Duration='" + Textbox1.Text + "',Status='" + radioButton1.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+
+            sda.SelectCommand.ExecuteNonQuery();
+            con.Close();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "delete from Duration where Duration='" + Textbox1.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            sda.SelectCommand.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
