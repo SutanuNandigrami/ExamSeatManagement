@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace dashboard
 {
     public partial class tab1 : UserControl
     {
-        //Size last = new Size(0, 0);
         
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+
 
         private static tab1 _instance;
 
@@ -31,15 +33,29 @@ namespace dashboard
             InitializeComponent();
         }
 
-       /* private void tab1_Resize(object sender, EventArgs e)
+        private void addroombtn_Click(object sender, EventArgs e)
         {
-            if (last != new Size(0, 0))
+            try
             {
-                this.Parent.Size = Size.Add(this.Parent.Size, Size.Subtract(this.Size, last));
+                con.Open();
+                string query = "insert into Room values('" + Textbox1.Text + "','" + Textbox2.Text + "','" + Textbox3.Text + "','" + Textbox4.Text + "')";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                sda.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                statuslbl.ForeColor = System.Drawing.Color.White;
+                statuslbl.Text="INSERTION SUCCESSFULL";
             }
-            last = this.Size;
+            catch
+            {
+                statuslbl.ForeColor = System.Drawing.Color.Red;
+                statuslbl.Text="Duplicate Entry!!";
+            }
 
-            
-        }*/
+            finally
+            {
+                con.Close();
+                
+            }
+        }
     }
 }

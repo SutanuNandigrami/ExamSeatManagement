@@ -29,6 +29,7 @@ namespace dashboard
         public ViewRoom()
         {
             InitializeComponent();
+            Display();
         }
 
         private void ViewRoom_Load(object sender, EventArgs e)
