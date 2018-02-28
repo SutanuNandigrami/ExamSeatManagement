@@ -30,15 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDept));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.addDeptbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Textbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.statuslbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Textbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -48,8 +50,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.bunifuFlatButton1);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel2.Controls.Add(this.addDeptbtn);
+            this.panel2.Controls.Add(this.Textbox2);
+            this.panel2.Controls.Add(this.Textbox1);
+            this.panel2.Controls.Add(this.bunifuCustomLabel1);
             this.panel2.Controls.Add(this.bunifuCustomLabel2);
             this.panel2.Controls.Add(this.lbl1);
             this.panel2.Controls.Add(this.panel3);
@@ -59,66 +63,102 @@
             this.panel2.Size = new System.Drawing.Size(1015, 613);
             this.panel2.TabIndex = 3;
             // 
-            // bunifuFlatButton1
+            // radioButton2
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Add Department";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 50D;
-            this.bunifuFlatButton1.IsTab = true;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(370, 337);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(293, 64);
-            this.bunifuFlatButton1.TabIndex = 5;
-            this.bunifuFlatButton1.Text = "Add Department";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(625, 270);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(111, 27);
+            this.radioButton2.TabIndex = 6;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Inactive";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // bunifuMaterialTextbox1
+            // radioButton1
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(501, 128);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(312, 45);
-            this.bunifuMaterialTextbox1.TabIndex = 4;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(500, 270);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(95, 27);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Active";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // addDeptbtn
+            // 
+            this.addDeptbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.addDeptbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.addDeptbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addDeptbtn.BorderRadius = 0;
+            this.addDeptbtn.ButtonText = "Add Department";
+            this.addDeptbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addDeptbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.addDeptbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.addDeptbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("addDeptbtn.Iconimage")));
+            this.addDeptbtn.Iconimage_right = null;
+            this.addDeptbtn.Iconimage_right_Selected = null;
+            this.addDeptbtn.Iconimage_Selected = null;
+            this.addDeptbtn.IconMarginLeft = 0;
+            this.addDeptbtn.IconMarginRight = 0;
+            this.addDeptbtn.IconRightVisible = true;
+            this.addDeptbtn.IconRightZoom = 0D;
+            this.addDeptbtn.IconVisible = true;
+            this.addDeptbtn.IconZoom = 50D;
+            this.addDeptbtn.IsTab = true;
+            this.addDeptbtn.Location = new System.Drawing.Point(370, 337);
+            this.addDeptbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addDeptbtn.Name = "addDeptbtn";
+            this.addDeptbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.addDeptbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.addDeptbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.addDeptbtn.selected = false;
+            this.addDeptbtn.Size = new System.Drawing.Size(293, 64);
+            this.addDeptbtn.TabIndex = 5;
+            this.addDeptbtn.Text = "Add Department";
+            this.addDeptbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addDeptbtn.Textcolor = System.Drawing.Color.White;
+            this.addDeptbtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDeptbtn.Click += new System.EventHandler(this.addDeptbtn_Click);
+            // 
+            // Textbox1
+            // 
+            this.Textbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Textbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Textbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Textbox1.HintForeColor = System.Drawing.Color.Empty;
+            this.Textbox1.HintText = "";
+            this.Textbox1.isPassword = false;
+            this.Textbox1.LineFocusedColor = System.Drawing.Color.Blue;
+            this.Textbox1.LineIdleColor = System.Drawing.Color.Gray;
+            this.Textbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.Textbox1.LineThickness = 3;
+            this.Textbox1.Location = new System.Drawing.Point(500, 96);
+            this.Textbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.Textbox1.Name = "Textbox1";
+            this.Textbox1.Size = new System.Drawing.Size(312, 45);
+            this.Textbox1.TabIndex = 4;
+            this.Textbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(358, 251);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(96, 34);
+            this.bunifuCustomLabel2.TabIndex = 2;
+            this.bunifuCustomLabel2.Text = "Status";
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.lbl1.Location = new System.Drawing.Point(182, 139);
+            this.lbl1.Location = new System.Drawing.Point(181, 107);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(273, 34);
             this.lbl1.TabIndex = 2;
@@ -127,24 +167,24 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
-            this.panel3.Controls.Add(this.bunifuCustomLabel1);
+            this.panel3.Controls.Add(this.statuslbl);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1015, 64);
             this.panel3.TabIndex = 1;
             // 
-            // bunifuCustomLabel1
+            // statuslbl
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(51, 13);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(460, 34);
-            this.bunifuCustomLabel1.TabIndex = 0;
-            this.bunifuCustomLabel1.Text = "Department Added Successfully.";
+            this.statuslbl.AutoSize = true;
+            this.statuslbl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.statuslbl.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statuslbl.ForeColor = System.Drawing.Color.White;
+            this.statuslbl.Location = new System.Drawing.Point(51, 13);
+            this.statuslbl.Name = "statuslbl";
+            this.statuslbl.Size = new System.Drawing.Size(460, 34);
+            this.statuslbl.TabIndex = 0;
+            this.statuslbl.Text = "Department Added Successfully.";
             // 
             // panel1
             // 
@@ -154,40 +194,35 @@
             this.panel1.Size = new System.Drawing.Size(1015, 100);
             this.panel1.TabIndex = 2;
             // 
-            // bunifuCustomLabel2
+            // bunifuCustomLabel1
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(320, 237);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(96, 34);
-            this.bunifuCustomLabel2.TabIndex = 2;
-            this.bunifuCustomLabel2.Text = "Status";
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(240, 186);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(214, 34);
+            this.bunifuCustomLabel1.TabIndex = 2;
+            this.bunifuCustomLabel1.Text = "Department Id";
             // 
-            // radioButton1
+            // Textbox2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(515, 249);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(95, 27);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Active";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(640, 249);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(111, 27);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Inactive";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Textbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Textbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Textbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Textbox2.HintForeColor = System.Drawing.Color.Empty;
+            this.Textbox2.HintText = "";
+            this.Textbox2.isPassword = false;
+            this.Textbox2.LineFocusedColor = System.Drawing.Color.Blue;
+            this.Textbox2.LineIdleColor = System.Drawing.Color.Gray;
+            this.Textbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.Textbox2.LineThickness = 3;
+            this.Textbox2.Location = new System.Drawing.Point(500, 175);
+            this.Textbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.Textbox2.Name = "Textbox2";
+            this.Textbox2.Size = new System.Drawing.Size(312, 45);
+            this.Textbox2.TabIndex = 4;
+            this.Textbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // AddDept
             // 
@@ -208,14 +243,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuFlatButton addDeptbtn;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Textbox1;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl1;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel statuslbl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Textbox2;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }

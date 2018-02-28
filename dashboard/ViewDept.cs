@@ -14,7 +14,7 @@ namespace dashboard
     public partial class ViewDept : UserControl
     {
         private static ViewDept _instance;
-
+        string s;
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
 
 
@@ -31,6 +31,7 @@ namespace dashboard
         {
             InitializeComponent();
             editpnl.Visible = false;
+            Display();
             
         }
         
@@ -46,12 +47,17 @@ namespace dashboard
 
             Textbox1.Text = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
             Textbox2.Text = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
-            if (DataGrid.SelectedRows[0].Cells[1].Value.ToString() == "Active")
-                radioButton1.Select();
+            if (DataGrid.SelectedRows[0].Cells[2].Value.ToString() == "Active")
+                radioButton1.Checked = true;
             else
-                radioButton2.Select();
-        }
+                radioButton1.Checked = false;
+            if (DataGrid.SelectedRows[0].Cells[2].Value.ToString() == "Inactive")
+                radioButton2.Checked = true;
+            else
+                radioButton2.Checked = false;
 
+        }
+        
         private void ViewDept_Load(object sender, EventArgs e)
         {
             con.Open();
@@ -65,21 +71,83 @@ namespace dashboard
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            
+            s = ("UnSpecified").ToString();
             con.Open();
-            string query = "update Dept set DeptId='" + Textbox1.Text + "',DeptName='" + Textbox2.Text + "',Status='" + radioButton1.Text + "'";
+            if (radioButton1.Checked == true)
+                s = "Active";
+            else if (radioButton2.Checked == true)
+                s = "Inactive";
+            string query = "update Dept set DeptName='" + Textbox2.Text + "',Status='" + s + "' where DeptId='" + Textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
 
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
+            Blank();
+            editpnl.Visible = false;
+            Display();
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "delete from Room where DeptId='" + Textbox1.Text + "'";
+            string query = "delete from Dept where DeptId='" + Textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
+            Blank();
+            editpnl.Visible = false;
+            Display();
+        }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string query = "select * from Dept where DeptId='" + searchbox.Text + "' or DeptName='" + searchbox.Text + "' ";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                DataGrid.DataSource = dt;
+
+                con.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void viewallbtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Dept", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGrid.DataSource = dt;
+            con.Close();
+            editpnl.Visible = false;
+        }
+        public void Display()
+        {
+            con.Open();
+            string query = "select * from Dept";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            DataGrid.DataSource = dt;
+            con.Close();
+        }
+
+        public void Blank()
+        {
+            Textbox1.Text = "";
+            Textbox2.Text = "";
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            
         }
     }
 }

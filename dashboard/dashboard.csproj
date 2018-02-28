@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TESToneDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TESToneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TESToneDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ViewBatch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,6 +230,17 @@
     </None>
     <None Include="TESToneDataSet.xss">
       <DependentUpon>TESToneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TESToneDataSet1.xsc">
+      <DependentUpon>TESToneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TESToneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TESToneDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TESToneDataSet1.xss">
+      <DependentUpon>TESToneDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
