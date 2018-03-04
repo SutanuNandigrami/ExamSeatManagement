@@ -37,6 +37,11 @@
             this.tESToneDataSet = new dashboard.TESToneDataSet();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.deptIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tESToneDataSet1 = new dashboard.TESToneDataSet1();
             this.panel2 = new System.Windows.Forms.Panel();
             this.editpnl = new System.Windows.Forms.Panel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -54,21 +59,16 @@
             this.viewallbtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.searchbtn = new MyImageButton.CustomImageButton();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tESToneDataSet1 = new dashboard.TESToneDataSet1();
-            this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deptTableAdapter = new dashboard.TESToneDataSet1TableAdapters.DeptTableAdapter();
-            this.deptIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deptNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet1)).BeginInit();
             this.panel2.SuspendLayout();
             this.editpnl.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel5
@@ -99,6 +99,8 @@
             // 
             // DataGrid
             // 
+            this.DataGrid.AllowUserToAddRows = false;
+            this.DataGrid.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
@@ -140,6 +142,7 @@
             this.DataGrid.HeaderForeColor = System.Drawing.Color.White;
             this.DataGrid.Location = new System.Drawing.Point(17, 21);
             this.DataGrid.Name = "DataGrid";
+            this.DataGrid.ReadOnly = true;
             this.DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGrid.RowHeadersVisible = false;
             this.DataGrid.RowHeadersWidth = 5;
@@ -148,6 +151,40 @@
             this.DataGrid.Size = new System.Drawing.Size(1282, 793);
             this.DataGrid.TabIndex = 0;
             this.DataGrid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGrid_MouseDoubleClick);
+            // 
+            // deptIdDataGridViewTextBoxColumn
+            // 
+            this.deptIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deptIdDataGridViewTextBoxColumn.DataPropertyName = "DeptId";
+            this.deptIdDataGridViewTextBoxColumn.HeaderText = "DeptId";
+            this.deptIdDataGridViewTextBoxColumn.Name = "deptIdDataGridViewTextBoxColumn";
+            this.deptIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deptNameDataGridViewTextBoxColumn
+            // 
+            this.deptNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deptNameDataGridViewTextBoxColumn.DataPropertyName = "DeptName";
+            this.deptNameDataGridViewTextBoxColumn.HeaderText = "DeptName";
+            this.deptNameDataGridViewTextBoxColumn.Name = "deptNameDataGridViewTextBoxColumn";
+            this.deptNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deptBindingSource
+            // 
+            this.deptBindingSource.DataMember = "Dept";
+            this.deptBindingSource.DataSource = this.tESToneDataSet1;
+            // 
+            // tESToneDataSet1
+            // 
+            this.tESToneDataSet1.DataSetName = "TESToneDataSet1";
+            this.tESToneDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel2
             // 
@@ -452,40 +489,9 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // tESToneDataSet1
-            // 
-            this.tESToneDataSet1.DataSetName = "TESToneDataSet1";
-            this.tESToneDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deptBindingSource
-            // 
-            this.deptBindingSource.DataMember = "Dept";
-            this.deptBindingSource.DataSource = this.tESToneDataSet1;
-            // 
             // deptTableAdapter
             // 
             this.deptTableAdapter.ClearBeforeFill = true;
-            // 
-            // deptIdDataGridViewTextBoxColumn
-            // 
-            this.deptIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.deptIdDataGridViewTextBoxColumn.DataPropertyName = "DeptId";
-            this.deptIdDataGridViewTextBoxColumn.HeaderText = "DeptId";
-            this.deptIdDataGridViewTextBoxColumn.Name = "deptIdDataGridViewTextBoxColumn";
-            // 
-            // deptNameDataGridViewTextBoxColumn
-            // 
-            this.deptNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.deptNameDataGridViewTextBoxColumn.DataPropertyName = "DeptName";
-            this.deptNameDataGridViewTextBoxColumn.HeaderText = "DeptName";
-            this.deptNameDataGridViewTextBoxColumn.Name = "deptNameDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
             // ViewDept
             // 
@@ -499,14 +505,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.editpnl.ResumeLayout(false);
             this.editpnl.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

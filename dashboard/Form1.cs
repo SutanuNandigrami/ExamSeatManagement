@@ -19,8 +19,11 @@ namespace dashboard
         //Form Load Event
           public Dashboard()
         {
-            
-             InitializeComponent();
+           // SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+           
+            InitializeComponent();
+
+            UserNamelbl.Text = dashboard.LoginSignUp.LoginInfo.UserId;
             //to hide menu bar initially
             leftpanel.Visible = false;
             leftsubpnl.Visible = false;

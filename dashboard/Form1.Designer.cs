@@ -55,27 +55,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Closebtn = new MyImageButton.CustomImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.spnlRoom = new System.Windows.Forms.Panel();
-            this.viewRoombtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.AddRoombtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.spnlDept = new System.Windows.Forms.Panel();
-            this.ViewDeptbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.AddDeptbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.spnlBatch = new System.Windows.Forms.Panel();
-            this.ViewBatchbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.AddBatchbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.spnlStudent = new System.Windows.Forms.Panel();
-            this.ViewStudentbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.AddStudentbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.spnlDur = new System.Windows.Forms.Panel();
-            this.ViewDurbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.AddDurbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pnlOperation = new System.Windows.Forms.Panel();
-            this.ViewPlanbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.AddPlanbtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.Mainpnl = new System.Windows.Forms.Panel();
             this.leftsubpnl = new System.Windows.Forms.Panel();
+            this.spnlBatch = new System.Windows.Forms.Panel();
+            this.AddBatchbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ViewBatchbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.spnlStudent = new System.Windows.Forms.Panel();
+            this.AddStudentbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ViewStudentbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.spnlRoom = new System.Windows.Forms.Panel();
+            this.AddRoombtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.viewRoombtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.spnlDept = new System.Windows.Forms.Panel();
+            this.AddDeptbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ViewDeptbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.spnlDur = new System.Windows.Forms.Panel();
+            this.AddDurbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ViewDurbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pnlOperation = new System.Windows.Forms.Panel();
+            this.AddPlanbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ViewPlanbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Mainpnl = new System.Windows.Forms.Panel();
             this.leftpanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -88,14 +88,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.maxminbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Closebtn)).BeginInit();
-            this.spnlRoom.SuspendLayout();
-            this.spnlDept.SuspendLayout();
+            this.leftsubpnl.SuspendLayout();
             this.spnlBatch.SuspendLayout();
             this.spnlStudent.SuspendLayout();
+            this.spnlRoom.SuspendLayout();
+            this.spnlDept.SuspendLayout();
             this.spnlDur.SuspendLayout();
             this.pnlOperation.SuspendLayout();
             this.Mainpnl.SuspendLayout();
-            this.leftsubpnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftpanel
@@ -169,7 +169,7 @@
             // 
             // btnDur
             // 
-            this.btnDur.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.btnDur.Activecolor = System.Drawing.Color.Black;
             this.btnDur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
             this.btnDur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDur.BorderRadius = 0;
@@ -206,7 +206,7 @@
             // 
             // btnStudent
             // 
-            this.btnStudent.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.btnStudent.Activecolor = System.Drawing.Color.Black;
             this.btnStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
             this.btnStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStudent.BorderRadius = 0;
@@ -243,7 +243,7 @@
             // 
             // btnBatch
             // 
-            this.btnBatch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.btnBatch.Activecolor = System.Drawing.Color.Black;
             this.btnBatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
             this.btnBatch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBatch.BorderRadius = 0;
@@ -280,7 +280,7 @@
             // 
             // btnDept
             // 
-            this.btnDept.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.btnDept.Activecolor = System.Drawing.Color.Black;
             this.btnDept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
             this.btnDept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDept.BorderRadius = 0;
@@ -317,7 +317,7 @@
             // 
             // btnRoom
             // 
-            this.btnRoom.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.btnRoom.Activecolor = System.Drawing.Color.Black;
             this.btnRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
             this.btnRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRoom.BorderRadius = 0;
@@ -457,7 +457,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(130, 82);
+            this.label5.Location = new System.Drawing.Point(121, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 23);
             this.label5.TabIndex = 7;
@@ -466,7 +466,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(97, 76);
+            this.pictureBox4.Location = new System.Drawing.Point(88, 76);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(27, 29);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -476,11 +476,11 @@
             // UserNamelbl
             // 
             this.UserNamelbl.AutoSize = true;
-            this.UserNamelbl.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNamelbl.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UserNamelbl.Location = new System.Drawing.Point(100, 36);
+            this.UserNamelbl.Location = new System.Drawing.Point(88, 36);
             this.UserNamelbl.Name = "UserNamelbl";
-            this.UserNamelbl.Size = new System.Drawing.Size(78, 37);
+            this.UserNamelbl.Size = new System.Drawing.Size(72, 34);
             this.UserNamelbl.TabIndex = 4;
             this.UserNamelbl.Text = "User";
             // 
@@ -537,7 +537,7 @@
             this.minimizebtn.Image = global::dashboard.Properties.Resources.icons9_Minimize_Window_32;
             this.minimizebtn.ImageHover = global::dashboard.Properties.Resources.icons8_Minimize_Window_64;
             this.minimizebtn.ImageNormal = global::dashboard.Properties.Resources.icons9_Minimize_Window_32;
-            this.minimizebtn.Location = new System.Drawing.Point(1183, 0);
+            this.minimizebtn.Location = new System.Drawing.Point(1181, 0);
             this.minimizebtn.Name = "minimizebtn";
             this.minimizebtn.Size = new System.Drawing.Size(46, 81);
             this.minimizebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -550,9 +550,9 @@
             this.maxminbtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.maxminbtn.Image = global::dashboard.Properties.Resources.icons8_Maximize_Window_64;
             this.maxminbtn.InitialImage = global::dashboard.Properties.Resources.icons8_Restore_Window_641;
-            this.maxminbtn.Location = new System.Drawing.Point(1229, 0);
+            this.maxminbtn.Location = new System.Drawing.Point(1227, 0);
             this.maxminbtn.Name = "maxminbtn";
-            this.maxminbtn.Size = new System.Drawing.Size(57, 81);
+            this.maxminbtn.Size = new System.Drawing.Size(59, 81);
             this.maxminbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maxminbtn.TabIndex = 5;
             this.maxminbtn.TabStop = false;
@@ -601,178 +601,21 @@
             this.bunifuDragControl1.TargetControl = this.headpanel;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // spnlRoom
+            // leftsubpnl
             // 
-            this.spnlRoom.Controls.Add(this.viewRoombtn);
-            this.spnlRoom.Controls.Add(this.AddRoombtn);
-            this.spnlRoom.ForeColor = System.Drawing.Color.White;
-            this.spnlRoom.Location = new System.Drawing.Point(3, 14);
-            this.spnlRoom.Name = "spnlRoom";
-            this.spnlRoom.Size = new System.Drawing.Size(302, 109);
-            this.spnlRoom.TabIndex = 4;
-            this.spnlRoom.Visible = false;
-            // 
-            // viewRoombtn
-            // 
-            this.viewRoombtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.viewRoombtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.viewRoombtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.viewRoombtn.BorderRadius = 0;
-            this.viewRoombtn.ButtonText = "View Room";
-            this.viewRoombtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.viewRoombtn.DisabledColor = System.Drawing.Color.Gray;
-            this.viewRoombtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.viewRoombtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewRoombtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.viewRoombtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("viewRoombtn.Iconimage")));
-            this.viewRoombtn.Iconimage_right = null;
-            this.viewRoombtn.Iconimage_right_Selected = null;
-            this.viewRoombtn.Iconimage_Selected = null;
-            this.viewRoombtn.IconMarginLeft = 0;
-            this.viewRoombtn.IconMarginRight = 0;
-            this.viewRoombtn.IconRightVisible = true;
-            this.viewRoombtn.IconRightZoom = 0D;
-            this.viewRoombtn.IconVisible = true;
-            this.viewRoombtn.IconZoom = 40D;
-            this.viewRoombtn.IsTab = true;
-            this.viewRoombtn.Location = new System.Drawing.Point(0, 56);
-            this.viewRoombtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.viewRoombtn.Name = "viewRoombtn";
-            this.viewRoombtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.viewRoombtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.viewRoombtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.viewRoombtn.selected = false;
-            this.viewRoombtn.Size = new System.Drawing.Size(302, 53);
-            this.viewRoombtn.TabIndex = 5;
-            this.viewRoombtn.Text = "View Room";
-            this.viewRoombtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.viewRoombtn.Textcolor = System.Drawing.Color.Silver;
-            this.viewRoombtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewRoombtn.Click += new System.EventHandler(this.viewRoombtn_Click);
-            // 
-            // AddRoombtn
-            // 
-            this.AddRoombtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.AddRoombtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.AddRoombtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddRoombtn.BorderRadius = 0;
-            this.AddRoombtn.ButtonText = "Add Room";
-            this.AddRoombtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddRoombtn.DisabledColor = System.Drawing.Color.Gray;
-            this.AddRoombtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddRoombtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRoombtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.AddRoombtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("AddRoombtn.Iconimage")));
-            this.AddRoombtn.Iconimage_right = null;
-            this.AddRoombtn.Iconimage_right_Selected = null;
-            this.AddRoombtn.Iconimage_Selected = null;
-            this.AddRoombtn.IconMarginLeft = 0;
-            this.AddRoombtn.IconMarginRight = 0;
-            this.AddRoombtn.IconRightVisible = true;
-            this.AddRoombtn.IconRightZoom = 0D;
-            this.AddRoombtn.IconVisible = true;
-            this.AddRoombtn.IconZoom = 40D;
-            this.AddRoombtn.IsTab = true;
-            this.AddRoombtn.Location = new System.Drawing.Point(0, 0);
-            this.AddRoombtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.AddRoombtn.Name = "AddRoombtn";
-            this.AddRoombtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.AddRoombtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.AddRoombtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.AddRoombtn.selected = false;
-            this.AddRoombtn.Size = new System.Drawing.Size(302, 56);
-            this.AddRoombtn.TabIndex = 4;
-            this.AddRoombtn.Text = "Add Room";
-            this.AddRoombtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AddRoombtn.Textcolor = System.Drawing.Color.Silver;
-            this.AddRoombtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRoombtn.Click += new System.EventHandler(this.AddRoombtn_Click);
-            // 
-            // spnlDept
-            // 
-            this.spnlDept.Controls.Add(this.ViewDeptbtn);
-            this.spnlDept.Controls.Add(this.AddDeptbtn);
-            this.spnlDept.Location = new System.Drawing.Point(2, 129);
-            this.spnlDept.Name = "spnlDept";
-            this.spnlDept.Size = new System.Drawing.Size(302, 106);
-            this.spnlDept.TabIndex = 4;
-            this.spnlDept.Visible = false;
-            // 
-            // ViewDeptbtn
-            // 
-            this.ViewDeptbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.ViewDeptbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewDeptbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ViewDeptbtn.BorderRadius = 0;
-            this.ViewDeptbtn.ButtonText = "View Depertment";
-            this.ViewDeptbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewDeptbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.ViewDeptbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ViewDeptbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewDeptbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ViewDeptbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewDeptbtn.Iconimage")));
-            this.ViewDeptbtn.Iconimage_right = null;
-            this.ViewDeptbtn.Iconimage_right_Selected = null;
-            this.ViewDeptbtn.Iconimage_Selected = null;
-            this.ViewDeptbtn.IconMarginLeft = 0;
-            this.ViewDeptbtn.IconMarginRight = 0;
-            this.ViewDeptbtn.IconRightVisible = true;
-            this.ViewDeptbtn.IconRightZoom = 0D;
-            this.ViewDeptbtn.IconVisible = true;
-            this.ViewDeptbtn.IconZoom = 40D;
-            this.ViewDeptbtn.IsTab = true;
-            this.ViewDeptbtn.Location = new System.Drawing.Point(0, 55);
-            this.ViewDeptbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.ViewDeptbtn.Name = "ViewDeptbtn";
-            this.ViewDeptbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewDeptbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.ViewDeptbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.ViewDeptbtn.selected = false;
-            this.ViewDeptbtn.Size = new System.Drawing.Size(302, 50);
-            this.ViewDeptbtn.TabIndex = 5;
-            this.ViewDeptbtn.Text = "View Depertment";
-            this.ViewDeptbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ViewDeptbtn.Textcolor = System.Drawing.Color.Silver;
-            this.ViewDeptbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewDeptbtn.Click += new System.EventHandler(this.ViewDeptbtn_Click);
-            // 
-            // AddDeptbtn
-            // 
-            this.AddDeptbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.AddDeptbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.AddDeptbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddDeptbtn.BorderRadius = 0;
-            this.AddDeptbtn.ButtonText = "Add Depertment";
-            this.AddDeptbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddDeptbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.AddDeptbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddDeptbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddDeptbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.AddDeptbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("AddDeptbtn.Iconimage")));
-            this.AddDeptbtn.Iconimage_right = null;
-            this.AddDeptbtn.Iconimage_right_Selected = null;
-            this.AddDeptbtn.Iconimage_Selected = null;
-            this.AddDeptbtn.IconMarginLeft = 0;
-            this.AddDeptbtn.IconMarginRight = 0;
-            this.AddDeptbtn.IconRightVisible = true;
-            this.AddDeptbtn.IconRightZoom = 0D;
-            this.AddDeptbtn.IconVisible = true;
-            this.AddDeptbtn.IconZoom = 40D;
-            this.AddDeptbtn.IsTab = true;
-            this.AddDeptbtn.Location = new System.Drawing.Point(0, 0);
-            this.AddDeptbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.AddDeptbtn.Name = "AddDeptbtn";
-            this.AddDeptbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.AddDeptbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.AddDeptbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.AddDeptbtn.selected = false;
-            this.AddDeptbtn.Size = new System.Drawing.Size(302, 55);
-            this.AddDeptbtn.TabIndex = 4;
-            this.AddDeptbtn.Text = "Add Depertment";
-            this.AddDeptbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AddDeptbtn.Textcolor = System.Drawing.Color.Silver;
-            this.AddDeptbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddDeptbtn.Click += new System.EventHandler(this.AddDeptbtn_Click);
+            this.leftsubpnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
+            this.leftsubpnl.Controls.Add(this.pnlOperation);
+            this.leftsubpnl.Controls.Add(this.spnlDur);
+            this.leftsubpnl.Controls.Add(this.spnlDept);
+            this.leftsubpnl.Controls.Add(this.spnlRoom);
+            this.leftsubpnl.Controls.Add(this.spnlStudent);
+            this.leftsubpnl.Controls.Add(this.spnlBatch);
+            this.leftsubpnl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftsubpnl.Location = new System.Drawing.Point(0, 0);
+            this.leftsubpnl.Name = "leftsubpnl";
+            this.leftsubpnl.Size = new System.Drawing.Size(309, 999);
+            this.leftsubpnl.TabIndex = 11;
+            this.leftsubpnl.Visible = false;
             // 
             // spnlBatch
             // 
@@ -783,44 +626,6 @@
             this.spnlBatch.Size = new System.Drawing.Size(302, 93);
             this.spnlBatch.TabIndex = 4;
             this.spnlBatch.Visible = false;
-            // 
-            // ViewBatchbtn
-            // 
-            this.ViewBatchbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.ViewBatchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewBatchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ViewBatchbtn.BorderRadius = 0;
-            this.ViewBatchbtn.ButtonText = "View Batch";
-            this.ViewBatchbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewBatchbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.ViewBatchbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ViewBatchbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewBatchbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ViewBatchbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewBatchbtn.Iconimage")));
-            this.ViewBatchbtn.Iconimage_right = null;
-            this.ViewBatchbtn.Iconimage_right_Selected = null;
-            this.ViewBatchbtn.Iconimage_Selected = null;
-            this.ViewBatchbtn.IconMarginLeft = 0;
-            this.ViewBatchbtn.IconMarginRight = 0;
-            this.ViewBatchbtn.IconRightVisible = true;
-            this.ViewBatchbtn.IconRightZoom = 0D;
-            this.ViewBatchbtn.IconVisible = true;
-            this.ViewBatchbtn.IconZoom = 40D;
-            this.ViewBatchbtn.IsTab = true;
-            this.ViewBatchbtn.Location = new System.Drawing.Point(0, 51);
-            this.ViewBatchbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.ViewBatchbtn.Name = "ViewBatchbtn";
-            this.ViewBatchbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewBatchbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.ViewBatchbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.ViewBatchbtn.selected = false;
-            this.ViewBatchbtn.Size = new System.Drawing.Size(302, 44);
-            this.ViewBatchbtn.TabIndex = 5;
-            this.ViewBatchbtn.Text = "View Batch";
-            this.ViewBatchbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ViewBatchbtn.Textcolor = System.Drawing.Color.Silver;
-            this.ViewBatchbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewBatchbtn.Click += new System.EventHandler(this.ViewBatchbtn_Click);
             // 
             // AddBatchbtn
             // 
@@ -860,6 +665,44 @@
             this.AddBatchbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBatchbtn.Click += new System.EventHandler(this.AddBatchbtn_Click);
             // 
+            // ViewBatchbtn
+            // 
+            this.ViewBatchbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.ViewBatchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewBatchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ViewBatchbtn.BorderRadius = 0;
+            this.ViewBatchbtn.ButtonText = "View Batch";
+            this.ViewBatchbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewBatchbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.ViewBatchbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ViewBatchbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewBatchbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.ViewBatchbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewBatchbtn.Iconimage")));
+            this.ViewBatchbtn.Iconimage_right = null;
+            this.ViewBatchbtn.Iconimage_right_Selected = null;
+            this.ViewBatchbtn.Iconimage_Selected = null;
+            this.ViewBatchbtn.IconMarginLeft = 0;
+            this.ViewBatchbtn.IconMarginRight = 0;
+            this.ViewBatchbtn.IconRightVisible = true;
+            this.ViewBatchbtn.IconRightZoom = 0D;
+            this.ViewBatchbtn.IconVisible = true;
+            this.ViewBatchbtn.IconZoom = 40D;
+            this.ViewBatchbtn.IsTab = true;
+            this.ViewBatchbtn.Location = new System.Drawing.Point(0, 51);
+            this.ViewBatchbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ViewBatchbtn.Name = "ViewBatchbtn";
+            this.ViewBatchbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewBatchbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.ViewBatchbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ViewBatchbtn.selected = false;
+            this.ViewBatchbtn.Size = new System.Drawing.Size(302, 44);
+            this.ViewBatchbtn.TabIndex = 5;
+            this.ViewBatchbtn.Text = "View Batch";
+            this.ViewBatchbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ViewBatchbtn.Textcolor = System.Drawing.Color.Silver;
+            this.ViewBatchbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewBatchbtn.Click += new System.EventHandler(this.ViewBatchbtn_Click);
+            // 
             // spnlStudent
             // 
             this.spnlStudent.Controls.Add(this.ViewStudentbtn);
@@ -869,44 +712,6 @@
             this.spnlStudent.Size = new System.Drawing.Size(302, 87);
             this.spnlStudent.TabIndex = 4;
             this.spnlStudent.Visible = false;
-            // 
-            // ViewStudentbtn
-            // 
-            this.ViewStudentbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.ViewStudentbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewStudentbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ViewStudentbtn.BorderRadius = 0;
-            this.ViewStudentbtn.ButtonText = "View Student";
-            this.ViewStudentbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewStudentbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.ViewStudentbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ViewStudentbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewStudentbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ViewStudentbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewStudentbtn.Iconimage")));
-            this.ViewStudentbtn.Iconimage_right = null;
-            this.ViewStudentbtn.Iconimage_right_Selected = null;
-            this.ViewStudentbtn.Iconimage_Selected = null;
-            this.ViewStudentbtn.IconMarginLeft = 0;
-            this.ViewStudentbtn.IconMarginRight = 0;
-            this.ViewStudentbtn.IconRightVisible = true;
-            this.ViewStudentbtn.IconRightZoom = 0D;
-            this.ViewStudentbtn.IconVisible = true;
-            this.ViewStudentbtn.IconZoom = 40D;
-            this.ViewStudentbtn.IsTab = true;
-            this.ViewStudentbtn.Location = new System.Drawing.Point(0, 47);
-            this.ViewStudentbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.ViewStudentbtn.Name = "ViewStudentbtn";
-            this.ViewStudentbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewStudentbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.ViewStudentbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.ViewStudentbtn.selected = false;
-            this.ViewStudentbtn.Size = new System.Drawing.Size(302, 43);
-            this.ViewStudentbtn.TabIndex = 5;
-            this.ViewStudentbtn.Text = "View Student";
-            this.ViewStudentbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ViewStudentbtn.Textcolor = System.Drawing.Color.Silver;
-            this.ViewStudentbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewStudentbtn.Click += new System.EventHandler(this.ViewStudentbtn_Click);
             // 
             // AddStudentbtn
             // 
@@ -946,6 +751,217 @@
             this.AddStudentbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStudentbtn.Click += new System.EventHandler(this.AddStudentbtn_Click);
             // 
+            // ViewStudentbtn
+            // 
+            this.ViewStudentbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.ViewStudentbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewStudentbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ViewStudentbtn.BorderRadius = 0;
+            this.ViewStudentbtn.ButtonText = "View Student";
+            this.ViewStudentbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewStudentbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.ViewStudentbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ViewStudentbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewStudentbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.ViewStudentbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewStudentbtn.Iconimage")));
+            this.ViewStudentbtn.Iconimage_right = null;
+            this.ViewStudentbtn.Iconimage_right_Selected = null;
+            this.ViewStudentbtn.Iconimage_Selected = null;
+            this.ViewStudentbtn.IconMarginLeft = 0;
+            this.ViewStudentbtn.IconMarginRight = 0;
+            this.ViewStudentbtn.IconRightVisible = true;
+            this.ViewStudentbtn.IconRightZoom = 0D;
+            this.ViewStudentbtn.IconVisible = true;
+            this.ViewStudentbtn.IconZoom = 40D;
+            this.ViewStudentbtn.IsTab = true;
+            this.ViewStudentbtn.Location = new System.Drawing.Point(0, 47);
+            this.ViewStudentbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ViewStudentbtn.Name = "ViewStudentbtn";
+            this.ViewStudentbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewStudentbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.ViewStudentbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ViewStudentbtn.selected = false;
+            this.ViewStudentbtn.Size = new System.Drawing.Size(302, 43);
+            this.ViewStudentbtn.TabIndex = 5;
+            this.ViewStudentbtn.Text = "View Student";
+            this.ViewStudentbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ViewStudentbtn.Textcolor = System.Drawing.Color.Silver;
+            this.ViewStudentbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewStudentbtn.Click += new System.EventHandler(this.ViewStudentbtn_Click);
+            // 
+            // spnlRoom
+            // 
+            this.spnlRoom.Controls.Add(this.viewRoombtn);
+            this.spnlRoom.Controls.Add(this.AddRoombtn);
+            this.spnlRoom.ForeColor = System.Drawing.Color.White;
+            this.spnlRoom.Location = new System.Drawing.Point(3, 14);
+            this.spnlRoom.Name = "spnlRoom";
+            this.spnlRoom.Size = new System.Drawing.Size(302, 109);
+            this.spnlRoom.TabIndex = 4;
+            this.spnlRoom.Visible = false;
+            // 
+            // AddRoombtn
+            // 
+            this.AddRoombtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.AddRoombtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.AddRoombtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddRoombtn.BorderRadius = 0;
+            this.AddRoombtn.ButtonText = "Add Room";
+            this.AddRoombtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddRoombtn.DisabledColor = System.Drawing.Color.Gray;
+            this.AddRoombtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddRoombtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRoombtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.AddRoombtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("AddRoombtn.Iconimage")));
+            this.AddRoombtn.Iconimage_right = null;
+            this.AddRoombtn.Iconimage_right_Selected = null;
+            this.AddRoombtn.Iconimage_Selected = null;
+            this.AddRoombtn.IconMarginLeft = 0;
+            this.AddRoombtn.IconMarginRight = 0;
+            this.AddRoombtn.IconRightVisible = true;
+            this.AddRoombtn.IconRightZoom = 0D;
+            this.AddRoombtn.IconVisible = true;
+            this.AddRoombtn.IconZoom = 40D;
+            this.AddRoombtn.IsTab = true;
+            this.AddRoombtn.Location = new System.Drawing.Point(0, 0);
+            this.AddRoombtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.AddRoombtn.Name = "AddRoombtn";
+            this.AddRoombtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.AddRoombtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.AddRoombtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.AddRoombtn.selected = false;
+            this.AddRoombtn.Size = new System.Drawing.Size(302, 56);
+            this.AddRoombtn.TabIndex = 4;
+            this.AddRoombtn.Text = "Add Room";
+            this.AddRoombtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddRoombtn.Textcolor = System.Drawing.Color.Silver;
+            this.AddRoombtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRoombtn.Click += new System.EventHandler(this.AddRoombtn_Click);
+            // 
+            // viewRoombtn
+            // 
+            this.viewRoombtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.viewRoombtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.viewRoombtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.viewRoombtn.BorderRadius = 0;
+            this.viewRoombtn.ButtonText = "View Room";
+            this.viewRoombtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewRoombtn.DisabledColor = System.Drawing.Color.Gray;
+            this.viewRoombtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.viewRoombtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewRoombtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.viewRoombtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("viewRoombtn.Iconimage")));
+            this.viewRoombtn.Iconimage_right = null;
+            this.viewRoombtn.Iconimage_right_Selected = null;
+            this.viewRoombtn.Iconimage_Selected = null;
+            this.viewRoombtn.IconMarginLeft = 0;
+            this.viewRoombtn.IconMarginRight = 0;
+            this.viewRoombtn.IconRightVisible = true;
+            this.viewRoombtn.IconRightZoom = 0D;
+            this.viewRoombtn.IconVisible = true;
+            this.viewRoombtn.IconZoom = 40D;
+            this.viewRoombtn.IsTab = true;
+            this.viewRoombtn.Location = new System.Drawing.Point(0, 56);
+            this.viewRoombtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.viewRoombtn.Name = "viewRoombtn";
+            this.viewRoombtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.viewRoombtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.viewRoombtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.viewRoombtn.selected = false;
+            this.viewRoombtn.Size = new System.Drawing.Size(302, 53);
+            this.viewRoombtn.TabIndex = 5;
+            this.viewRoombtn.Text = "View Room";
+            this.viewRoombtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.viewRoombtn.Textcolor = System.Drawing.Color.Silver;
+            this.viewRoombtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewRoombtn.Click += new System.EventHandler(this.viewRoombtn_Click);
+            // 
+            // spnlDept
+            // 
+            this.spnlDept.Controls.Add(this.ViewDeptbtn);
+            this.spnlDept.Controls.Add(this.AddDeptbtn);
+            this.spnlDept.Location = new System.Drawing.Point(2, 129);
+            this.spnlDept.Name = "spnlDept";
+            this.spnlDept.Size = new System.Drawing.Size(302, 106);
+            this.spnlDept.TabIndex = 4;
+            this.spnlDept.Visible = false;
+            // 
+            // AddDeptbtn
+            // 
+            this.AddDeptbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.AddDeptbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.AddDeptbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddDeptbtn.BorderRadius = 0;
+            this.AddDeptbtn.ButtonText = "Add Depertment";
+            this.AddDeptbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddDeptbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.AddDeptbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddDeptbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddDeptbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.AddDeptbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("AddDeptbtn.Iconimage")));
+            this.AddDeptbtn.Iconimage_right = null;
+            this.AddDeptbtn.Iconimage_right_Selected = null;
+            this.AddDeptbtn.Iconimage_Selected = null;
+            this.AddDeptbtn.IconMarginLeft = 0;
+            this.AddDeptbtn.IconMarginRight = 0;
+            this.AddDeptbtn.IconRightVisible = true;
+            this.AddDeptbtn.IconRightZoom = 0D;
+            this.AddDeptbtn.IconVisible = true;
+            this.AddDeptbtn.IconZoom = 40D;
+            this.AddDeptbtn.IsTab = true;
+            this.AddDeptbtn.Location = new System.Drawing.Point(0, 0);
+            this.AddDeptbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddDeptbtn.Name = "AddDeptbtn";
+            this.AddDeptbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.AddDeptbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.AddDeptbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.AddDeptbtn.selected = false;
+            this.AddDeptbtn.Size = new System.Drawing.Size(302, 55);
+            this.AddDeptbtn.TabIndex = 4;
+            this.AddDeptbtn.Text = "Add Depertment";
+            this.AddDeptbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddDeptbtn.Textcolor = System.Drawing.Color.Silver;
+            this.AddDeptbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddDeptbtn.Click += new System.EventHandler(this.AddDeptbtn_Click);
+            // 
+            // ViewDeptbtn
+            // 
+            this.ViewDeptbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.ViewDeptbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewDeptbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ViewDeptbtn.BorderRadius = 0;
+            this.ViewDeptbtn.ButtonText = "View Depertment";
+            this.ViewDeptbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewDeptbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.ViewDeptbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ViewDeptbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewDeptbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.ViewDeptbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewDeptbtn.Iconimage")));
+            this.ViewDeptbtn.Iconimage_right = null;
+            this.ViewDeptbtn.Iconimage_right_Selected = null;
+            this.ViewDeptbtn.Iconimage_Selected = null;
+            this.ViewDeptbtn.IconMarginLeft = 0;
+            this.ViewDeptbtn.IconMarginRight = 0;
+            this.ViewDeptbtn.IconRightVisible = true;
+            this.ViewDeptbtn.IconRightZoom = 0D;
+            this.ViewDeptbtn.IconVisible = true;
+            this.ViewDeptbtn.IconZoom = 40D;
+            this.ViewDeptbtn.IsTab = true;
+            this.ViewDeptbtn.Location = new System.Drawing.Point(0, 55);
+            this.ViewDeptbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ViewDeptbtn.Name = "ViewDeptbtn";
+            this.ViewDeptbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewDeptbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.ViewDeptbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ViewDeptbtn.selected = false;
+            this.ViewDeptbtn.Size = new System.Drawing.Size(302, 50);
+            this.ViewDeptbtn.TabIndex = 5;
+            this.ViewDeptbtn.Text = "View Depertment";
+            this.ViewDeptbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ViewDeptbtn.Textcolor = System.Drawing.Color.Silver;
+            this.ViewDeptbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewDeptbtn.Click += new System.EventHandler(this.ViewDeptbtn_Click);
+            // 
             // spnlDur
             // 
             this.spnlDur.Controls.Add(this.ViewDurbtn);
@@ -955,44 +971,6 @@
             this.spnlDur.Size = new System.Drawing.Size(302, 98);
             this.spnlDur.TabIndex = 4;
             this.spnlDur.Visible = false;
-            // 
-            // ViewDurbtn
-            // 
-            this.ViewDurbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.ViewDurbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewDurbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ViewDurbtn.BorderRadius = 0;
-            this.ViewDurbtn.ButtonText = "View Duration";
-            this.ViewDurbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewDurbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.ViewDurbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ViewDurbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewDurbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ViewDurbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewDurbtn.Iconimage")));
-            this.ViewDurbtn.Iconimage_right = null;
-            this.ViewDurbtn.Iconimage_right_Selected = null;
-            this.ViewDurbtn.Iconimage_Selected = null;
-            this.ViewDurbtn.IconMarginLeft = 0;
-            this.ViewDurbtn.IconMarginRight = 0;
-            this.ViewDurbtn.IconRightVisible = true;
-            this.ViewDurbtn.IconRightZoom = 0D;
-            this.ViewDurbtn.IconVisible = true;
-            this.ViewDurbtn.IconZoom = 40D;
-            this.ViewDurbtn.IsTab = true;
-            this.ViewDurbtn.Location = new System.Drawing.Point(0, 53);
-            this.ViewDurbtn.Margin = new System.Windows.Forms.Padding(1);
-            this.ViewDurbtn.Name = "ViewDurbtn";
-            this.ViewDurbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewDurbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.ViewDurbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.ViewDurbtn.selected = false;
-            this.ViewDurbtn.Size = new System.Drawing.Size(302, 49);
-            this.ViewDurbtn.TabIndex = 5;
-            this.ViewDurbtn.Text = "View Duration";
-            this.ViewDurbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ViewDurbtn.Textcolor = System.Drawing.Color.Silver;
-            this.ViewDurbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewDurbtn.Click += new System.EventHandler(this.ViewDurbtn_Click);
             // 
             // AddDurbtn
             // 
@@ -1032,6 +1010,44 @@
             this.AddDurbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddDurbtn.Click += new System.EventHandler(this.AddDurbtn_Click);
             // 
+            // ViewDurbtn
+            // 
+            this.ViewDurbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.ViewDurbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewDurbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ViewDurbtn.BorderRadius = 0;
+            this.ViewDurbtn.ButtonText = "View Duration";
+            this.ViewDurbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewDurbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.ViewDurbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ViewDurbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewDurbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.ViewDurbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewDurbtn.Iconimage")));
+            this.ViewDurbtn.Iconimage_right = null;
+            this.ViewDurbtn.Iconimage_right_Selected = null;
+            this.ViewDurbtn.Iconimage_Selected = null;
+            this.ViewDurbtn.IconMarginLeft = 0;
+            this.ViewDurbtn.IconMarginRight = 0;
+            this.ViewDurbtn.IconRightVisible = true;
+            this.ViewDurbtn.IconRightZoom = 0D;
+            this.ViewDurbtn.IconVisible = true;
+            this.ViewDurbtn.IconZoom = 40D;
+            this.ViewDurbtn.IsTab = true;
+            this.ViewDurbtn.Location = new System.Drawing.Point(0, 53);
+            this.ViewDurbtn.Margin = new System.Windows.Forms.Padding(1);
+            this.ViewDurbtn.Name = "ViewDurbtn";
+            this.ViewDurbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewDurbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.ViewDurbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ViewDurbtn.selected = false;
+            this.ViewDurbtn.Size = new System.Drawing.Size(302, 49);
+            this.ViewDurbtn.TabIndex = 5;
+            this.ViewDurbtn.Text = "View Duration";
+            this.ViewDurbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ViewDurbtn.Textcolor = System.Drawing.Color.Silver;
+            this.ViewDurbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewDurbtn.Click += new System.EventHandler(this.ViewDurbtn_Click);
+            // 
             // pnlOperation
             // 
             this.pnlOperation.Controls.Add(this.ViewPlanbtn);
@@ -1041,44 +1057,6 @@
             this.pnlOperation.Size = new System.Drawing.Size(302, 80);
             this.pnlOperation.TabIndex = 9;
             this.pnlOperation.Visible = false;
-            // 
-            // ViewPlanbtn
-            // 
-            this.ViewPlanbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.ViewPlanbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewPlanbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ViewPlanbtn.BorderRadius = 0;
-            this.ViewPlanbtn.ButtonText = "View Plan";
-            this.ViewPlanbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewPlanbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.ViewPlanbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ViewPlanbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewPlanbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ViewPlanbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewPlanbtn.Iconimage")));
-            this.ViewPlanbtn.Iconimage_right = null;
-            this.ViewPlanbtn.Iconimage_right_Selected = null;
-            this.ViewPlanbtn.Iconimage_Selected = null;
-            this.ViewPlanbtn.IconMarginLeft = 0;
-            this.ViewPlanbtn.IconMarginRight = 0;
-            this.ViewPlanbtn.IconRightVisible = true;
-            this.ViewPlanbtn.IconRightZoom = 0D;
-            this.ViewPlanbtn.IconVisible = true;
-            this.ViewPlanbtn.IconZoom = 40D;
-            this.ViewPlanbtn.IsTab = true;
-            this.ViewPlanbtn.Location = new System.Drawing.Point(0, 41);
-            this.ViewPlanbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.ViewPlanbtn.Name = "ViewPlanbtn";
-            this.ViewPlanbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
-            this.ViewPlanbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.ViewPlanbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.ViewPlanbtn.selected = false;
-            this.ViewPlanbtn.Size = new System.Drawing.Size(302, 39);
-            this.ViewPlanbtn.TabIndex = 5;
-            this.ViewPlanbtn.Text = "View Plan";
-            this.ViewPlanbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ViewPlanbtn.Textcolor = System.Drawing.Color.Silver;
-            this.ViewPlanbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewPlanbtn.Click += new System.EventHandler(this.ViewPlanbtn_Click);
             // 
             // AddPlanbtn
             // 
@@ -1118,6 +1096,44 @@
             this.AddPlanbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddPlanbtn.Click += new System.EventHandler(this.AddPlanbtn_Click);
             // 
+            // ViewPlanbtn
+            // 
+            this.ViewPlanbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.ViewPlanbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewPlanbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ViewPlanbtn.BorderRadius = 0;
+            this.ViewPlanbtn.ButtonText = "View Plan";
+            this.ViewPlanbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewPlanbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.ViewPlanbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ViewPlanbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewPlanbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.ViewPlanbtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("ViewPlanbtn.Iconimage")));
+            this.ViewPlanbtn.Iconimage_right = null;
+            this.ViewPlanbtn.Iconimage_right_Selected = null;
+            this.ViewPlanbtn.Iconimage_Selected = null;
+            this.ViewPlanbtn.IconMarginLeft = 0;
+            this.ViewPlanbtn.IconMarginRight = 0;
+            this.ViewPlanbtn.IconRightVisible = true;
+            this.ViewPlanbtn.IconRightZoom = 0D;
+            this.ViewPlanbtn.IconVisible = true;
+            this.ViewPlanbtn.IconZoom = 40D;
+            this.ViewPlanbtn.IsTab = true;
+            this.ViewPlanbtn.Location = new System.Drawing.Point(0, 41);
+            this.ViewPlanbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ViewPlanbtn.Name = "ViewPlanbtn";
+            this.ViewPlanbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
+            this.ViewPlanbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.ViewPlanbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ViewPlanbtn.selected = false;
+            this.ViewPlanbtn.Size = new System.Drawing.Size(302, 39);
+            this.ViewPlanbtn.TabIndex = 5;
+            this.ViewPlanbtn.Text = "View Plan";
+            this.ViewPlanbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ViewPlanbtn.Textcolor = System.Drawing.Color.Silver;
+            this.ViewPlanbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewPlanbtn.Click += new System.EventHandler(this.ViewPlanbtn_Click);
+            // 
             // Mainpnl
             // 
             this.Mainpnl.BackColor = System.Drawing.Color.Gray;
@@ -1127,22 +1143,6 @@
             this.Mainpnl.Name = "Mainpnl";
             this.Mainpnl.Size = new System.Drawing.Size(1338, 999);
             this.Mainpnl.TabIndex = 10;
-            // 
-            // leftsubpnl
-            // 
-            this.leftsubpnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
-            this.leftsubpnl.Controls.Add(this.pnlOperation);
-            this.leftsubpnl.Controls.Add(this.spnlDur);
-            this.leftsubpnl.Controls.Add(this.spnlDept);
-            this.leftsubpnl.Controls.Add(this.spnlRoom);
-            this.leftsubpnl.Controls.Add(this.spnlStudent);
-            this.leftsubpnl.Controls.Add(this.spnlBatch);
-            this.leftsubpnl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftsubpnl.Location = new System.Drawing.Point(0, 0);
-            this.leftsubpnl.Name = "leftsubpnl";
-            this.leftsubpnl.Size = new System.Drawing.Size(309, 999);
-            this.leftsubpnl.TabIndex = 11;
-            this.leftsubpnl.Visible = false;
             // 
             // Dashboard
             // 
@@ -1176,14 +1176,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.maxminbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Closebtn)).EndInit();
-            this.spnlRoom.ResumeLayout(false);
-            this.spnlDept.ResumeLayout(false);
+            this.leftsubpnl.ResumeLayout(false);
             this.spnlBatch.ResumeLayout(false);
             this.spnlStudent.ResumeLayout(false);
+            this.spnlRoom.ResumeLayout(false);
+            this.spnlDept.ResumeLayout(false);
             this.spnlDur.ResumeLayout(false);
             this.pnlOperation.ResumeLayout(false);
             this.Mainpnl.ResumeLayout(false);
-            this.leftsubpnl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1200,23 +1200,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.Panel spnlStudent;
-        private Bunifu.Framework.UI.BunifuFlatButton ViewStudentbtn;
-        private Bunifu.Framework.UI.BunifuFlatButton AddStudentbtn;
-        private System.Windows.Forms.Panel spnlBatch;
-        private Bunifu.Framework.UI.BunifuFlatButton ViewBatchbtn;
-        private Bunifu.Framework.UI.BunifuFlatButton AddBatchbtn;
-        private System.Windows.Forms.Panel spnlDept;
-        private Bunifu.Framework.UI.BunifuFlatButton ViewDeptbtn;
-        private Bunifu.Framework.UI.BunifuFlatButton AddDeptbtn;
-        private Bunifu.Framework.UI.BunifuFlatButton viewRoombtn;
-        private Bunifu.Framework.UI.BunifuFlatButton AddRoombtn;
-        private System.Windows.Forms.Panel pnlOperation;
-        private Bunifu.Framework.UI.BunifuFlatButton ViewPlanbtn;
-        private Bunifu.Framework.UI.BunifuFlatButton AddPlanbtn;
-        private System.Windows.Forms.Panel spnlDur;
-        private Bunifu.Framework.UI.BunifuFlatButton ViewDurbtn;
-        private Bunifu.Framework.UI.BunifuFlatButton AddDurbtn;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton btnOperation;
         private Bunifu.Framework.UI.BunifuFlatButton btnDur;
@@ -1224,18 +1207,35 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnBatch;
         private Bunifu.Framework.UI.BunifuFlatButton btnDept;
         private Bunifu.Framework.UI.BunifuFlatButton btnRoom;
-        private System.Windows.Forms.Panel spnlRoom;
         private System.Windows.Forms.PictureBox profImgbox;
         private System.Windows.Forms.Panel userProfpnl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label UserNamelbl;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Panel Mainpnl;
-        private System.Windows.Forms.Panel leftsubpnl;
         private MyImageButton.CustomImageButton Closebtn;
         private MyImageButton.CustomImageButton minimizebtn;
         private System.Windows.Forms.PictureBox maxminbtn;
+        private System.Windows.Forms.Panel leftsubpnl;
+        private System.Windows.Forms.Panel pnlOperation;
+        private Bunifu.Framework.UI.BunifuFlatButton ViewPlanbtn;
+        private Bunifu.Framework.UI.BunifuFlatButton AddPlanbtn;
+        private System.Windows.Forms.Panel spnlDur;
+        private Bunifu.Framework.UI.BunifuFlatButton ViewDurbtn;
+        private Bunifu.Framework.UI.BunifuFlatButton AddDurbtn;
+        private System.Windows.Forms.Panel spnlDept;
+        private Bunifu.Framework.UI.BunifuFlatButton ViewDeptbtn;
+        private Bunifu.Framework.UI.BunifuFlatButton AddDeptbtn;
+        private System.Windows.Forms.Panel spnlRoom;
+        private Bunifu.Framework.UI.BunifuFlatButton viewRoombtn;
+        private Bunifu.Framework.UI.BunifuFlatButton AddRoombtn;
+        private System.Windows.Forms.Panel spnlStudent;
+        private Bunifu.Framework.UI.BunifuFlatButton ViewStudentbtn;
+        private Bunifu.Framework.UI.BunifuFlatButton AddStudentbtn;
+        private System.Windows.Forms.Panel spnlBatch;
+        private Bunifu.Framework.UI.BunifuFlatButton ViewBatchbtn;
+        private Bunifu.Framework.UI.BunifuFlatButton AddBatchbtn;
+        private System.Windows.Forms.Panel Mainpnl;
     }
 }
 

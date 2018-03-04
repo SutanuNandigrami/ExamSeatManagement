@@ -79,5 +79,16 @@ namespace dashboard
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
         }
+
+        private void viewallbtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Student", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGrid.DataSource = dt;
+            con.Close();
+            editpnl.Visible = false;
+        }
     }
 }
