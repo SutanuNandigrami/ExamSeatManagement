@@ -36,13 +36,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.viewallbtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.searchBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.searchbtn = new MyImageButton.CustomImageButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.searchbtn = new MyImageButton.CustomImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewImageColumn1
@@ -129,20 +129,6 @@
             this.searchBox.TabIndex = 8;
             this.searchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // searchbtn
-            // 
-            this.searchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.searchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.searchbtn.Image = global::dashboard.Properties.Resources.Search_100px;
-            this.searchbtn.ImageHover = global::dashboard.Properties.Resources.Detective_96px;
-            this.searchbtn.ImageNormal = global::dashboard.Properties.Resources.Search_100px;
-            this.searchbtn.Location = new System.Drawing.Point(685, 16);
-            this.searchbtn.Name = "searchbtn";
-            this.searchbtn.Size = new System.Drawing.Size(46, 81);
-            this.searchbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchbtn.TabIndex = 7;
-            this.searchbtn.TabStop = false;
-            // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
@@ -168,6 +154,20 @@
             this.panel1.Size = new System.Drawing.Size(1260, 100);
             this.panel1.TabIndex = 2;
             // 
+            // searchbtn
+            // 
+            this.searchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.searchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.searchbtn.Image = global::dashboard.Properties.Resources.Search_100px;
+            this.searchbtn.ImageHover = global::dashboard.Properties.Resources.Detective_96px;
+            this.searchbtn.ImageNormal = global::dashboard.Properties.Resources.Search_100px;
+            this.searchbtn.Location = new System.Drawing.Point(685, 16);
+            this.searchbtn.Name = "searchbtn";
+            this.searchbtn.Size = new System.Drawing.Size(46, 81);
+            this.searchbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchbtn.TabIndex = 7;
+            this.searchbtn.TabStop = false;
+            // 
             // ViewPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,11 +176,12 @@
             this.Controls.Add(this.panel1);
             this.Name = "ViewPlan";
             this.Size = new System.Drawing.Size(1260, 731);
+            this.Load += new System.EventHandler(this.ViewPlan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -28,6 +28,10 @@ namespace dashboard
         {
             InitializeComponent();
         }
-        
+
+        private void ViewPlan_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -479,7 +479,7 @@ namespace dashboard
             if (!Mainpnl.Controls.Contains(ViewPlan.Instance))
             {
                 Mainpnl.Controls.Add(ViewPlan.Instance);
-                //ViewPlan.Instance.Dock = ViewPlan.Fill;
+                ViewPlan.Instance.Dock = DockStyle.Fill;
                 ViewPlan.Instance.BringToFront();
                 clean();
 
