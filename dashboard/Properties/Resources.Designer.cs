@@ -103,6 +103,16 @@ namespace dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Erase_100px {
+            get {
+                object obj = ResourceManager.GetObject("Erase_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Eye_96px {
             get {
                 object obj = ResourceManager.GetObject("Eye_96px", resourceCulture);
@@ -196,6 +206,16 @@ namespace dashboard.Properties {
         internal static System.Drawing.Bitmap Lock_96px {
             get {
                 object obj = ResourceManager.GetObject("Lock_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh_80px {
+            get {
+                object obj = ResourceManager.GetObject("Refresh_80px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

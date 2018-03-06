@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Bunifu.Framework.UI;
 using System.Data.SqlClient;
 
+
 namespace dashboard
 {
     public partial class Dashboard : Form
@@ -107,6 +108,7 @@ namespace dashboard
             spnlDur.Visible = false;
             pnlOperation.Visible = false;
             leftsubpnl.Visible = false;
+            
         }
 
        
@@ -451,11 +453,17 @@ namespace dashboard
                 Mainpnl.Controls.Add(ViewStudent.Instance);
                 ViewStudent.Instance.Dock = DockStyle.Fill;
                 ViewStudent.Instance.BringToFront();
+
                 clean();
 
             }
             else
+            {
                 ViewStudent.Instance.BringToFront();
+                clean();
+                ViewStudent.Instance.Update();
+            }
+            
         }
 
         private void ViewDurbtn_Click(object sender, EventArgs e)
@@ -466,6 +474,7 @@ namespace dashboard
                 Mainpnl.Controls.Add(ViewDuration.Instance);
                 ViewDuration.Instance.Dock = DockStyle.Fill;
                 ViewDuration.Instance.BringToFront();
+                
                 clean();
 
             }

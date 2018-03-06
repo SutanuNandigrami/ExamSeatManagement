@@ -31,17 +31,8 @@ namespace dashboard
         public ViewStudent()
         {
             InitializeComponent();
-        }
 
-        private void ViewStudent_Load(object sender, EventArgs e)
-        {
-            con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Student", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DataGrid.DataSource = dt;
-            con.Close();
-            editpnl.Visible = false;
+            showall();
         }
 
         private void DataGrid_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -71,24 +62,43 @@ namespace dashboard
             con.Close();
         }
 
+        public void showall()
+        {
+            SqlConnection mcon = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+            mcon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Student", mcon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGrid.DataSource = dt;
+            mcon.Close();
+            editpnl.Visible = false;
+        }
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            con.Open();
+            SqlConnection mycon = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+            mycon.Open();
             string query = "delete from Student where RegNo='" + textbox1.Text + "'";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            SqlDataAdapter sda = new SqlDataAdapter(query, mycon);
             sda.SelectCommand.ExecuteNonQuery();
-            con.Close();
+            mycon.Close();
         }
 
         private void viewallbtn_Click(object sender, EventArgs e)
         {
+            showall();
+        }
+
+        private void erasebtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Student", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DataGrid.DataSource = dt;
+            string query = "truncate table Student ";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            sda.SelectCommand.ExecuteNonQuery();
             con.Close();
-            editpnl.Visible = false;
+            DataGrid.DataSource = null;
+
+            MessageBox.Show("Deletion SUCCESSFULL!!!!");
         }
     }
 }

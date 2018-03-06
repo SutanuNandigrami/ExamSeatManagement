@@ -39,6 +39,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\softy\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="ExcelLibrary">
+      <HintPath>..\..\..\Module-1(Excel Import Export)\MTS1\ExcelLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -299,6 +302,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Eye_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICONS\Erase_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICONS\Refresh_80px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
