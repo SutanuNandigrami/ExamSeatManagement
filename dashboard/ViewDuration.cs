@@ -46,13 +46,9 @@ namespace dashboard
         private void DataGrid_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             editpnl.Visible = true;
-
-            Textbox1.Text = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
-            if (DataGrid.SelectedRows[0].Cells[1].Value.ToString() == "Active")
-                radioButton1.Select();
-            else
-                radioButton2.Select();
-
+            editpnl.Refresh();
+            Textbox1.Text = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
+            Textbox2.Text = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
         }
 
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
@@ -63,20 +59,44 @@ namespace dashboard
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "update Duration set Duration='" + Textbox1.Text + "',Status='" + radioButton1.Text + "'";
+            string query = "update Duration set Duration='" + Textbox1.Text + "'where Id='" + Textbox2.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
 
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
+            Blank();
+            editpnl.Visible = false;
+            Display();
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "delete from Duration where Duration='" + Textbox1.Text + "'";
+            string query = "delete from Duration where Id='" + Textbox2.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
+            Blank();
+            editpnl.Visible = false;
+            Display();
+        }
+
+        public void Display()
+        {
+            con.Open();
+            string query = "select * from Duration";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            DataGrid.DataSource = dt;
+            con.Close();
+        }
+
+        public void Blank()
+        {
+            Textbox1.Text = "";
+           
+
         }
 
         private void viewallbtn_Click(object sender, EventArgs e)
@@ -88,6 +108,26 @@ namespace dashboard
             DataGrid.DataSource = dt;
             con.Close();
             editpnl.Visible = false;
+        }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string query = "select * from Duration where Duration='" + searchbox.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                DataGrid.DataSource = dt;
+
+                con.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

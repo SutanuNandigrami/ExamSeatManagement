@@ -37,19 +37,13 @@
             this.tESToneDataSet = new dashboard.TESToneDataSet();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.deptIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deptNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deptBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tESToneDataSet1 = new dashboard.TESToneDataSet1();
             this.panel2 = new System.Windows.Forms.Panel();
             this.editpnl = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Textbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Textbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.deletebtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.editbtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -60,6 +54,8 @@
             this.searchbtn = new MyImageButton.CustomImageButton();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.deptTableAdapter = new dashboard.TESToneDataSet1TableAdapters.DeptTableAdapter();
+            this.deptIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -125,8 +121,7 @@
             this.DataGrid.ColumnHeadersHeight = 50;
             this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.deptIdDataGridViewTextBoxColumn,
-            this.deptNameDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn});
+            this.deptNameDataGridViewTextBoxColumn});
             this.DataGrid.DataSource = this.deptBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -152,30 +147,6 @@
             this.DataGrid.TabIndex = 0;
             this.DataGrid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGrid_MouseDoubleClick);
             // 
-            // deptIdDataGridViewTextBoxColumn
-            // 
-            this.deptIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.deptIdDataGridViewTextBoxColumn.DataPropertyName = "DeptId";
-            this.deptIdDataGridViewTextBoxColumn.HeaderText = "DeptId";
-            this.deptIdDataGridViewTextBoxColumn.Name = "deptIdDataGridViewTextBoxColumn";
-            this.deptIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // deptNameDataGridViewTextBoxColumn
-            // 
-            this.deptNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.deptNameDataGridViewTextBoxColumn.DataPropertyName = "DeptName";
-            this.deptNameDataGridViewTextBoxColumn.HeaderText = "DeptName";
-            this.deptNameDataGridViewTextBoxColumn.Name = "deptNameDataGridViewTextBoxColumn";
-            this.deptNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // deptBindingSource
             // 
             this.deptBindingSource.DataMember = "Dept";
@@ -200,12 +171,9 @@
             // 
             this.editpnl.BackColor = System.Drawing.Color.White;
             this.editpnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.editpnl.Controls.Add(this.radioButton2);
-            this.editpnl.Controls.Add(this.radioButton1);
             this.editpnl.Controls.Add(this.Textbox1);
             this.editpnl.Controls.Add(this.Textbox2);
             this.editpnl.Controls.Add(this.bunifuCustomLabel3);
-            this.editpnl.Controls.Add(this.bunifuCustomLabel1);
             this.editpnl.Controls.Add(this.lbl1);
             this.editpnl.Controls.Add(this.deletebtn);
             this.editpnl.Controls.Add(this.editbtn);
@@ -216,32 +184,6 @@
             this.editpnl.Name = "editpnl";
             this.editpnl.Size = new System.Drawing.Size(674, 416);
             this.editpnl.TabIndex = 1;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Black;
-            this.radioButton2.Location = new System.Drawing.Point(447, 187);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(111, 27);
-            this.radioButton2.TabIndex = 18;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Inactive";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(346, 190);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(95, 27);
-            this.radioButton1.TabIndex = 19;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Active";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // Textbox1
             // 
@@ -274,7 +216,7 @@
             this.Textbox2.LineIdleColor = System.Drawing.Color.Gray;
             this.Textbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.Textbox2.LineThickness = 3;
-            this.Textbox2.Location = new System.Drawing.Point(346, 119);
+            this.Textbox2.Location = new System.Drawing.Point(346, 164);
             this.Textbox2.Margin = new System.Windows.Forms.Padding(4);
             this.Textbox2.Name = "Textbox2";
             this.Textbox2.Size = new System.Drawing.Size(253, 45);
@@ -292,23 +234,12 @@
             this.bunifuCustomLabel3.TabIndex = 16;
             this.bunifuCustomLabel3.Text = "Department ID";
             // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(211, 187);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(82, 30);
-            this.bunifuCustomLabel1.TabIndex = 15;
-            this.bunifuCustomLabel1.Text = "Status";
-            // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.lbl1.Location = new System.Drawing.Point(55, 134);
+            this.lbl1.Location = new System.Drawing.Point(55, 179);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(238, 30);
             this.lbl1.TabIndex = 16;
@@ -493,6 +424,22 @@
             // 
             this.deptTableAdapter.ClearBeforeFill = true;
             // 
+            // deptIdDataGridViewTextBoxColumn
+            // 
+            this.deptIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deptIdDataGridViewTextBoxColumn.DataPropertyName = "DeptId";
+            this.deptIdDataGridViewTextBoxColumn.HeaderText = "DeptId";
+            this.deptIdDataGridViewTextBoxColumn.Name = "deptIdDataGridViewTextBoxColumn";
+            this.deptIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deptNameDataGridViewTextBoxColumn
+            // 
+            this.deptNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deptNameDataGridViewTextBoxColumn.DataPropertyName = "DeptName";
+            this.deptNameDataGridViewTextBoxColumn.HeaderText = "DeptName";
+            this.deptNameDataGridViewTextBoxColumn.Name = "deptNameDataGridViewTextBoxColumn";
+            this.deptNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // ViewDept
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -532,19 +479,15 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Textbox2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Textbox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuFlatButton viewallbtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deptIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deptNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource deptBindingSource;
         private TESToneDataSet1 tESToneDataSet1;
         private TESToneDataSet1TableAdapters.DeptTableAdapter deptTableAdapter;
+        private System.Windows.Forms.BindingSource deptBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deptIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deptNameDataGridViewTextBoxColumn;
     }
 }

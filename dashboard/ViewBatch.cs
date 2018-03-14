@@ -28,30 +28,32 @@ namespace dashboard
         public ViewBatch()
         {
             InitializeComponent();
+            
+        }
+
+        public void showall()
+        {
+            SqlConnection mcon = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+            mcon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Batch", mcon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGrid.DataSource = dt;
+            mcon.Close();
+            editpnl.Visible = false;
         }
 
         private void ViewBatch_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
-            con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Batch", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DataGrid.DataSource = dt;
-            con.Close();
-            editpnl.Visible = false;
+            showall();
         }
 
         private void DataGrid_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            editpnl.Visible = true;
-
-            Textbox1.Text = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
+             Textbox1.Text = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
             Textbox2.Text = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
-            if (DataGrid.SelectedRows[0].Cells[3].Value.ToString() == "Active")
-                radioButton1.Select();
-            else
-                radioButton2.Select();
+            
+            editpnl.Visible = true;
 
         }
 
@@ -63,31 +65,48 @@ namespace dashboard
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "update Batch set BatchName='" + Textbox1.Text + "',DeptName='" + Textbox2.Text + "',Status='" + radioButton1.Text + "'";
+            string query = "update Batch set DeptName='" + Textbox2.Text + "' where BatchName='" + Textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
-
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
+            editpnl.Visible = false;
+            showall();
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "delete from Batch where RoomNo='" + Textbox1.Text + "'";
+            string query = "delete from Batch where BatchName='" + Textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
+            editpnl.Visible = false;
+            showall();
         }
 
         private void viewallbtn_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Batch", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DataGrid.DataSource = dt;
-            con.Close();
-            editpnl.Visible = false;
+            showall();
+        }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string query = "select * from Batch where BatchName='" + searchbox.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                DataGrid.DataSource = dt;
+                searchbox.Text = "";
+                con.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

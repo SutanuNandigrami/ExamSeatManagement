@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.searchbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.deptDrp1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.refreshbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.viewallbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.searchbtn2 = new MyImageButton.CustomImageButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.editpnl = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -49,6 +50,8 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.roomTableAdapter = new dashboard.TESToneDataSetTableAdapters.RoomTableAdapter();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -63,13 +66,9 @@
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tESToneDataSet1 = new dashboard.TESToneDataSet1();
             this.studentTableAdapter = new dashboard.TESToneDataSet1TableAdapters.StudentTableAdapter();
-            this.erasebtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.viewallbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.minimizebtn = new MyImageButton.CustomImageButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchbtn2)).BeginInit();
             this.editpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).BeginInit();
@@ -77,53 +76,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizebtn)).BeginInit();
             this.SuspendLayout();
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Black;
-            this.radioButton2.Location = new System.Drawing.Point(480, 358);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(111, 27);
-            this.radioButton2.TabIndex = 18;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Inactive";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(355, 358);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(95, 27);
-            this.radioButton1.TabIndex = 19;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Active";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(213, 351);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(96, 34);
-            this.bunifuCustomLabel1.TabIndex = 15;
-            this.bunifuCustomLabel1.Text = "Status";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.panel1.Controls.Add(this.erasebtn);
+            this.panel1.Controls.Add(this.searchbox1);
+            this.panel1.Controls.Add(this.deptDrp1);
+            this.panel1.Controls.Add(this.refreshbtn);
             this.panel1.Controls.Add(this.viewallbtn);
-            this.panel1.Controls.Add(this.bunifuMetroTextbox1);
-            this.panel1.Controls.Add(this.minimizebtn);
+            this.panel1.Controls.Add(this.searchbtn2);
             this.panel1.Controls.Add(this.bunifuCustomLabel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -132,29 +94,136 @@
             this.panel1.Size = new System.Drawing.Size(1348, 100);
             this.panel1.TabIndex = 4;
             // 
-            // bunifuMetroTextbox1
+            // searchbox1
             // 
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(43)))), ((int)(((byte)(24)))));
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(43)))), ((int)(((byte)(24)))));
-            this.bunifuMetroTextbox1.BorderThickness = 3;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(365, 39);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(312, 48);
-            this.bunifuMetroTextbox1.TabIndex = 8;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.searchbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.searchbox1.ForeColor = System.Drawing.Color.White;
+            this.searchbox1.HintForeColor = System.Drawing.Color.White;
+            this.searchbox1.HintText = "Reg No/ Name/ Sem";
+            this.searchbox1.isPassword = false;
+            this.searchbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.searchbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.searchbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.searchbox1.LineThickness = 3;
+            this.searchbox1.Location = new System.Drawing.Point(573, 48);
+            this.searchbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.searchbox1.Name = "searchbox1";
+            this.searchbox1.Size = new System.Drawing.Size(337, 36);
+            this.searchbox1.TabIndex = 4;
+            this.searchbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // deptDrp1
+            // 
+            this.deptDrp1.BackColor = System.Drawing.Color.Transparent;
+            this.deptDrp1.BorderRadius = 3;
+            this.deptDrp1.DisabledColor = System.Drawing.Color.Gray;
+            this.deptDrp1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deptDrp1.ForeColor = System.Drawing.Color.White;
+            this.deptDrp1.Items = new string[0];
+            this.deptDrp1.Location = new System.Drawing.Point(258, 36);
+            this.deptDrp1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.deptDrp1.Name = "deptDrp1";
+            this.deptDrp1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.deptDrp1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
+            this.deptDrp1.selectedIndex = -1;
+            this.deptDrp1.Size = new System.Drawing.Size(290, 48);
+            this.deptDrp1.TabIndex = 18;
+            this.deptDrp1.onItemSelected += new System.EventHandler(this.deptDrp1_onItemSelected);
+            // 
+            // refreshbtn
+            // 
+            this.refreshbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.refreshbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.refreshbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.refreshbtn.BorderRadius = 0;
+            this.refreshbtn.ButtonText = "Refresh";
+            this.refreshbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.refreshbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.refreshbtn.Iconimage = global::dashboard.Properties.Resources.Refresh_80px;
+            this.refreshbtn.Iconimage_right = null;
+            this.refreshbtn.Iconimage_right_Selected = null;
+            this.refreshbtn.Iconimage_Selected = null;
+            this.refreshbtn.IconMarginLeft = 0;
+            this.refreshbtn.IconMarginRight = 0;
+            this.refreshbtn.IconRightVisible = true;
+            this.refreshbtn.IconRightZoom = 0D;
+            this.refreshbtn.IconVisible = true;
+            this.refreshbtn.IconZoom = 50D;
+            this.refreshbtn.IsTab = true;
+            this.refreshbtn.Location = new System.Drawing.Point(1171, 33);
+            this.refreshbtn.Margin = new System.Windows.Forms.Padding(6);
+            this.refreshbtn.Name = "refreshbtn";
+            this.refreshbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.refreshbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
+            this.refreshbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.refreshbtn.selected = false;
+            this.refreshbtn.Size = new System.Drawing.Size(171, 51);
+            this.refreshbtn.TabIndex = 17;
+            this.refreshbtn.Text = "Refresh";
+            this.refreshbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.refreshbtn.Textcolor = System.Drawing.Color.White;
+            this.refreshbtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshbtn.Click += new System.EventHandler(this.refreshbtn_Click);
+            // 
+            // viewallbtn
+            // 
+            this.viewallbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.viewallbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.viewallbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.viewallbtn.BorderRadius = 0;
+            this.viewallbtn.ButtonText = "View All";
+            this.viewallbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewallbtn.DisabledColor = System.Drawing.Color.Gray;
+            this.viewallbtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.viewallbtn.Iconimage = global::dashboard.Properties.Resources.Eye_96px;
+            this.viewallbtn.Iconimage_right = null;
+            this.viewallbtn.Iconimage_right_Selected = null;
+            this.viewallbtn.Iconimage_Selected = null;
+            this.viewallbtn.IconMarginLeft = 0;
+            this.viewallbtn.IconMarginRight = 0;
+            this.viewallbtn.IconRightVisible = true;
+            this.viewallbtn.IconRightZoom = 0D;
+            this.viewallbtn.IconVisible = true;
+            this.viewallbtn.IconZoom = 50D;
+            this.viewallbtn.IsTab = true;
+            this.viewallbtn.Location = new System.Drawing.Point(988, 33);
+            this.viewallbtn.Margin = new System.Windows.Forms.Padding(6);
+            this.viewallbtn.Name = "viewallbtn";
+            this.viewallbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.viewallbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
+            this.viewallbtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.viewallbtn.selected = false;
+            this.viewallbtn.Size = new System.Drawing.Size(171, 51);
+            this.viewallbtn.TabIndex = 16;
+            this.viewallbtn.Text = "View All";
+            this.viewallbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.viewallbtn.Textcolor = System.Drawing.Color.White;
+            this.viewallbtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewallbtn.Click += new System.EventHandler(this.viewallbtn_Click);
+            // 
+            // searchbtn2
+            // 
+            this.searchbtn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.searchbtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.searchbtn2.Image = global::dashboard.Properties.Resources.Search_100px;
+            this.searchbtn2.ImageHover = global::dashboard.Properties.Resources.Detective_96px;
+            this.searchbtn2.ImageNormal = global::dashboard.Properties.Resources.Search_100px;
+            this.searchbtn2.Location = new System.Drawing.Point(933, 16);
+            this.searchbtn2.Name = "searchbtn2";
+            this.searchbtn2.Size = new System.Drawing.Size(46, 81);
+            this.searchbtn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchbtn2.TabIndex = 7;
+            this.searchbtn2.TabStop = false;
+            this.searchbtn2.Click += new System.EventHandler(this.searchbtn2_Click);
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(45, 36);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(11, 26);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(198, 34);
             this.bunifuCustomLabel2.TabIndex = 3;
@@ -174,9 +243,6 @@
             this.editpnl.Controls.Add(this.bunifuCustomLabel7);
             this.editpnl.Controls.Add(this.bunifuCustomLabel8);
             this.editpnl.Controls.Add(this.lbl1);
-            this.editpnl.Controls.Add(this.radioButton2);
-            this.editpnl.Controls.Add(this.radioButton1);
-            this.editpnl.Controls.Add(this.bunifuCustomLabel1);
             this.editpnl.Controls.Add(this.bunifuFlatButton2);
             this.editpnl.Controls.Add(this.bunifuFlatButton1);
             this.editpnl.Controls.Add(this.bunifuCustomLabel5);
@@ -337,239 +403,6 @@
             this.lbl1.TabIndex = 23;
             this.lbl1.Text = "Student Name";
             // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(810, 0);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(28, 30);
-            this.bunifuCustomLabel5.TabIndex = 13;
-            this.bunifuCustomLabel5.Text = "X";
-            this.bunifuCustomLabel5.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
-            // 
-            // roomTableAdapter
-            // 
-            this.roomTableAdapter.ClearBeforeFill = true;
-            // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.tESToneDataSet;
-            // 
-            // tESToneDataSet
-            // 
-            this.tESToneDataSet.DataSetName = "TESToneDataSet";
-            this.tESToneDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.editpnl);
-            this.panel2.Controls.Add(this.DataGrid);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1348, 782);
-            this.panel2.TabIndex = 5;
-            // 
-            // DataGrid
-            // 
-            this.DataGrid.AllowUserToAddRows = false;
-            this.DataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGrid.AutoGenerateColumns = false;
-            this.DataGrid.BackgroundColor = System.Drawing.Color.White;
-            this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.DataGrid.ColumnHeadersHeight = 50;
-            this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.regNoDataGridViewTextBoxColumn,
-            this.univRollNoDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.streamDataGridViewTextBoxColumn,
-            this.semDataGridViewTextBoxColumn});
-            this.DataGrid.DataSource = this.studentBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DataGrid.DoubleBuffered = true;
-            this.DataGrid.EnableHeadersVisualStyles = false;
-            this.DataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.DataGrid.HeaderForeColor = System.Drawing.Color.White;
-            this.DataGrid.Location = new System.Drawing.Point(17, 121);
-            this.DataGrid.Name = "DataGrid";
-            this.DataGrid.ReadOnly = true;
-            this.DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGrid.RowHeadersVisible = false;
-            this.DataGrid.RowHeadersWidth = 5;
-            this.DataGrid.RowTemplate.Height = 36;
-            this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGrid.Size = new System.Drawing.Size(1309, 642);
-            this.DataGrid.TabIndex = 0;
-            // 
-            // regNoDataGridViewTextBoxColumn
-            // 
-            this.regNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.regNoDataGridViewTextBoxColumn.DataPropertyName = "RegNo";
-            this.regNoDataGridViewTextBoxColumn.HeaderText = "RegNo";
-            this.regNoDataGridViewTextBoxColumn.Name = "regNoDataGridViewTextBoxColumn";
-            this.regNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // univRollNoDataGridViewTextBoxColumn
-            // 
-            this.univRollNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.univRollNoDataGridViewTextBoxColumn.DataPropertyName = "UnivRollNo";
-            this.univRollNoDataGridViewTextBoxColumn.HeaderText = "UnivRollNo";
-            this.univRollNoDataGridViewTextBoxColumn.Name = "univRollNoDataGridViewTextBoxColumn";
-            this.univRollNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // streamDataGridViewTextBoxColumn
-            // 
-            this.streamDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.streamDataGridViewTextBoxColumn.DataPropertyName = "Stream";
-            this.streamDataGridViewTextBoxColumn.HeaderText = "Stream";
-            this.streamDataGridViewTextBoxColumn.Name = "streamDataGridViewTextBoxColumn";
-            this.streamDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // semDataGridViewTextBoxColumn
-            // 
-            this.semDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.semDataGridViewTextBoxColumn.DataPropertyName = "Sem";
-            this.semDataGridViewTextBoxColumn.HeaderText = "Sem";
-            this.semDataGridViewTextBoxColumn.Name = "semDataGridViewTextBoxColumn";
-            this.semDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.tESToneDataSet1;
-            // 
-            // tESToneDataSet1
-            // 
-            this.tESToneDataSet1.DataSetName = "TESToneDataSet1";
-            this.tESToneDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
-            // 
-            // erasebtn
-            // 
-            this.erasebtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.erasebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.erasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.erasebtn.BorderRadius = 0;
-            this.erasebtn.ButtonText = "Erase All";
-            this.erasebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.erasebtn.DisabledColor = System.Drawing.Color.Gray;
-            this.erasebtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.erasebtn.Iconimage = global::dashboard.Properties.Resources.Erase_100px;
-            this.erasebtn.Iconimage_right = null;
-            this.erasebtn.Iconimage_right_Selected = null;
-            this.erasebtn.Iconimage_Selected = null;
-            this.erasebtn.IconMarginLeft = 0;
-            this.erasebtn.IconMarginRight = 0;
-            this.erasebtn.IconRightVisible = true;
-            this.erasebtn.IconRightZoom = 0D;
-            this.erasebtn.IconVisible = true;
-            this.erasebtn.IconZoom = 50D;
-            this.erasebtn.IsTab = true;
-            this.erasebtn.Location = new System.Drawing.Point(977, 36);
-            this.erasebtn.Margin = new System.Windows.Forms.Padding(6);
-            this.erasebtn.Name = "erasebtn";
-            this.erasebtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.erasebtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
-            this.erasebtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.erasebtn.selected = false;
-            this.erasebtn.Size = new System.Drawing.Size(171, 51);
-            this.erasebtn.TabIndex = 17;
-            this.erasebtn.Text = "Erase All";
-            this.erasebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.erasebtn.Textcolor = System.Drawing.Color.White;
-            this.erasebtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erasebtn.Click += new System.EventHandler(this.erasebtn_Click);
-            // 
-            // viewallbtn
-            // 
-            this.viewallbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.viewallbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.viewallbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.viewallbtn.BorderRadius = 0;
-            this.viewallbtn.ButtonText = "View All";
-            this.viewallbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.viewallbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.viewallbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.viewallbtn.Iconimage = global::dashboard.Properties.Resources.Eye_96px;
-            this.viewallbtn.Iconimage_right = null;
-            this.viewallbtn.Iconimage_right_Selected = null;
-            this.viewallbtn.Iconimage_Selected = null;
-            this.viewallbtn.IconMarginLeft = 0;
-            this.viewallbtn.IconMarginRight = 0;
-            this.viewallbtn.IconRightVisible = true;
-            this.viewallbtn.IconRightZoom = 0D;
-            this.viewallbtn.IconVisible = true;
-            this.viewallbtn.IconZoom = 50D;
-            this.viewallbtn.IsTab = true;
-            this.viewallbtn.Location = new System.Drawing.Point(777, 36);
-            this.viewallbtn.Margin = new System.Windows.Forms.Padding(6);
-            this.viewallbtn.Name = "viewallbtn";
-            this.viewallbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.viewallbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
-            this.viewallbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.viewallbtn.selected = false;
-            this.viewallbtn.Size = new System.Drawing.Size(171, 51);
-            this.viewallbtn.TabIndex = 16;
-            this.viewallbtn.Text = "View All";
-            this.viewallbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.viewallbtn.Textcolor = System.Drawing.Color.White;
-            this.viewallbtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewallbtn.Click += new System.EventHandler(this.viewallbtn_Click);
-            // 
-            // minimizebtn
-            // 
-            this.minimizebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.minimizebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.minimizebtn.Image = global::dashboard.Properties.Resources.Search_100px;
-            this.minimizebtn.ImageHover = global::dashboard.Properties.Resources.Detective_96px;
-            this.minimizebtn.ImageNormal = global::dashboard.Properties.Resources.Search_100px;
-            this.minimizebtn.Location = new System.Drawing.Point(685, 16);
-            this.minimizebtn.Name = "minimizebtn";
-            this.minimizebtn.Size = new System.Drawing.Size(46, 81);
-            this.minimizebtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.minimizebtn.TabIndex = 7;
-            this.minimizebtn.TabStop = false;
-            // 
             // bunifuFlatButton2
             // 
             this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -642,6 +475,154 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(810, 0);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(28, 30);
+            this.bunifuCustomLabel5.TabIndex = 13;
+            this.bunifuCustomLabel5.Text = "X";
+            this.bunifuCustomLabel5.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.tESToneDataSet;
+            // 
+            // tESToneDataSet
+            // 
+            this.tESToneDataSet.DataSetName = "TESToneDataSet";
+            this.tESToneDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.editpnl);
+            this.panel2.Controls.Add(this.DataGrid);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1348, 782);
+            this.panel2.TabIndex = 5;
+            // 
+            // DataGrid
+            // 
+            this.DataGrid.AllowUserToAddRows = false;
+            this.DataGrid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataGrid.AutoGenerateColumns = false;
+            this.DataGrid.BackgroundColor = System.Drawing.Color.White;
+            this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DataGrid.ColumnHeadersHeight = 50;
+            this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.regNoDataGridViewTextBoxColumn,
+            this.univRollNoDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.streamDataGridViewTextBoxColumn,
+            this.semDataGridViewTextBoxColumn});
+            this.DataGrid.DataSource = this.studentBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGrid.DoubleBuffered = true;
+            this.DataGrid.EnableHeadersVisualStyles = false;
+            this.DataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.DataGrid.HeaderForeColor = System.Drawing.Color.White;
+            this.DataGrid.Location = new System.Drawing.Point(17, 121);
+            this.DataGrid.Name = "DataGrid";
+            this.DataGrid.ReadOnly = true;
+            this.DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DataGrid.RowHeadersVisible = false;
+            this.DataGrid.RowHeadersWidth = 5;
+            this.DataGrid.RowTemplate.Height = 36;
+            this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGrid.Size = new System.Drawing.Size(1309, 642);
+            this.DataGrid.TabIndex = 0;
+            this.DataGrid.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGrid_MouseDoubleClick);
+            // 
+            // regNoDataGridViewTextBoxColumn
+            // 
+            this.regNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.regNoDataGridViewTextBoxColumn.DataPropertyName = "RegNo";
+            this.regNoDataGridViewTextBoxColumn.HeaderText = "RegNo";
+            this.regNoDataGridViewTextBoxColumn.Name = "regNoDataGridViewTextBoxColumn";
+            this.regNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // univRollNoDataGridViewTextBoxColumn
+            // 
+            this.univRollNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.univRollNoDataGridViewTextBoxColumn.DataPropertyName = "UnivRollNo";
+            this.univRollNoDataGridViewTextBoxColumn.HeaderText = "UnivRollNo";
+            this.univRollNoDataGridViewTextBoxColumn.Name = "univRollNoDataGridViewTextBoxColumn";
+            this.univRollNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // streamDataGridViewTextBoxColumn
+            // 
+            this.streamDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.streamDataGridViewTextBoxColumn.DataPropertyName = "Stream";
+            this.streamDataGridViewTextBoxColumn.HeaderText = "Stream";
+            this.streamDataGridViewTextBoxColumn.Name = "streamDataGridViewTextBoxColumn";
+            this.streamDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // semDataGridViewTextBoxColumn
+            // 
+            this.semDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.semDataGridViewTextBoxColumn.DataPropertyName = "Sem";
+            this.semDataGridViewTextBoxColumn.HeaderText = "Sem";
+            this.semDataGridViewTextBoxColumn.Name = "semDataGridViewTextBoxColumn";
+            this.semDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.tESToneDataSet1;
+            // 
+            // tESToneDataSet1
+            // 
+            this.tESToneDataSet1.DataSetName = "TESToneDataSet1";
+            this.tESToneDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -663,6 +644,7 @@
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGrid_MouseDoubleClick);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchbtn2)).EndInit();
             this.editpnl.ResumeLayout(false);
             this.editpnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
@@ -671,7 +653,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizebtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -679,14 +660,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
-        private MyImageButton.CustomImageButton minimizebtn;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel editpnl;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
@@ -714,6 +690,9 @@
         private TESToneDataSet1 tESToneDataSet1;
         private TESToneDataSet1TableAdapters.StudentTableAdapter studentTableAdapter;
         private Bunifu.Framework.UI.BunifuFlatButton viewallbtn;
-        private Bunifu.Framework.UI.BunifuFlatButton erasebtn;
+        private Bunifu.Framework.UI.BunifuFlatButton refreshbtn;
+        private Bunifu.Framework.UI.BunifuDropdown deptDrp1;
+        private MyImageButton.CustomImageButton searchbtn2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox searchbox1;
     }
 }

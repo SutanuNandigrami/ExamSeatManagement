@@ -200,6 +200,32 @@ namespace dashboard
             fillDept();
             fillBatch();
         }
+
+        private void studentbtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+            try
+            {
+                con.Open();
+                string query = "insert into Student values('" + textbox1.Text + "','" + textbox2.Text + "','" + textbox3.Text + "','" + deptDrp1.selectedValue + "','" + batchDrp.selectedValue + "')";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                sda.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                statuslbl.ForeColor = System.Drawing.Color.White;
+                statuslbl.Text = "INSERTION SUCCESSFULL";
+            }
+            catch
+            {
+                statuslbl.ForeColor = System.Drawing.Color.Red;
+                statuslbl.Text = "Duplicate Entry!!";
+            }
+
+            finally
+            {
+
+                con.Close();
+            }
+        }
     }
 }
 

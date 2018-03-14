@@ -153,6 +153,19 @@ namespace dashboard
             DataGrid.DataSource = dt;
             con.Close();
         }
+
+        private void erasebtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+            con.Open();
+            string query = "truncate table Room ";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            sda.SelectCommand.ExecuteNonQuery();
+            con.Close();
+            DataGrid.DataSource = null;
+
+            MessageBox.Show("Deletion SUCCESSFULL!!!!");
+        }
     }
 
 }

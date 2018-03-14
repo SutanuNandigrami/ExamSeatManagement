@@ -13,7 +13,7 @@ namespace dashboard
 {
     public partial class AddDept : UserControl
     {
-        string s;
+        
         private static AddDept _instance;
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
 
@@ -36,13 +36,8 @@ namespace dashboard
         {
             try
             {
-                 s=("UnSpecified").ToString();
-                con.Open();
-                if (radioButton1.Checked == true)
-                    s = "Active";
-                else if (radioButton2.Checked == true)
-                    s = "Inactive";
-                string query = "insert into Dept values('" + Textbox2.Text + "','" + Textbox1.Text + "','" + s + "')";
+               
+                string query = "insert into Dept values('" + Textbox2.Text + "','" + Textbox1.Text + "')";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 sda.SelectCommand.ExecuteNonQuery();
                 con.Close();

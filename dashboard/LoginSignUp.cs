@@ -52,7 +52,7 @@ namespace dashboard
         private void loginbtn_Click(object sender, EventArgs e)
         { 
 
-            if (Textbox1.Text != "User Name" && Textbox2.Text != "Password")
+            if ((Textbox1.Text != "User Name" && Textbox1.Text!="") && (Textbox2.Text != "Password" && Textbox2.Text!=""))
             {
                 Textbox1.LineIdleColor=System.Drawing.Color.FromArgb(255, 125, 0);
                 Textbox2.LineIdleColor=System.Drawing.Color.FromArgb(255, 125, 0);
@@ -95,8 +95,8 @@ namespace dashboard
             }
             else
             {
-                Textbox1.ForeColor = System.Drawing.Color.Red;
-                Textbox2.ForeColor = System.Drawing.Color.Red;
+                Textbox1.LineIdleColor = System.Drawing.Color.Red;
+                Textbox2.LineIdleColor = System.Drawing.Color.Red;
 
             }
             
@@ -105,7 +105,7 @@ namespace dashboard
 
         private void signup_Click(object sender, EventArgs e)
         {
-            if (STextbox1 != null && STextbox2 != null && STextbox3 != null)
+            if (STextbox1.Text != null && STextbox2.Text != null && STextbox3.Text != null && STextbox1.Text != "First Name" && STextbox2.Text != "Last Name" && STextbox3.Text != "Email Address(User Name)" && STextbox4.Text!=null && STextbox4.Text!="Password" && STextbox5.Text!="" && STextbox5.Text!= "Re-Enter Password")
             {
                 STextbox1.LineIdleColor = System.Drawing.Color.FromArgb(255, 125, 0);
                 STextbox2.LineIdleColor = System.Drawing.Color.FromArgb(255, 125, 0);
@@ -150,10 +150,13 @@ namespace dashboard
                 STextbox1.LineIdleColor = System.Drawing.Color.Red;
                 STextbox2.LineIdleColor = System.Drawing.Color.Red;
                 STextbox3.LineIdleColor = System.Drawing.Color.Red;
-
+                STextbox4.LineIdleColor = System.Drawing.Color.Red;
+                STextbox5.LineIdleColor = System.Drawing.Color.Red;
 
             }
 
         }
+
+                
     }
 }

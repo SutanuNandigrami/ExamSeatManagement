@@ -398,6 +398,7 @@ namespace dashboard
         }
 
         //User Control(VIEW Templates) Fetching Area
+
         private void viewRoombtn_Click(object sender, EventArgs e)
         {
             //Load View Room User Control 
@@ -410,7 +411,12 @@ namespace dashboard
 
             }
             else
+            {
                 ViewRoom.Instance.BringToFront();
+                clean();
+                ViewRoom.Instance.Update();
+            }
+                
             
 
         }
@@ -427,7 +433,12 @@ namespace dashboard
 
             }
             else
+            {
                 ViewDept.Instance.BringToFront();
+                clean();
+                ViewDept.Instance.Update();
+            }
+                
         }
 
         private void ViewBatchbtn_Click(object sender, EventArgs e)
@@ -442,7 +453,12 @@ namespace dashboard
 
             }
             else
+            {
                 ViewBatch.Instance.BringToFront();
+                clean();
+                ViewBatch.Instance.Update();
+            }
+                
         }
 
         private void ViewStudentbtn_Click(object sender, EventArgs e)
@@ -479,7 +495,12 @@ namespace dashboard
 
             }
             else
+            {
                 ViewDuration.Instance.BringToFront();
+                clean();
+                ViewDuration.Instance.Update();
+            }
+                
         }
 
         private void ViewPlanbtn_Click(object sender, EventArgs e)
@@ -494,7 +515,12 @@ namespace dashboard
 
             }
             else
+            {
                 ViewPlan.Instance.BringToFront();
+                clean();
+                ViewPlan.Instance.Update();
+            }
+                
         }
     }
 }

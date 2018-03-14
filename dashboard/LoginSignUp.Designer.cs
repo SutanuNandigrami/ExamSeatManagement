@@ -65,7 +65,7 @@
             this.Textbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.Textbox1.ForeColor = System.Drawing.Color.White;
             this.Textbox1.HintForeColor = System.Drawing.Color.White;
-            this.Textbox1.HintText = "";
+            this.Textbox1.HintText = "User Name";
             this.Textbox1.isPassword = false;
             this.Textbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
             this.Textbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
@@ -76,7 +76,6 @@
             this.Textbox1.Name = "Textbox1";
             this.Textbox1.Size = new System.Drawing.Size(296, 36);
             this.Textbox1.TabIndex = 1;
-            this.Textbox1.Text = "User Name";
             this.Textbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Textbox2
@@ -85,7 +84,7 @@
             this.Textbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.Textbox2.ForeColor = System.Drawing.Color.White;
             this.Textbox2.HintForeColor = System.Drawing.Color.White;
-            this.Textbox2.HintText = "";
+            this.Textbox2.HintText = "Password";
             this.Textbox2.isPassword = false;
             this.Textbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
             this.Textbox2.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
@@ -96,7 +95,6 @@
             this.Textbox2.Name = "Textbox2";
             this.Textbox2.Size = new System.Drawing.Size(296, 36);
             this.Textbox2.TabIndex = 2;
-            this.Textbox2.Text = "Password";
             this.Textbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // loginbtn
@@ -410,7 +408,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(453, 692);
+            this.ClientSize = new System.Drawing.Size(450, 692);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);

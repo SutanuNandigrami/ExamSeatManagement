@@ -14,7 +14,7 @@ namespace dashboard
     public partial class ViewDept : UserControl
     {
         private static ViewDept _instance;
-        string s;
+        
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
 
 
@@ -30,7 +30,7 @@ namespace dashboard
         public ViewDept()
         {
             InitializeComponent();
-            editpnl.Visible = false;
+            //editpnl.Visible = false;
             Display();
             
         }
@@ -47,15 +47,7 @@ namespace dashboard
 
             Textbox1.Text = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
             Textbox2.Text = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
-            if (DataGrid.SelectedRows[0].Cells[2].Value.ToString() == "Active")
-                radioButton1.Checked = true;
-            else
-                radioButton1.Checked = false;
-            if (DataGrid.SelectedRows[0].Cells[2].Value.ToString() == "Inactive")
-                radioButton2.Checked = true;
-            else
-                radioButton2.Checked = false;
-
+            
         }
         
         private void ViewDept_Load(object sender, EventArgs e)
@@ -72,13 +64,8 @@ namespace dashboard
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             
-            s = ("UnSpecified").ToString();
-            con.Open();
-            if (radioButton1.Checked == true)
-                s = "Active";
-            else if (radioButton2.Checked == true)
-                s = "Inactive";
-            string query = "update Dept set DeptName='" + Textbox2.Text + "',Status='" + s + "' where DeptId='" + Textbox1.Text + "'";
+            
+            string query = "update Dept set DeptName='" + Textbox2.Text + "' where DeptId='" + Textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
 
             sda.SelectCommand.ExecuteNonQuery();
@@ -145,8 +132,7 @@ namespace dashboard
         {
             Textbox1.Text = "";
             Textbox2.Text = "";
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
+           
             
         }
     }
