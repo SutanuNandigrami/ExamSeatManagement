@@ -35,7 +35,7 @@ namespace dashboard
         {
             SqlConnection mcon = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             mcon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Batch", mcon);
+            SqlDataAdapter da = new SqlDataAdapter("select * from Subject", mcon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             DataGrid.DataSource = dt;
@@ -51,8 +51,10 @@ namespace dashboard
         private void DataGrid_MouseDoubleClick(object sender, MouseEventArgs e)
         {
              Textbox1.Text = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
-            Textbox2.Text = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
-            
+             Textbox2.Text = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
+            Textbox3.Text = DataGrid.SelectedRows[0].Cells[2].Value.ToString();
+            Textbox4.Text = DataGrid.SelectedRows[0].Cells[3].Value.ToString();
+
             editpnl.Visible = true;
 
         }
@@ -65,7 +67,7 @@ namespace dashboard
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "update Batch set DeptName='" + Textbox2.Text + "' where BatchName='" + Textbox1.Text + "'";
+            string query = "update Subject set Subject='" + Textbox2.Text + "',Dept='"+ Textbox3.Text + "',sem='"+ Textbox4.Text + "' where PaperCode='" + Textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
@@ -76,7 +78,7 @@ namespace dashboard
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "delete from Batch where BatchName='" + Textbox1.Text + "'";
+            string query = "delete from Subject where PaperCode='" + Textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
@@ -94,7 +96,7 @@ namespace dashboard
             try
             {
                 con.Open();
-                string query = "select * from Batch where BatchName='" + searchbox.Text + "'";
+                string query = "select * from Subject where PaperCode='" + searchbox.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);

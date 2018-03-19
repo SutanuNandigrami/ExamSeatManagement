@@ -46,6 +46,11 @@ namespace dashboard
             textbox3.Text = DataGrid.SelectedRows[0].Cells[2].Value.ToString();
             textbox4.Text = DataGrid.SelectedRows[0].Cells[3].Value.ToString();
             textbox5.Text = DataGrid.SelectedRows[0].Cells[4].Value.ToString();
+            textbox6.Text = DataGrid.SelectedRows[0].Cells[5].Value.ToString();
+            textbox7.Text = DataGrid.SelectedRows[0].Cells[6].Value.ToString();
+            textbox8.Text = DataGrid.SelectedRows[0].Cells[7].Value.ToString();
+            textbox9.Text = DataGrid.SelectedRows[0].Cells[8].Value.ToString();
+
             textbox1.Enabled = false;
 
         }
@@ -58,7 +63,7 @@ namespace dashboard
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "update Student set UnivRollNo='" + textbox2.Text + "',Name='" + textbox3.Text + "',Stream='" + textbox4.Text + "',Sem='" + textbox5.Text + "' where RegNo='" + textbox1.Text + "'";
+            string query = "update Student set UnivRollNo='" + textbox2.Text + "',Name='" + textbox3.Text + "',Stream='" + textbox4.Text + "',Sem='" + textbox5.Text + "',UG/PG='" + textbox9.Text + "',HonsPaper='" + textbox6.Text + "',Pass1='" + textbox7.Text + "',Pass2='" + textbox8.Text + "' where RegNo='" + textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
 
             sda.SelectCommand.ExecuteNonQuery();

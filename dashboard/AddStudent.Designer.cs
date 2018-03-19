@@ -58,6 +58,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.refreshbtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.deptTableAdapter = new dashboard.TESToneDataSet1TableAdapters.DeptTableAdapter();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.hnsdrp = new Bunifu.Framework.UI.BunifuDropdown();
+            this.pass1drp = new Bunifu.Framework.UI.BunifuDropdown();
+            this.pass2drp = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ugpgdrp = new Bunifu.Framework.UI.BunifuDropdown();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deptBindingSource)).BeginInit();
@@ -102,7 +110,7 @@
             this.studentbtn.IconVisible = true;
             this.studentbtn.IconZoom = 50D;
             this.studentbtn.IsTab = true;
-            this.studentbtn.Location = new System.Drawing.Point(216, 447);
+            this.studentbtn.Location = new System.Drawing.Point(371, 610);
             this.studentbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.studentbtn.Name = "studentbtn";
             this.studentbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -120,6 +128,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.ugpgdrp);
+            this.panel2.Controls.Add(this.bunifuCustomLabel10);
+            this.panel2.Controls.Add(this.pass2drp);
+            this.panel2.Controls.Add(this.pass1drp);
+            this.panel2.Controls.Add(this.hnsdrp);
+            this.panel2.Controls.Add(this.bunifuCustomLabel9);
+            this.panel2.Controls.Add(this.bunifuCustomLabel2);
+            this.panel2.Controls.Add(this.bunifuCustomLabel1);
             this.panel2.Controls.Add(this.excellbl);
             this.panel2.Controls.Add(this.bunifuFlatButton3);
             this.panel2.Controls.Add(this.bunifuFlatButton2);
@@ -144,7 +160,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1428, 677);
+            this.panel2.Size = new System.Drawing.Size(1428, 695);
             this.panel2.TabIndex = 7;
             // 
             // excellbl
@@ -213,7 +229,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 50D;
             this.bunifuFlatButton2.IsTab = true;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(908, 97);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(892, 102);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -233,7 +249,7 @@
             this.bunifuCustomLabel7.AutoSize = true;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(680, 310);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(680, 319);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(49, 30);
             this.bunifuCustomLabel7.TabIndex = 10;
@@ -247,7 +263,7 @@
             this.bunifuSeparator2.Location = new System.Drawing.Point(685, 366);
             this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(38, 185);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(38, 234);
             this.bunifuSeparator2.TabIndex = 9;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = true;
@@ -260,7 +276,7 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(685, 90);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(38, 185);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(38, 216);
             this.bunifuSeparator1.TabIndex = 9;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = true;
@@ -271,7 +287,13 @@
             this.batchDrp.BorderRadius = 3;
             this.batchDrp.DisabledColor = System.Drawing.Color.Gray;
             this.batchDrp.ForeColor = System.Drawing.Color.White;
-            this.batchDrp.Items = new string[0];
+            this.batchDrp.Items = new string[] {
+        "1st",
+        "2nd",
+        "3rd",
+        "4th",
+        "5th",
+        "6th"};
             this.batchDrp.Location = new System.Drawing.Point(285, 140);
             this.batchDrp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.batchDrp.Name = "batchDrp";
@@ -288,9 +310,9 @@
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.bunifuCustomLabel4.Location = new System.Drawing.Point(12, 152);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(82, 30);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(122, 30);
             this.bunifuCustomLabel4.TabIndex = 7;
-            this.bunifuCustomLabel4.Text = "Batch";
+            this.bunifuCustomLabel4.Text = "Semester";
             // 
             // bunifuCustomLabel3
             // 
@@ -324,7 +346,7 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 50D;
             this.bunifuFlatButton4.IsTab = true;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(908, 306);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(892, 404);
             this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -389,7 +411,7 @@
             this.browsetxt.LineIdleColor = System.Drawing.Color.Gray;
             this.browsetxt.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.browsetxt.LineThickness = 3;
-            this.browsetxt.Location = new System.Drawing.Point(881, 183);
+            this.browsetxt.Location = new System.Drawing.Point(881, 251);
             this.browsetxt.Margin = new System.Windows.Forms.Padding(4);
             this.browsetxt.Name = "browsetxt";
             this.browsetxt.Size = new System.Drawing.Size(341, 45);
@@ -431,7 +453,7 @@
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(730, 198);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(730, 266);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(134, 30);
             this.bunifuCustomLabel8.TabIndex = 2;
@@ -539,6 +561,116 @@
             // 
             this.deptTableAdapter.ClearBeforeFill = true;
             // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 418);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(184, 30);
+            this.bunifuCustomLabel1.TabIndex = 13;
+            this.bunifuCustomLabel1.Text = "Honours Paper";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(12, 481);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(206, 30);
+            this.bunifuCustomLabel2.TabIndex = 15;
+            this.bunifuCustomLabel2.Text = "General Paper 1";
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(12, 546);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(206, 30);
+            this.bunifuCustomLabel9.TabIndex = 17;
+            this.bunifuCustomLabel9.Text = "General Paper 2";
+            // 
+            // hnsdrp
+            // 
+            this.hnsdrp.BackColor = System.Drawing.Color.Transparent;
+            this.hnsdrp.BorderRadius = 3;
+            this.hnsdrp.DisabledColor = System.Drawing.Color.Gray;
+            this.hnsdrp.ForeColor = System.Drawing.Color.White;
+            this.hnsdrp.Items = new string[0];
+            this.hnsdrp.Location = new System.Drawing.Point(285, 418);
+            this.hnsdrp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hnsdrp.Name = "hnsdrp";
+            this.hnsdrp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.hnsdrp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.hnsdrp.selectedIndex = -1;
+            this.hnsdrp.Size = new System.Drawing.Size(376, 42);
+            this.hnsdrp.TabIndex = 18;
+            // 
+            // pass1drp
+            // 
+            this.pass1drp.BackColor = System.Drawing.Color.Transparent;
+            this.pass1drp.BorderRadius = 3;
+            this.pass1drp.DisabledColor = System.Drawing.Color.Gray;
+            this.pass1drp.ForeColor = System.Drawing.Color.White;
+            this.pass1drp.Items = new string[0];
+            this.pass1drp.Location = new System.Drawing.Point(285, 469);
+            this.pass1drp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pass1drp.Name = "pass1drp";
+            this.pass1drp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.pass1drp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.pass1drp.selectedIndex = -1;
+            this.pass1drp.Size = new System.Drawing.Size(376, 42);
+            this.pass1drp.TabIndex = 19;
+            // 
+            // pass2drp
+            // 
+            this.pass2drp.BackColor = System.Drawing.Color.Transparent;
+            this.pass2drp.BorderRadius = 3;
+            this.pass2drp.DisabledColor = System.Drawing.Color.Gray;
+            this.pass2drp.ForeColor = System.Drawing.Color.White;
+            this.pass2drp.Items = new string[0];
+            this.pass2drp.Location = new System.Drawing.Point(285, 519);
+            this.pass2drp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pass2drp.Name = "pass2drp";
+            this.pass2drp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.pass2drp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.pass2drp.selectedIndex = -1;
+            this.pass2drp.Size = new System.Drawing.Size(376, 42);
+            this.pass2drp.TabIndex = 20;
+            // 
+            // bunifuCustomLabel10
+            // 
+            this.bunifuCustomLabel10.AutoSize = true;
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(12, 622);
+            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(95, 30);
+            this.bunifuCustomLabel10.TabIndex = 21;
+            this.bunifuCustomLabel10.Text = "UG/PG";
+            // 
+            // ugpgdrp
+            // 
+            this.ugpgdrp.BackColor = System.Drawing.Color.Transparent;
+            this.ugpgdrp.BorderRadius = 3;
+            this.ugpgdrp.DisabledColor = System.Drawing.Color.Gray;
+            this.ugpgdrp.ForeColor = System.Drawing.Color.White;
+            this.ugpgdrp.Items = new string[] {
+        "UG",
+        "PG"};
+            this.ugpgdrp.Location = new System.Drawing.Point(126, 610);
+            this.ugpgdrp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ugpgdrp.Name = "ugpgdrp";
+            this.ugpgdrp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.ugpgdrp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.ugpgdrp.selectedIndex = -1;
+            this.ugpgdrp.Size = new System.Drawing.Size(141, 42);
+            this.ugpgdrp.TabIndex = 22;
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -546,7 +678,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AddStudent";
-            this.Size = new System.Drawing.Size(1428, 777);
+            this.Size = new System.Drawing.Size(1428, 795);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -588,5 +720,13 @@
         private TESToneDataSet1TableAdapters.DeptTableAdapter deptTableAdapter;
         private System.Windows.Forms.BindingSource deptBindingSource;
         private Bunifu.Framework.UI.BunifuFlatButton refreshbtn;
+        private Bunifu.Framework.UI.BunifuDropdown pass2drp;
+        private Bunifu.Framework.UI.BunifuDropdown pass1drp;
+        private Bunifu.Framework.UI.BunifuDropdown hnsdrp;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuDropdown ugpgdrp;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
     }
 }

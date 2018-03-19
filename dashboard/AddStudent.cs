@@ -39,7 +39,8 @@ namespace dashboard
             InitializeComponent();
             browsetxt.Text = "";
             fillDept();
-            fillBatch();
+            fillHon();
+            fillgen();
             
         }   
 
@@ -68,12 +69,11 @@ namespace dashboard
                 }
             con.Close();
         }
-
-        void fillBatch()
+        void fillHon()
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             con.Open();
-            string query = "select * from Batch";
+            string query = "select * from SubList where SubType='HON'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -81,8 +81,8 @@ namespace dashboard
             {
                 while (dr.Read())
                 {
-                    string BatchName = dr.GetString(dr.GetOrdinal("BatchName"));
-                    batchDrp.AddItem(BatchName);
+                    string Subject = dr.GetString(dr.GetOrdinal("SubName"));
+                    hnsdrp.AddItem(Subject);
                 }
 
 
@@ -94,6 +94,35 @@ namespace dashboard
             }
             con.Close();
         }
+    
+
+        void fillgen()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+            con.Open();
+            string query = "select * from SubList where SubType='GEN'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            try
+            {
+                while (dr.Read())
+                {
+                    string Subject = dr.GetString(dr.GetOrdinal("SubName"));
+                    pass1drp.AddItem(Subject);
+                    pass2drp.AddItem(Subject);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            con.Close();
+        }
+        
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
 
@@ -127,7 +156,7 @@ namespace dashboard
         {
 
             string RegNo;
-            string UnivRollNo, Name, Stream, Sem;
+            string UnivRollNo, Name, Stream, Sem,UG,HonsPaper,Pass1,Pass2;
 
             //CODE TO BUILD CONNECTION WITH EXCEL SHEET
             string pathcon = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + browsetxt.Text + "; Extended Properties=Excel 8.0; Persist Security Info = False";
@@ -151,10 +180,14 @@ namespace dashboard
                     Name = dr[2].ToString();
                     Stream = dr[3].ToString();
                     Sem = dr[4].ToString();
+                    UG = dr[5].ToString();
+                    HonsPaper= dr[6].ToString();
+                    Pass1= dr[7].ToString();
+                    Pass2= dr[8].ToString();
 
                     try
                     {
-                        savedata(RegNo, UnivRollNo, Name, Stream, Sem);
+                        savedata(RegNo, UnivRollNo, Name, Stream, Sem,UG,HonsPaper,Pass1,Pass2);
                     }
                     catch (Exception)
                     {
@@ -183,9 +216,9 @@ namespace dashboard
 
 
 
-        private void savedata(string RegNo, string UnivRollNo, string Name, string Stream, string Sem)
+        private void savedata(string RegNo, string UnivRollNo, string Name, string Stream, string Sem,string UG,string HonsPaper,string Pass1, string Pass2)
         {
-            String query = "insert into Student values('" + RegNo + "','" + UnivRollNo + "','" + Name + "','" + Stream + "','" + Sem + "')";
+            String query = "insert into Student values('" + RegNo + "','" + UnivRollNo + "','" + Name + "','" + Stream + "','" + Sem + "','" + UG + "','" + HonsPaper + "','" + Pass1 + "','" + Pass2 + "')";
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             con.Open();
             SqlDataAdapter dAdop = new SqlDataAdapter(query, con);
@@ -196,9 +229,15 @@ namespace dashboard
         private void refreshbtn_Click(object sender, EventArgs e)
         {
             deptDrp1.Clear();
-            batchDrp.Clear();
+            batchDrp.selectedIndex = -1;
             fillDept();
-            fillBatch();
+            hnsdrp.Clear();
+            pass1drp.Clear();
+            pass2drp.Clear();
+            fillHon();
+            fillgen();
+           
+            
         }
 
         private void studentbtn_Click(object sender, EventArgs e)
@@ -207,7 +246,7 @@ namespace dashboard
             try
             {
                 con.Open();
-                string query = "insert into Student values('" + textbox1.Text + "','" + textbox2.Text + "','" + textbox3.Text + "','" + deptDrp1.selectedValue + "','" + batchDrp.selectedValue + "')";
+                string query = "insert into Student values('" + textbox1.Text + "','" + textbox2.Text + "','" + textbox3.Text + "','" + deptDrp1.selectedValue + "','" + batchDrp.selectedValue + "','" + ugpgdrp.selectedValue + "','" + hnsdrp.selectedValue+"','"+pass1drp.selectedValue+"','"+pass2drp.selectedValue+"')";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 sda.SelectCommand.ExecuteNonQuery();
                 con.Close();

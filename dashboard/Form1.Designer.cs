@@ -246,7 +246,7 @@
             this.btnBatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
             this.btnBatch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBatch.BorderRadius = 0;
-            this.btnBatch.ButtonText = "Batch";
+            this.btnBatch.ButtonText = "Paper";
             this.btnBatch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBatch.DisabledColor = System.Drawing.Color.Gray;
             this.btnBatch.Dock = System.Windows.Forms.DockStyle.Top;
@@ -271,7 +271,7 @@
             this.btnBatch.selected = false;
             this.btnBatch.Size = new System.Drawing.Size(262, 66);
             this.btnBatch.TabIndex = 5;
-            this.btnBatch.Text = "Batch";
+            this.btnBatch.Text = "Paper";
             this.btnBatch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBatch.Textcolor = System.Drawing.Color.Silver;
             this.btnBatch.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1063,7 +1063,7 @@
             this.ViewBatchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
             this.ViewBatchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ViewBatchbtn.BorderRadius = 0;
-            this.ViewBatchbtn.ButtonText = "View Batch";
+            this.ViewBatchbtn.ButtonText = "View Paper";
             this.ViewBatchbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ViewBatchbtn.DisabledColor = System.Drawing.Color.Gray;
             this.ViewBatchbtn.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1089,7 +1089,7 @@
             this.ViewBatchbtn.selected = false;
             this.ViewBatchbtn.Size = new System.Drawing.Size(302, 44);
             this.ViewBatchbtn.TabIndex = 5;
-            this.ViewBatchbtn.Text = "View Batch";
+            this.ViewBatchbtn.Text = "View Paper";
             this.ViewBatchbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ViewBatchbtn.Textcolor = System.Drawing.Color.Silver;
             this.ViewBatchbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1101,7 +1101,7 @@
             this.AddBatchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(109)))), ((int)(((byte)(179)))));
             this.AddBatchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddBatchbtn.BorderRadius = 0;
-            this.AddBatchbtn.ButtonText = "Add Batch";
+            this.AddBatchbtn.ButtonText = "Add Paper";
             this.AddBatchbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddBatchbtn.DisabledColor = System.Drawing.Color.Gray;
             this.AddBatchbtn.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1127,7 +1127,7 @@
             this.AddBatchbtn.selected = false;
             this.AddBatchbtn.Size = new System.Drawing.Size(302, 51);
             this.AddBatchbtn.TabIndex = 4;
-            this.AddBatchbtn.Text = "Add Batch";
+            this.AddBatchbtn.Text = "Add Paper";
             this.AddBatchbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AddBatchbtn.Textcolor = System.Drawing.Color.Silver;
             this.AddBatchbtn.TextFont = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
