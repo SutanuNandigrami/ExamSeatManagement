@@ -28,19 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel = new System.Windows.Forms.Panel();
+            this.clr = new System.Windows.Forms.Button();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel
+            // 
+            this.panel.Controls.Add(this.clr);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1060, 700);
+            this.panel.TabIndex = 0;
+            // 
+            // clr
+            // 
+            this.clr.Location = new System.Drawing.Point(741, 35);
+            this.clr.Name = "clr";
+            this.clr.Size = new System.Drawing.Size(75, 23);
+            this.clr.TabIndex = 0;
+            this.clr.Text = "Clear";
+            this.clr.UseVisualStyleBackColor = true;
+            this.clr.Click += new System.EventHandler(this.clr_Click);
             // 
             // SeatingArrangementcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 700);
+            this.Controls.Add(this.panel);
             this.Name = "SeatingArrangementcs";
             this.Text = "SeatingArrangementcs";
+            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button clr;
     }
 }

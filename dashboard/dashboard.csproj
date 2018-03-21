@@ -112,6 +112,7 @@
     <Compile Include="LoginSignUp.Designer.cs">
       <DependentUpon>LoginSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlanVar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
@@ -172,6 +173,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TESToneDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TESToneDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TESToneDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="ViewBatch.cs">
       <SubType>UserControl</SubType>
@@ -274,6 +280,7 @@
     <EmbeddedResource Include="ViewStudent.resx">
       <DependentUpon>ViewStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\PlanVar.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -359,6 +366,17 @@
     </None>
     <None Include="TESToneDataSet6.xss">
       <DependentUpon>TESToneDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TESToneDataSet7.xsc">
+      <DependentUpon>TESToneDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="TESToneDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TESToneDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TESToneDataSet7.xss">
+      <DependentUpon>TESToneDataSet7.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

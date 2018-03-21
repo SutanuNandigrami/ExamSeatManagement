@@ -42,7 +42,6 @@
             this.studentnolbl = new System.Windows.Forms.Label();
             this.paperdrp = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.datepkr = new Bunifu.Framework.UI.BunifuDatepicker();
             this.roomdrp = new Bunifu.Framework.UI.BunifuDropdown();
             this.deptdrp = new Bunifu.Framework.UI.BunifuDropdown();
             this.durdrp = new Bunifu.Framework.UI.BunifuDropdown();
@@ -59,6 +58,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.refroombtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.refreshbtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.datepkr = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,6 +78,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.datepkr);
             this.panel2.Controls.Add(this.lblrmcap);
             this.panel2.Controls.Add(this.batchdrp);
             this.panel2.Controls.Add(this.bunifuCustomLabel4);
@@ -89,7 +90,6 @@
             this.panel2.Controls.Add(this.studentnolbl);
             this.panel2.Controls.Add(this.paperdrp);
             this.panel2.Controls.Add(this.bunifuCustomLabel7);
-            this.panel2.Controls.Add(this.datepkr);
             this.panel2.Controls.Add(this.roomdrp);
             this.panel2.Controls.Add(this.deptdrp);
             this.panel2.Controls.Add(this.durdrp);
@@ -250,21 +250,6 @@
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(96, 34);
             this.bunifuCustomLabel7.TabIndex = 8;
             this.bunifuCustomLabel7.Text = "Paper";
-            // 
-            // datepkr
-            // 
-            this.datepkr.BackColor = System.Drawing.Color.SeaGreen;
-            this.datepkr.BorderRadius = 0;
-            this.datepkr.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.datepkr.ForeColor = System.Drawing.Color.White;
-            this.datepkr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datepkr.FormatCustom = null;
-            this.datepkr.Location = new System.Drawing.Point(398, 147);
-            this.datepkr.Margin = new System.Windows.Forms.Padding(4);
-            this.datepkr.Name = "datepkr";
-            this.datepkr.Size = new System.Drawing.Size(312, 44);
-            this.datepkr.TabIndex = 7;
-            this.datepkr.Value = new System.DateTime(2018, 3, 12, 0, 6, 44, 890);
             // 
             // roomdrp
             // 
@@ -551,6 +536,14 @@
             this.refreshbtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshbtn.Click += new System.EventHandler(this.Refreshbtn_Click);
             // 
+            // datepkr
+            // 
+            this.datepkr.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepkr.Location = new System.Drawing.Point(398, 157);
+            this.datepkr.Name = "datepkr";
+            this.datepkr.Size = new System.Drawing.Size(312, 26);
+            this.datepkr.TabIndex = 19;
+            // 
             // AddPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -583,7 +576,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuDatepicker datepkr;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Textbox2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
@@ -600,5 +592,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private System.Windows.Forms.Label lblrmcap;
         private Bunifu.Framework.UI.BunifuFlatButton refroombtn;
+        private System.Windows.Forms.DateTimePicker datepkr;
     }
 }

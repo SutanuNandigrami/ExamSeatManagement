@@ -368,6 +368,7 @@ namespace dashboard
                         {
                             RegNo = dr2.GetString(dr2.GetOrdinal("RegNo"));
                             Textbox1.Text = RegNo;
+                            
                         }
                         RegNo = dr2.GetString(dr2.GetOrdinal("RegNo"));
                         i++;
@@ -391,6 +392,7 @@ namespace dashboard
                 MessageBox.Show(k.ToString());
             }
         }
+
        
         private void deptdrp_onItemSelected(object sender, EventArgs e)
         {
@@ -413,13 +415,15 @@ namespace dashboard
         private void addPlanbtn_Click(object sender, EventArgs e)
         {
 
+           
+
             //adding plan to database
 
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             try
             {
                 con.Open();
-                string query = $"INSERT INTO AddPlan VALUES('{paperdrp.selectedValue}','{batchdrp.selectedValue}','{subdrp.selectedValue}','{deptdrp.selectedValue}','{roomdrp.selectedValue.ToString()}','{durdrp.selectedValue}','{datepkr.Value.Date}','{Textbox1.Text}','{Textbox2.Text}')";
+                string query = $"INSERT INTO AddPlan VALUES('{paperdrp.selectedValue}','{batchdrp.selectedValue}','{subdrp.selectedValue}','{deptdrp.selectedValue}','{roomdrp.selectedValue.ToString()}','{durdrp.selectedValue}','{datepkr.Value}','{Textbox1.Text}','{Textbox2.Text}')";
                 SqlCommand cmd=new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 
