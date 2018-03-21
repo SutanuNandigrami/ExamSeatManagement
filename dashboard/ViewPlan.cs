@@ -19,10 +19,13 @@ namespace dashboard
     {
         int cap,capasity;
         
-        string PaperCode="", Sem="", Subject="", Dept="", RoomNo="", Duration="", RollS="", RollE="";
+        string PaperCode="", Sem="", Subject="", Dept="", RoomNo="", Duration="", RollS="", RollE="",strDate;
         DateTime Date = DateTime.Now;
 
-        public PlanVar pp { get; set; }
+        public delegate void SetTextValueCallback(string str);
+        public SetTextValueCallback pp;
+
+        //public PlanVar pp { get; set; }
          
 
         private static ViewPlan _instance;
@@ -38,6 +41,33 @@ namespace dashboard
                 return _instance;
             }
         }
+
+        private void DataGrid_MouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            PaperCode = DataGrid.SelectedRows[0].Cells[0].Value.ToString();
+            Sem = DataGrid.SelectedRows[0].Cells[1].Value.ToString();
+            Subject = DataGrid.SelectedRows[0].Cells[2].Value.ToString();
+            Dept = DataGrid.SelectedRows[0].Cells[3].Value.ToString();
+            RoomNo = DataGrid.SelectedRows[0].Cells[4].Value.ToString();
+            Duration = DataGrid.SelectedRows[0].Cells[5].Value.ToString();
+            /*strDate = DataGrid.SelectedRows[0].Cells[6].Value.ToString() ;
+            Date = DateTime.ParseExact(strDate, "dd/MM/YYYY", System.Globalization.CultureInfo.InvariantCulture);
+             RollS = DataGrid.SelectedRows[0].Cells[7].Value.ToString(); 
+             RollE = DataGrid.SelectedRows[0].Cells[8].Value.ToString(); */
+            //capasity = MaxCap(RoomNo);
+
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True;MultipleActiveResultSets=True");
+            string query = "update AddPlan set A='" + 1.ToString() + "' where (PaperCode='" + PaperCode + "' ) ";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+
+            SeatingArrangementcs b = new SeatingArrangementcs();
+
+
+            b.Show();
+        }
+
         public ViewPlan()
         {
             InitializeComponent();
@@ -84,39 +114,7 @@ namespace dashboard
             }
         }
 
-        private void DataGrid_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            PaperCode = DataGrid.SelectedRows[0].Cells[0].Value.ToString(); 
-             Sem = DataGrid.SelectedRows[0].Cells[1].Value.ToString(); 
-            Subject = DataGrid.SelectedRows[0].Cells[2].Value.ToString(); 
-             Dept = DataGrid.SelectedRows[0].Cells[3].Value.ToString(); 
-             RoomNo = DataGrid.SelectedRows[0].Cells[4].Value.ToString(); 
-             Duration = DataGrid.SelectedRows[0].Cells[5].Value.ToString();
-            //strDate = DataGrid.SelectedRows[0].Cells[6].Value.ToString() ;
-            //Date = DateTime.ParseExact(strDate, "dd/MM/YYYY", System.Globalization.CultureInfo.InvariantCulture);
-             RollS = DataGrid.SelectedRows[0].Cells[7].Value.ToString(); 
-             RollE = DataGrid.SelectedRows[0].Cells[8].Value.ToString(); 
-            capasity = MaxCap(RoomNo);
-
-            label1.Text = PaperCode;
-            label2.Text = capasity.ToString();
-
-            pp.PaperCode = PaperCode;
-            pp.Sem = Sem;
-            pp.Subject = Subject;
-            pp.Dept = Dept;
-            pp.RoomNo = RoomNo;
-            pp.Duration = Duration;
-            pp.RollS = RollS;
-            pp.RollE = RollE;
-            pp.capasity = capasity;
-           // pp.Date = Date;
-
-
-            //ViewRoomArgBtn.selected = true;
-            SeatingArrangementcs b = new SeatingArrangementcs(pp);
-            b.ShowDialog();
-        }
+       
 
         private void ViewPlan_Load(object sender, EventArgs e)
         {
@@ -158,54 +156,15 @@ namespace dashboard
             
         }
 
-        private void DataGrid_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-           
+        
 
-        }
+       
 
-        public int MaxCap(string rno)
-        {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True;MultipleActiveResultSets=True");
-            string query = "select Location,ColumnNo,BenchCapasity from Room where RoomNo='" + int.Parse(rno) + "'";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            
-            while (dr.Read())
-            {
-                cap = dr.GetInt32(dr.GetOrdinal("BenchCapasity"));
-
-            }
-            return cap;
-        }
-
-        private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-                
-              /*  {pp.PaperCode = DataGrid.SelectedRows[0].Cells[0].Value.ToString(); }
-                { pp.Sem = DataGrid.SelectedRows[0].Cells[1].Value.ToString(); }
-                { pp.Subject = DataGrid.SelectedRows[0].Cells[2].Value.ToString(); }
-                { pp.Dept = DataGrid.SelectedRows[0].Cells[3].Value.ToString(); }
-                { pp.RoomNo = DataGrid.SelectedRows[0].Cells[4].Value.ToString(); }
-                { pp.Duration = DataGrid.SelectedRows[0].Cells[5].Value.ToString(); }
-                { //pp.Date = Convert.ToDateTime(DataGrid.SelectedRows[0].Cells[6].Value.ToString()); }
-                { pp.RollS = DataGrid.SelectedRows[0].Cells[7].Value.ToString(); }
-                { pp.RollE = DataGrid.SelectedRows[0].Cells[8].Value.ToString(); }
-
-                { pp.capasity = MaxCap(pp.RoomNo).ToString(); }
-                
-
-            //ViewRoomArgBtn.selected = true;
-            SeatingArrangementcs b = new SeatingArrangementcs(pp);
-            b.ShowDialog();*/
-        }
+       
 
         private void ViewRoomArgBtn_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

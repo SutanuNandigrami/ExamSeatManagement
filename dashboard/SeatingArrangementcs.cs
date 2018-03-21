@@ -13,25 +13,23 @@ namespace dashboard
 {
     public partial class SeatingArrangementcs : Form
     {
-        int ColNo;
-        string Loc;
+        int ColNo,cap, BenchCapasity;
+        string PaperCode="",RoomNo="",P="";
+        string Loc="", capasity="",Sem="",Dept="",Subject="",RollS="",RollE="";
 
 
-        public PlanVar plan;
+      
         public SeatingArrangementcs()
         {
             InitializeComponent();
-           
+            this.AutoScroll = true;
+            panel.Visible = true;
+            
             arrange();
 
         }
 
-        public SeatingArrangementcs(PlanVar pv)
-        {
-            InitializeComponent();
-            plan = pv;
-           
-        }
+      
         void eraseDesign()
         {
             SqlConnection con3 = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
@@ -44,25 +42,58 @@ namespace dashboard
 
         void arrange()
         {
+            getData();
+            getOtherRows(RoomNo);
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             con.Open();
-            string query = "select RegNo,UnivRollNo,Name,Stream from Student where Sem='" + plan.Sem + "' and Stream='" + plan.Dept + "' and (HonsPaper='" + plan.Subject + "' or Pass1='" + plan.Subject + "' or Pass2='" + plan.Subject + "') ORDER BY RegNo ASC";
+            string query = "select RegNo,UnivRollNo,Name,Stream from Student where Sem='" + Sem + "' and Stream='" + Dept + "' and (HonsPaper='" + Subject + "' or Pass1='" + Subject + "' or Pass2='" + Subject + "') ORDER BY RegNo ASC";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader dr = cmd.ExecuteReader();
             int pointer = 1;
-
-            int m = plan.capasity;
-            getOtherRows(plan.RoomNo);
-            DesignMatrix(m);
+            DesignMatrix(BenchCapasity);
             try
             {
                 while (dr.Read())
                 {
-                    NewTextBox(pointer).Text = (dr[0].ToString()) + Environment.NewLine + (dr[1].ToString()) + Environment.NewLine + (dr[2].ToString()) + Environment.NewLine + (dr[3].ToString()) + Environment.NewLine + (plan.Subject);
+                    NewTextBox(pointer).Text = (dr[0].ToString()) + Environment.NewLine + (dr[1].ToString()) + Environment.NewLine + (dr[2].ToString()) + Environment.NewLine + (dr[3].ToString()) + Environment.NewLine + (Subject) + Environment.NewLine + (Sem);
                     pointer++;
                 }
 
                 MessageBox.Show("Arrangement Completed!!");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+
+            con.Close();
+        }
+
+        void getData()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
+            con.Open();
+            string query = "select PaperCode,Sem,Subject,Dept,RoomNo,RollS,RollE from AddPlan where A='" + 1.ToString()+"'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            
+            try
+            {
+                while (dr.Read())
+                {
+                    PaperCode= dr.GetString(dr.GetOrdinal("PaperCode"));
+                    Sem= dr.GetString(dr.GetOrdinal("Sem"));
+                    Subject= dr.GetString(dr.GetOrdinal("Subject"));
+                    Dept= dr.GetString(dr.GetOrdinal("Dept"));
+                    RoomNo= dr.GetString(dr.GetOrdinal("RoomNo"));
+
+                    RollS= dr.GetString(dr.GetOrdinal("RollS"));
+                    RollE= dr.GetString(dr.GetOrdinal("RollE"));
+                }
+
+                P = PaperCode;
             }
             catch (Exception ex)
             {
@@ -138,6 +169,16 @@ namespace dashboard
 
         }
 
+        private void SeatingArrangementcs_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void print_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+        }
+
         void getOtherRows(string rmn)
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True;MultipleActiveResultSets=True");
@@ -152,6 +193,7 @@ namespace dashboard
                 
                 ColNo = dr.GetInt32(dr.GetOrdinal("ColumnNo"));
                 Loc = dr.GetString(dr.GetOrdinal("Location"));
+                BenchCapasity = dr.GetInt32(dr.GetOrdinal("BenchCapasity"));
 
             }
             
@@ -171,7 +213,18 @@ namespace dashboard
         private void clr_Click(object sender, EventArgs e)
         {
             eraseDesign();
+
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True;MultipleActiveResultSets=True");
+            string query = "update AddPlan set A='" + 0.ToString() + "' where (PaperCode='" + P + "' )";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+
+            this.Close();
         }
+
+        
+       
     }
 
 }

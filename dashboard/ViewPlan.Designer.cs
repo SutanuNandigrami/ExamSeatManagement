@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tESToneDataSet = new dashboard.TESToneDataSet();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomTableAdapter = new dashboard.TESToneDataSetTableAdapters.RoomTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.tESToneDataSet6 = new dashboard.TESToneDataSet6();
+            this.addPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tESToneDataSet8 = new dashboard.TESToneDataSet8();
             this.Stickerbtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ViewRoomArgBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.PrntScheduleBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tESToneDataSet6 = new dashboard.TESToneDataSet6();
             this.searchBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,8 +52,8 @@
             this.addPlanTableAdapter = new dashboard.TESToneDataSet6TableAdapters.AddPlanTableAdapter();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tESToneDataSet7 = new dashboard.TESToneDataSet7();
-            this.addPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addPlanTableAdapter1 = new dashboard.TESToneDataSet7TableAdapters.AddPlanTableAdapter();
+            this.addPlanTableAdapter2 = new dashboard.TESToneDataSet8TableAdapters.AddPlanTableAdapter();
             this.paperCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.semDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,17 +63,16 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rollSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rollEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet6)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addPlanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tESToneDataSet
@@ -90,8 +91,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.DataGrid);
             this.panel2.Controls.Add(this.Stickerbtn);
             this.panel2.Controls.Add(this.ViewRoomArgBtn);
@@ -106,25 +105,25 @@
             // 
             this.DataGrid.AllowUserToAddRows = false;
             this.DataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DataGrid.AutoGenerateColumns = false;
             this.DataGrid.BackgroundColor = System.Drawing.Color.White;
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGrid.ColumnHeadersHeight = 50;
             this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.paperCodeDataGridViewTextBoxColumn,
@@ -137,14 +136,14 @@
             this.rollSDataGridViewTextBoxColumn,
             this.rollEDataGridViewTextBoxColumn});
             this.DataGrid.DataSource = this.addPlanBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.DataGrid.DoubleBuffered = true;
             this.DataGrid.EnableHeadersVisualStyles = false;
             this.DataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
@@ -159,13 +158,17 @@
             this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGrid.Size = new System.Drawing.Size(1259, 537);
             this.DataGrid.TabIndex = 17;
-            this.DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellContentClick);
-            this.DataGrid.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGrid_MouseDoubleClick);
+            this.DataGrid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGrid_MouseDoubleClick);
             // 
-            // tESToneDataSet6
+            // addPlanBindingSource
             // 
-            this.tESToneDataSet6.DataSetName = "TESToneDataSet6";
-            this.tESToneDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.addPlanBindingSource.DataMember = "AddPlan";
+            this.addPlanBindingSource.DataSource = this.tESToneDataSet8;
+            // 
+            // tESToneDataSet8
+            // 
+            this.tESToneDataSet8.DataSetName = "TESToneDataSet8";
+            this.tESToneDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Stickerbtn
             // 
@@ -273,6 +276,11 @@
             this.PrntScheduleBtn.Textcolor = System.Drawing.Color.White;
             this.PrntScheduleBtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrntScheduleBtn.Click += new System.EventHandler(this.PrntScheduleBtn_Click);
+            // 
+            // tESToneDataSet6
+            // 
+            this.tESToneDataSet6.DataSetName = "TESToneDataSet6";
+            this.tESToneDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // searchBox
             // 
@@ -402,14 +410,13 @@
             this.tESToneDataSet7.DataSetName = "TESToneDataSet7";
             this.tESToneDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // addPlanBindingSource
-            // 
-            this.addPlanBindingSource.DataMember = "AddPlan";
-            this.addPlanBindingSource.DataSource = this.tESToneDataSet7;
-            // 
             // addPlanTableAdapter1
             // 
             this.addPlanTableAdapter1.ClearBeforeFill = true;
+            // 
+            // addPlanTableAdapter2
+            // 
+            this.addPlanTableAdapter2.ClearBeforeFill = true;
             // 
             // paperCodeDataGridViewTextBoxColumn
             // 
@@ -483,24 +490,6 @@
             this.rollEDataGridViewTextBoxColumn.Name = "rollEDataGridViewTextBoxColumn";
             this.rollEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(961, 607);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1048, 607);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "label2";
-            // 
             // ViewPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -513,14 +502,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addPlanBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -544,6 +533,11 @@
         private TESToneDataSet6TableAdapters.AddPlanTableAdapter addPlanTableAdapter;
         private Bunifu.Framework.UI.BunifuCustomDataGrid DataGrid;
         private Bunifu.Framework.UI.BunifuDatepicker dtpkr;
+        private TESToneDataSet7 tESToneDataSet7;
+        private TESToneDataSet7TableAdapters.AddPlanTableAdapter addPlanTableAdapter1;
+        private System.Windows.Forms.BindingSource addPlanBindingSource;
+        private TESToneDataSet8 tESToneDataSet8;
+        private TESToneDataSet8TableAdapters.AddPlanTableAdapter addPlanTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn paperCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn semDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn subjectDataGridViewTextBoxColumn;
@@ -553,10 +547,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rollSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rollEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource addPlanBindingSource;
-        private TESToneDataSet7 tESToneDataSet7;
-        private TESToneDataSet7TableAdapters.AddPlanTableAdapter addPlanTableAdapter1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
     }
 }

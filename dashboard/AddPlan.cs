@@ -44,9 +44,7 @@ namespace dashboard
 
         private void Refreshbtn_Click(object sender, EventArgs e)
         {
-            batchdrp.Enabled = false;
-            subdrp.Enabled = false;
-            paperdrp.Enabled = false;
+            
             
             try
             {
@@ -55,15 +53,14 @@ namespace dashboard
                 
                 durdrp.Clear();
             }
-            catch (Exception k)
+            catch (Exception )
             {
-
-                MessageBox.Show(k.ToString());
+                throw;
             }
             
             FillDept();
             FillDur();
-           
+            statuslbl.Text = "";
            fillsub();
             
         }
@@ -358,12 +355,13 @@ namespace dashboard
                 string query2 = "select * from Student where Sem='" + batchdrp.selectedValue + "' and (HonsPaper='" + subdrp.selectedValue + "' or Pass1='" + subdrp.selectedValue + "' or Pass2='" + subdrp.selectedValue + "') ORDER BY RegNo ASC";
                 SqlCommand cmd2 = new SqlCommand(query2, conn);
                 SqlDataReader dr2 = cmd2.ExecuteReader();
-                int i = 1;
+                int i = 0;
 
                 try
                 {
                     while (dr2.Read())
                     {
+                        i++;
                         if (i == 1)
                         {
                             RegNo = dr2.GetString(dr2.GetOrdinal("RegNo"));
@@ -371,7 +369,7 @@ namespace dashboard
                             
                         }
                         RegNo = dr2.GetString(dr2.GetOrdinal("RegNo"));
-                        i++;
+                        
 
                     }
                     Textbox2.Text = RegNo;
@@ -405,8 +403,8 @@ namespace dashboard
         {
             roomdrp.Enabled = true;
 
-            //cleantempRoom();
-            //filltempRoom();
+            cleantempRoom();
+            filltempRoom();
             roomdrp.Clear();
             FillRoom();
 
@@ -423,7 +421,7 @@ namespace dashboard
             try
             {
                 con.Open();
-                string query = $"INSERT INTO AddPlan VALUES('{paperdrp.selectedValue}','{batchdrp.selectedValue}','{subdrp.selectedValue}','{deptdrp.selectedValue}','{roomdrp.selectedValue.ToString()}','{durdrp.selectedValue}','{datepkr.Value}','{Textbox1.Text}','{Textbox2.Text}')";
+                string query = $"INSERT INTO AddPlan VALUES('{paperdrp.selectedValue}','{batchdrp.selectedValue}','{subdrp.selectedValue}','{deptdrp.selectedValue}','{roomdrp.selectedValue.ToString()}','{durdrp.selectedValue}','{datepkr.Value}','{Textbox1.Text}','{Textbox2.Text}',{0.ToString()})";
                 SqlCommand cmd=new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 
@@ -517,7 +515,7 @@ namespace dashboard
 
         private void refroombtn_Click(object sender, EventArgs e)
         {
-            //cleantempRoom();
+            cleantempRoom();
             filltempRoom();
             roomdrp.Clear();
             FillRoom();
