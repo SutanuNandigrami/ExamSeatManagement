@@ -88,6 +88,12 @@
     <Compile Include="AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Arrangement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Arrangement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Dash.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomArrangement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomArrangement.Designer.cs">
+      <DependentUpon>RoomArrangement.cs</DependentUpon>
     </Compile>
     <Compile Include="SeatingArrangementcs.cs">
       <SubType>Form</SubType>
@@ -231,6 +243,10 @@
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Arrangement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Arrangement.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dash.resx">
       <DependentUpon>Dash.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomArrangement.resx">
+      <DependentUpon>RoomArrangement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeatingArrangementcs.resx">
       <DependentUpon>SeatingArrangementcs.cs</DependentUpon>

@@ -29,14 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tESToneDataSet = new dashboard.TESToneDataSet();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomTableAdapter = new dashboard.TESToneDataSetTableAdapters.RoomTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.paperCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rollSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rollEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tESToneDataSet8 = new dashboard.TESToneDataSet8();
             this.Stickerbtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -48,21 +57,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpkr = new Bunifu.Framework.UI.BunifuDatepicker();
             this.viewallbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.searchbtn = new MyImageButton.CustomImageButton();
             this.addPlanTableAdapter = new dashboard.TESToneDataSet6TableAdapters.AddPlanTableAdapter();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tESToneDataSet7 = new dashboard.TESToneDataSet7();
             this.addPlanTableAdapter1 = new dashboard.TESToneDataSet7TableAdapters.AddPlanTableAdapter();
             this.addPlanTableAdapter2 = new dashboard.TESToneDataSet8TableAdapters.AddPlanTableAdapter();
-            this.paperCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deptDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rollSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rollEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchbtn = new MyImageButton.CustomImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -71,8 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet6)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tESToneDataSet
@@ -105,25 +105,25 @@
             // 
             this.DataGrid.AllowUserToAddRows = false;
             this.DataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DataGrid.AutoGenerateColumns = false;
             this.DataGrid.BackgroundColor = System.Drawing.Color.White;
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGrid.ColumnHeadersHeight = 50;
             this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.paperCodeDataGridViewTextBoxColumn,
@@ -136,14 +136,14 @@
             this.rollSDataGridViewTextBoxColumn,
             this.rollEDataGridViewTextBoxColumn});
             this.DataGrid.DataSource = this.addPlanBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGrid.DoubleBuffered = true;
             this.DataGrid.EnableHeadersVisualStyles = false;
             this.DataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
@@ -158,7 +158,80 @@
             this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGrid.Size = new System.Drawing.Size(1259, 537);
             this.DataGrid.TabIndex = 17;
+            this.DataGrid.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGrid_CellMouseClick);
             this.DataGrid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGrid_MouseDoubleClick);
+            // 
+            // paperCodeDataGridViewTextBoxColumn
+            // 
+            this.paperCodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.paperCodeDataGridViewTextBoxColumn.DataPropertyName = "PaperCode";
+            this.paperCodeDataGridViewTextBoxColumn.HeaderText = "PaperCode";
+            this.paperCodeDataGridViewTextBoxColumn.Name = "paperCodeDataGridViewTextBoxColumn";
+            this.paperCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // semDataGridViewTextBoxColumn
+            // 
+            this.semDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.semDataGridViewTextBoxColumn.DataPropertyName = "Sem";
+            this.semDataGridViewTextBoxColumn.HeaderText = "Sem";
+            this.semDataGridViewTextBoxColumn.Name = "semDataGridViewTextBoxColumn";
+            this.semDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // subjectDataGridViewTextBoxColumn
+            // 
+            this.subjectDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.subjectDataGridViewTextBoxColumn.DataPropertyName = "Subject";
+            this.subjectDataGridViewTextBoxColumn.HeaderText = "Subject";
+            this.subjectDataGridViewTextBoxColumn.Name = "subjectDataGridViewTextBoxColumn";
+            this.subjectDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deptDataGridViewTextBoxColumn
+            // 
+            this.deptDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deptDataGridViewTextBoxColumn.DataPropertyName = "Dept";
+            this.deptDataGridViewTextBoxColumn.HeaderText = "Dept";
+            this.deptDataGridViewTextBoxColumn.Name = "deptDataGridViewTextBoxColumn";
+            this.deptDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roomNoDataGridViewTextBoxColumn
+            // 
+            this.roomNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.roomNoDataGridViewTextBoxColumn.DataPropertyName = "RoomNo";
+            this.roomNoDataGridViewTextBoxColumn.HeaderText = "RoomNo";
+            this.roomNoDataGridViewTextBoxColumn.Name = "roomNoDataGridViewTextBoxColumn";
+            this.roomNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // durationDataGridViewTextBoxColumn
+            // 
+            this.durationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.durationDataGridViewTextBoxColumn.DataPropertyName = "Duration ";
+            this.durationDataGridViewTextBoxColumn.HeaderText = "Duration ";
+            this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
+            this.durationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rollSDataGridViewTextBoxColumn
+            // 
+            this.rollSDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rollSDataGridViewTextBoxColumn.DataPropertyName = "RollS";
+            this.rollSDataGridViewTextBoxColumn.HeaderText = "RollS";
+            this.rollSDataGridViewTextBoxColumn.Name = "rollSDataGridViewTextBoxColumn";
+            this.rollSDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rollEDataGridViewTextBoxColumn
+            // 
+            this.rollEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rollEDataGridViewTextBoxColumn.DataPropertyName = "RollE";
+            this.rollEDataGridViewTextBoxColumn.HeaderText = "RollE";
+            this.rollEDataGridViewTextBoxColumn.Name = "rollEDataGridViewTextBoxColumn";
+            this.rollEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addPlanBindingSource
             // 
@@ -376,21 +449,6 @@
             this.viewallbtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewallbtn.Click += new System.EventHandler(this.viewallbtn_Click);
             // 
-            // searchbtn
-            // 
-            this.searchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.searchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.searchbtn.Image = global::dashboard.Properties.Resources.Search_100px;
-            this.searchbtn.ImageHover = global::dashboard.Properties.Resources.Detective_96px;
-            this.searchbtn.ImageNormal = global::dashboard.Properties.Resources.Search_100px;
-            this.searchbtn.Location = new System.Drawing.Point(862, 16);
-            this.searchbtn.Name = "searchbtn";
-            this.searchbtn.Size = new System.Drawing.Size(46, 81);
-            this.searchbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchbtn.TabIndex = 7;
-            this.searchbtn.TabStop = false;
-            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
-            // 
             // addPlanTableAdapter
             // 
             this.addPlanTableAdapter.ClearBeforeFill = true;
@@ -418,77 +476,20 @@
             // 
             this.addPlanTableAdapter2.ClearBeforeFill = true;
             // 
-            // paperCodeDataGridViewTextBoxColumn
+            // searchbtn
             // 
-            this.paperCodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.paperCodeDataGridViewTextBoxColumn.DataPropertyName = "PaperCode";
-            this.paperCodeDataGridViewTextBoxColumn.HeaderText = "PaperCode";
-            this.paperCodeDataGridViewTextBoxColumn.Name = "paperCodeDataGridViewTextBoxColumn";
-            this.paperCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // semDataGridViewTextBoxColumn
-            // 
-            this.semDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.semDataGridViewTextBoxColumn.DataPropertyName = "Sem";
-            this.semDataGridViewTextBoxColumn.HeaderText = "Sem";
-            this.semDataGridViewTextBoxColumn.Name = "semDataGridViewTextBoxColumn";
-            this.semDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // subjectDataGridViewTextBoxColumn
-            // 
-            this.subjectDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.subjectDataGridViewTextBoxColumn.DataPropertyName = "Subject";
-            this.subjectDataGridViewTextBoxColumn.HeaderText = "Subject";
-            this.subjectDataGridViewTextBoxColumn.Name = "subjectDataGridViewTextBoxColumn";
-            this.subjectDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // deptDataGridViewTextBoxColumn
-            // 
-            this.deptDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.deptDataGridViewTextBoxColumn.DataPropertyName = "Dept";
-            this.deptDataGridViewTextBoxColumn.HeaderText = "Dept";
-            this.deptDataGridViewTextBoxColumn.Name = "deptDataGridViewTextBoxColumn";
-            this.deptDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // roomNoDataGridViewTextBoxColumn
-            // 
-            this.roomNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.roomNoDataGridViewTextBoxColumn.DataPropertyName = "RoomNo";
-            this.roomNoDataGridViewTextBoxColumn.HeaderText = "RoomNo";
-            this.roomNoDataGridViewTextBoxColumn.Name = "roomNoDataGridViewTextBoxColumn";
-            this.roomNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // durationDataGridViewTextBoxColumn
-            // 
-            this.durationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.durationDataGridViewTextBoxColumn.DataPropertyName = "Duration ";
-            this.durationDataGridViewTextBoxColumn.HeaderText = "Duration ";
-            this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
-            this.durationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rollSDataGridViewTextBoxColumn
-            // 
-            this.rollSDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.rollSDataGridViewTextBoxColumn.DataPropertyName = "RollS";
-            this.rollSDataGridViewTextBoxColumn.HeaderText = "RollS";
-            this.rollSDataGridViewTextBoxColumn.Name = "rollSDataGridViewTextBoxColumn";
-            this.rollSDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rollEDataGridViewTextBoxColumn
-            // 
-            this.rollEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.rollEDataGridViewTextBoxColumn.DataPropertyName = "RollE";
-            this.rollEDataGridViewTextBoxColumn.HeaderText = "RollE";
-            this.rollEDataGridViewTextBoxColumn.Name = "rollEDataGridViewTextBoxColumn";
-            this.rollEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.searchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.searchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.searchbtn.Image = global::dashboard.Properties.Resources.Search_100px;
+            this.searchbtn.ImageHover = global::dashboard.Properties.Resources.Detective_96px;
+            this.searchbtn.ImageNormal = global::dashboard.Properties.Resources.Search_100px;
+            this.searchbtn.Location = new System.Drawing.Point(862, 16);
+            this.searchbtn.Name = "searchbtn";
+            this.searchbtn.Size = new System.Drawing.Size(46, 81);
+            this.searchbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchbtn.TabIndex = 7;
+            this.searchbtn.TabStop = false;
+            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
             // 
             // ViewPlan
             // 
@@ -508,8 +509,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).EndInit();
             this.ResumeLayout(false);
 
         }

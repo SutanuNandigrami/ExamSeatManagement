@@ -139,7 +139,7 @@ namespace dashboard
                     try
                     {
                         int RoomNo= dr.GetInt32(dr.GetOrdinal("RoomNo"));
-                        int BenchCapasity= dr.GetInt32(dr.GetOrdinal("BenchCapasity")); ;
+                        int BenchCapasity= dr.GetInt32(dr.GetOrdinal("BenchCapasity")); 
                         String query2 = "insert into TempRoom (RoomNo,BenchCapasity) values('"+RoomNo+"','"+BenchCapasity+"') ";
                         SqlDataAdapter dAdop = new SqlDataAdapter(query2, con);
                         dAdop.SelectCommand.ExecuteNonQuery();
