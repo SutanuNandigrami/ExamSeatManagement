@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tESToneDataSet = new dashboard.TESToneDataSet();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomTableAdapter = new dashboard.TESToneDataSetTableAdapters.RoomTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ViewRoomArgBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.PrntScheduleBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.planNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,13 +65,10 @@
             this.addPlanTableAdapter2 = new dashboard.TESToneDataSet8TableAdapters.AddPlanTableAdapter();
             this.addPlanTableAdapter3 = new dashboard.TESToneDataSet9TableAdapters.AddPlanTableAdapter();
             this.addPlanTableAdapter4 = new dashboard.TESToneDataSet10TableAdapters.AddPlanTableAdapter();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Stickerbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.ViewRoomArgBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.PrntScheduleBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet10)).BeginInit();
@@ -78,7 +78,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet7)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tESToneDataSet
@@ -105,28 +104,109 @@
             this.panel2.Size = new System.Drawing.Size(1303, 651);
             this.panel2.TabIndex = 3;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ViewRoomArgBtn);
+            this.panel3.Controls.Add(this.PrntScheduleBtn);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 545);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1303, 100);
+            this.panel3.TabIndex = 18;
+            // 
+            // ViewRoomArgBtn
+            // 
+            this.ViewRoomArgBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.ViewRoomArgBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.ViewRoomArgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ViewRoomArgBtn.BorderRadius = 0;
+            this.ViewRoomArgBtn.ButtonText = "View Room Arrangement";
+            this.ViewRoomArgBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewRoomArgBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.ViewRoomArgBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.ViewRoomArgBtn.Iconimage = global::dashboard.Properties.Resources.Eye_96px;
+            this.ViewRoomArgBtn.Iconimage_right = null;
+            this.ViewRoomArgBtn.Iconimage_right_Selected = null;
+            this.ViewRoomArgBtn.Iconimage_Selected = null;
+            this.ViewRoomArgBtn.IconMarginLeft = 0;
+            this.ViewRoomArgBtn.IconMarginRight = 0;
+            this.ViewRoomArgBtn.IconRightVisible = true;
+            this.ViewRoomArgBtn.IconRightZoom = 0D;
+            this.ViewRoomArgBtn.IconVisible = true;
+            this.ViewRoomArgBtn.IconZoom = 50D;
+            this.ViewRoomArgBtn.IsTab = true;
+            this.ViewRoomArgBtn.Location = new System.Drawing.Point(599, 25);
+            this.ViewRoomArgBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.ViewRoomArgBtn.Name = "ViewRoomArgBtn";
+            this.ViewRoomArgBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.ViewRoomArgBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
+            this.ViewRoomArgBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ViewRoomArgBtn.selected = false;
+            this.ViewRoomArgBtn.Size = new System.Drawing.Size(386, 51);
+            this.ViewRoomArgBtn.TabIndex = 18;
+            this.ViewRoomArgBtn.Text = "View Room Arrangement";
+            this.ViewRoomArgBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ViewRoomArgBtn.Textcolor = System.Drawing.Color.White;
+            this.ViewRoomArgBtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewRoomArgBtn.Click += new System.EventHandler(this.ViewRoomArgBtn_Click);
+            // 
+            // PrntScheduleBtn
+            // 
+            this.PrntScheduleBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.PrntScheduleBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.PrntScheduleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PrntScheduleBtn.BorderRadius = 0;
+            this.PrntScheduleBtn.ButtonText = "Print Exam Schedule";
+            this.PrntScheduleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PrntScheduleBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.PrntScheduleBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.PrntScheduleBtn.Iconimage = global::dashboard.Properties.Resources.Eye_96px;
+            this.PrntScheduleBtn.Iconimage_right = null;
+            this.PrntScheduleBtn.Iconimage_right_Selected = null;
+            this.PrntScheduleBtn.Iconimage_Selected = null;
+            this.PrntScheduleBtn.IconMarginLeft = 0;
+            this.PrntScheduleBtn.IconMarginRight = 0;
+            this.PrntScheduleBtn.IconRightVisible = true;
+            this.PrntScheduleBtn.IconRightZoom = 0D;
+            this.PrntScheduleBtn.IconVisible = true;
+            this.PrntScheduleBtn.IconZoom = 50D;
+            this.PrntScheduleBtn.IsTab = true;
+            this.PrntScheduleBtn.Location = new System.Drawing.Point(115, 25);
+            this.PrntScheduleBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.PrntScheduleBtn.Name = "PrntScheduleBtn";
+            this.PrntScheduleBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.PrntScheduleBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
+            this.PrntScheduleBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.PrntScheduleBtn.selected = false;
+            this.PrntScheduleBtn.Size = new System.Drawing.Size(320, 51);
+            this.PrntScheduleBtn.TabIndex = 19;
+            this.PrntScheduleBtn.Text = "Print Exam Schedule";
+            this.PrntScheduleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PrntScheduleBtn.Textcolor = System.Drawing.Color.White;
+            this.PrntScheduleBtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrntScheduleBtn.Click += new System.EventHandler(this.PrntScheduleBtn_Click);
+            // 
             // DataGrid
             // 
             this.DataGrid.AllowUserToAddRows = false;
-            this.DataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(63)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGrid.AutoGenerateColumns = false;
             this.DataGrid.BackgroundColor = System.Drawing.Color.White;
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGrid.ColumnHeadersHeight = 50;
             this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.planNoDataGridViewTextBoxColumn,
@@ -137,14 +217,14 @@
             this.paperCode2DataGridViewTextBoxColumn,
             this.subject2DataGridViewTextBoxColumn});
             this.DataGrid.DataSource = this.addPlanBindingSource;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGrid.Dock = System.Windows.Forms.DockStyle.Top;
             this.DataGrid.DoubleBuffered = true;
             this.DataGrid.EnableHeadersVisualStyles = false;
@@ -160,6 +240,7 @@
             this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGrid.Size = new System.Drawing.Size(1303, 545);
             this.DataGrid.TabIndex = 17;
+            this.DataGrid.VirtualMode = true;
             this.DataGrid.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGrid_CellMouseClick);
             // 
             // planNoDataGridViewTextBoxColumn
@@ -381,124 +462,6 @@
             // 
             this.addPlanTableAdapter4.ClearBeforeFill = true;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.Stickerbtn);
-            this.panel3.Controls.Add(this.ViewRoomArgBtn);
-            this.panel3.Controls.Add(this.PrntScheduleBtn);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 545);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1303, 100);
-            this.panel3.TabIndex = 18;
-            // 
-            // Stickerbtn
-            // 
-            this.Stickerbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Stickerbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Stickerbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Stickerbtn.BorderRadius = 0;
-            this.Stickerbtn.ButtonText = "Stickers";
-            this.Stickerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Stickerbtn.DisabledColor = System.Drawing.Color.Gray;
-            this.Stickerbtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.Stickerbtn.Iconimage = global::dashboard.Properties.Resources.Eye_96px;
-            this.Stickerbtn.Iconimage_right = null;
-            this.Stickerbtn.Iconimage_right_Selected = null;
-            this.Stickerbtn.Iconimage_Selected = null;
-            this.Stickerbtn.IconMarginLeft = 0;
-            this.Stickerbtn.IconMarginRight = 0;
-            this.Stickerbtn.IconRightVisible = true;
-            this.Stickerbtn.IconRightZoom = 0D;
-            this.Stickerbtn.IconVisible = true;
-            this.Stickerbtn.IconZoom = 50D;
-            this.Stickerbtn.IsTab = true;
-            this.Stickerbtn.Location = new System.Drawing.Point(845, 25);
-            this.Stickerbtn.Margin = new System.Windows.Forms.Padding(6);
-            this.Stickerbtn.Name = "Stickerbtn";
-            this.Stickerbtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Stickerbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
-            this.Stickerbtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.Stickerbtn.selected = false;
-            this.Stickerbtn.Size = new System.Drawing.Size(171, 51);
-            this.Stickerbtn.TabIndex = 17;
-            this.Stickerbtn.Text = "Stickers";
-            this.Stickerbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Stickerbtn.Textcolor = System.Drawing.Color.White;
-            this.Stickerbtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // ViewRoomArgBtn
-            // 
-            this.ViewRoomArgBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.ViewRoomArgBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.ViewRoomArgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ViewRoomArgBtn.BorderRadius = 0;
-            this.ViewRoomArgBtn.ButtonText = "View Room Arrangement";
-            this.ViewRoomArgBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewRoomArgBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.ViewRoomArgBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.ViewRoomArgBtn.Iconimage = global::dashboard.Properties.Resources.Eye_96px;
-            this.ViewRoomArgBtn.Iconimage_right = null;
-            this.ViewRoomArgBtn.Iconimage_right_Selected = null;
-            this.ViewRoomArgBtn.Iconimage_Selected = null;
-            this.ViewRoomArgBtn.IconMarginLeft = 0;
-            this.ViewRoomArgBtn.IconMarginRight = 0;
-            this.ViewRoomArgBtn.IconRightVisible = true;
-            this.ViewRoomArgBtn.IconRightZoom = 0D;
-            this.ViewRoomArgBtn.IconVisible = true;
-            this.ViewRoomArgBtn.IconZoom = 50D;
-            this.ViewRoomArgBtn.IsTab = true;
-            this.ViewRoomArgBtn.Location = new System.Drawing.Point(447, 25);
-            this.ViewRoomArgBtn.Margin = new System.Windows.Forms.Padding(6);
-            this.ViewRoomArgBtn.Name = "ViewRoomArgBtn";
-            this.ViewRoomArgBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.ViewRoomArgBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
-            this.ViewRoomArgBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.ViewRoomArgBtn.selected = false;
-            this.ViewRoomArgBtn.Size = new System.Drawing.Size(386, 51);
-            this.ViewRoomArgBtn.TabIndex = 18;
-            this.ViewRoomArgBtn.Text = "View Room Arrangement";
-            this.ViewRoomArgBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ViewRoomArgBtn.Textcolor = System.Drawing.Color.White;
-            this.ViewRoomArgBtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewRoomArgBtn.Click += new System.EventHandler(this.ViewRoomArgBtn_Click);
-            // 
-            // PrntScheduleBtn
-            // 
-            this.PrntScheduleBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.PrntScheduleBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.PrntScheduleBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PrntScheduleBtn.BorderRadius = 0;
-            this.PrntScheduleBtn.ButtonText = "Print Exam Schedule";
-            this.PrntScheduleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PrntScheduleBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.PrntScheduleBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.PrntScheduleBtn.Iconimage = global::dashboard.Properties.Resources.Eye_96px;
-            this.PrntScheduleBtn.Iconimage_right = null;
-            this.PrntScheduleBtn.Iconimage_right_Selected = null;
-            this.PrntScheduleBtn.Iconimage_Selected = null;
-            this.PrntScheduleBtn.IconMarginLeft = 0;
-            this.PrntScheduleBtn.IconMarginRight = 0;
-            this.PrntScheduleBtn.IconRightVisible = true;
-            this.PrntScheduleBtn.IconRightZoom = 0D;
-            this.PrntScheduleBtn.IconVisible = true;
-            this.PrntScheduleBtn.IconZoom = 50D;
-            this.PrntScheduleBtn.IsTab = true;
-            this.PrntScheduleBtn.Location = new System.Drawing.Point(115, 25);
-            this.PrntScheduleBtn.Margin = new System.Windows.Forms.Padding(6);
-            this.PrntScheduleBtn.Name = "PrntScheduleBtn";
-            this.PrntScheduleBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.PrntScheduleBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(11)))), ((int)(((byte)(14)))));
-            this.PrntScheduleBtn.OnHoverTextColor = System.Drawing.Color.White;
-            this.PrntScheduleBtn.selected = false;
-            this.PrntScheduleBtn.Size = new System.Drawing.Size(320, 51);
-            this.PrntScheduleBtn.TabIndex = 19;
-            this.PrntScheduleBtn.Text = "Print Exam Schedule";
-            this.PrntScheduleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.PrntScheduleBtn.Textcolor = System.Drawing.Color.White;
-            this.PrntScheduleBtn.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrntScheduleBtn.Click += new System.EventHandler(this.PrntScheduleBtn_Click);
-            // 
             // ViewPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -511,6 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPlanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet10)).EndInit();
@@ -521,7 +485,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tESToneDataSet7)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -559,7 +522,6 @@
         private TESToneDataSet10 tESToneDataSet10;
         private TESToneDataSet10TableAdapters.AddPlanTableAdapter addPlanTableAdapter4;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuFlatButton Stickerbtn;
         private Bunifu.Framework.UI.BunifuFlatButton ViewRoomArgBtn;
         private Bunifu.Framework.UI.BunifuFlatButton PrntScheduleBtn;
     }

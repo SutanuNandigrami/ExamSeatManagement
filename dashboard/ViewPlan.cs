@@ -115,14 +115,18 @@ namespace dashboard
 
             b.Show();
 
-            
+            RoomArrangement c = new RoomArrangement();
+            c.ShowDialog();
+            eraseArr();
+
+
         }
 
         public void firstdeptadd()
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True;MultipleActiveResultSets=True");
             con.Open();
-            string query = "select RegNo,UnivRollNo,Name,Stream from Student where (Sem='" + Sem + "' and Stream='" + Dept + "' and (HonsPaper='" + Subject + "' or Pass1='" + Subject + "' or Pass2='" + Subject + "')) ORDER BY RegNo ASC";
+            string query = "select RegNo,UnivRollNo,Name from Student where (Sem='" + Sem + "' and Stream='" + Dept + "' and (HonsPaper='" + Subject + "' or Pass1='" + Subject + "' or Pass2='" + Subject + "')) ORDER BY RegNo ASC";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -136,9 +140,9 @@ namespace dashboard
                         string RegNo = dr.GetString(dr.GetOrdinal("RegNo"));
                         string UnivRollNo = dr.GetString(dr.GetOrdinal("UnivRollNo"));
                         string Name = dr.GetString(dr.GetOrdinal("Name"));
-                        string Stream = dr.GetString(dr.GetOrdinal("Stream"));
+                        //string Stream = dr.GetString(dr.GetOrdinal("Stream"));
 
-                        String query2 = "insert into Arrangement (RegNo,UnivRollNo,Name,Stream,PaperCode,Subject,Sem,RollS,RollE,RoomNo,Duration,PaperCode2,Subject2,Sem2,RollS2,RollE2,RoomNo2,Dept2) values('" + RegNo + "','" + UnivRollNo + "','" + Name + "','" + Stream + "','" + PaperCode + "','" + Subject + "','" + Sem + "','" + RollS + "','" + RollE + "','" + RoomNo + "','" + Duration + "','" + PaperCode2 + "','" + Subject2 + "','" + Sem2 + "','" + RollS2 + "','" + RollE2 + "','" + RoomNo2 + "','" + Dept2 + "') ";
+                        String query2 = "insert into Arrangement (RegNo,UnivRollNo,Name,Stream,PaperCode,Subject,Sem,RollS,RollE,RoomNo,Duration) values('" + RegNo + "','" + UnivRollNo + "','" + Name + "','" + Dept + "','" + PaperCode + "','" + Subject + "','" + Sem + "','" + RollS + "','" + RollE + "','" + RoomNo + "','" + Duration + "') ";
                         SqlDataAdapter dAdop = new SqlDataAdapter(query2, con);
                         dAdop.SelectCommand.ExecuteNonQuery();
                     }
@@ -165,7 +169,7 @@ namespace dashboard
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True;MultipleActiveResultSets=True");
             con.Open();
-            string query = "select RegNo,UnivRollNo,Name,Stream from Student where (Sem = '" + Sem2 + "' and Stream = '" + Dept2 + "' and(HonsPaper = '" + Subject2 + "' or Pass1 = '" + Subject2 + "' or Pass2 = '" + Subject2 + "')) ORDER BY RegNo ASC";
+            string query = "select RegNo,UnivRollNo,Name from Student where (Sem = '" + Sem2 + "' and Stream = '" + Dept2 + "' and(HonsPaper = '" + Subject2 + "' or Pass1 = '" + Subject2 + "' or Pass2 = '" + Subject2 + "')) ORDER BY RegNo ASC";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -179,9 +183,9 @@ namespace dashboard
                         string RegNo = dr.GetString(dr.GetOrdinal("RegNo"));
                         string UnivRollNo = dr.GetString(dr.GetOrdinal("UnivRollNo"));
                         string Name = dr.GetString(dr.GetOrdinal("Name"));
-                        string Stream = dr.GetString(dr.GetOrdinal("Stream"));
+                        //string Stream = dr.GetString(dr.GetOrdinal("Stream"));
 
-                        String query2 = "insert into Arrangement (RegNo,UnivRollNo,Name,Stream,PaperCode,Subject,Sem,RollS,RollE,RoomNo,Duration,PaperCode2,Subject2,Sem2,RollS2,RollE2,RoomNo2,Dept2) values('" + RegNo + "','" + UnivRollNo + "','" + Name + "','" + Stream + "','" + PaperCode + "','" + Subject + "','" + Sem + "','" + RollS + "','" + RollE + "','" + RoomNo + "','" + Duration + "','" + PaperCode2 + "','" + Subject2 + "','" + Sem2 + "','" + RollS2 + "','" + RollE2 + "','" + RoomNo2 + "','" + Dept2 + "') ";
+                        String query2 = "insert into Arrangement (RegNo,UnivRollNo,Name,Stream,PaperCode,Subject,Sem,RollS,RollE,RoomNo,Duration) values('" + RegNo + "','" + UnivRollNo + "','" + Name + "','" + Dept2 + "','" + PaperCode2 + "','" + Subject2 + "','" + Sem2 + "','" + RollS2 + "','" + RollE2 + "','" + RoomNo2 + "','" + Duration + "') ";
                         SqlDataAdapter dAdop = new SqlDataAdapter(query2, con);
                         dAdop.SelectCommand.ExecuteNonQuery();
                     }
@@ -219,7 +223,7 @@ namespace dashboard
             eraseDesign();
 
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True;MultipleActiveResultSets=True");
-            string query = "update AddPlan set A='" + 0.ToString() + "' where (PlanNo='" + PlanNo + "' )";
+            string query = "update AddPlan set A='" + 0.ToString() + "' where (A='" + 1.ToString() + "' )";
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();

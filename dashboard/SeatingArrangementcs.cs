@@ -13,21 +13,25 @@ namespace dashboard
 {
     public partial class SeatingArrangementcs : Form
     {
-        int ColNo, ColNo2, cap, BenchCapasity,Sitting, BenchCapasity2;
-        string PaperCode="",RoomNo="",P="";
-        string Loc="", Loc2 = "", capasity ="",Sem="",Dept="",Subject="",RollS="",RollE="", Sem2 = "", Dept2 = "", Subject2 = "", RollS2 = "", RollE2 = "", PaperCode2 = "", RoomNo2 = "", Duration="";
+        int ColNo, ColNo2, cap, BenchCapasity, Sitting, BenchCapasity2;
+        string PaperCode = "", RoomNo = "", P = "";
+        string Loc = "", Loc2 = "", capasity = "", Sem = "", Dept = "", Subject = "", RollS = "", RollE = "", Sem2 = "", Dept2 = "", Subject2 = "", RollS2 = "", RollE2 = "", PaperCode2 = "", RoomNo2 = "", Duration = "";
+        int[] a = new int[200];
+        int[] b = new int[200];
 
         private void button1_Click(object sender, EventArgs e)
         {
             eraseDesign();
             label4.Visible = false;
+            a = new int[200];
+            b = new int[200];
             getData();
             RoomFunc();
         }
 
         string Date;
 
-      
+
         public SeatingArrangementcs()
         {
             InitializeComponent();
@@ -36,11 +40,11 @@ namespace dashboard
             label4.Visible = false;
             getData();
             RoomFunc();
-            
-
+            a = new int[200];
+            b = new int[200];
         }
 
-      
+
         void eraseDesign()
         {
             SqlConnection con3 = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
@@ -53,35 +57,38 @@ namespace dashboard
 
         void RoomFunc()
         {
-            if(RoomNo!=null && RoomNo2!="0")  //DOUBLE ROOM CASE
+            if (RoomNo != null && RoomNo2 != "0")  //DOUBLE ROOM CASE
             {
-                if (Dept != null && Dept2!= "0")  //DOUBLE DEPT CASE
+                if (Dept != null && Dept2 != "0")  //DOUBLE DEPT CASE
                 {
-                    if(Sitting==0)  // SINGLE SITTING
+                    if (Sitting == 0)  // SINGLE SITTING
                     {
                         getOtherRows_R2(RoomNo, RoomNo2);
 
-                        DesignMatrix_S1R2(BenchCapasity2);
+                        DesignMatrix_S1R1(BenchCapasity);
                         DesignMatrix_S1R2(BenchCapasity2);
 
                         Arrange_D2S1();
                     }
-                    else if(Sitting==1) // DOUBLE SITTING
+                    else if (Sitting == 1) // DOUBLE SITTING
                     {
+                        MessageBox.Show("DDD");
                         getOtherRows_R2(RoomNo, RoomNo2);
-                        DesignMatrix_S2R2(BenchCapasity2);
+                        DesignMatrix_S2R1(BenchCapasity);
                         DesignMatrix_S2R2(BenchCapasity2);
                         Arrange_D2S2();
+
                     }
                 }
-                else if(Dept!=null && Dept2== "0") //SINGLE DEPT CASE
+                else if (Dept != null && Dept2 == "0") //SINGLE DEPT CASE
                 {
                     if (Sitting == 0)  // SINGLE SITTING
                     {
-                        getOtherRows_R2(RoomNo,RoomNo2);
+                        MessageBox.Show("hello;");
+                        getOtherRows_R2(RoomNo, RoomNo2);
 
-                        DesignMatrix_S1R2(BenchCapasity);
-                        DesignMatrix_S1R2(BenchCapasity);
+                        DesignMatrix_S1R1(BenchCapasity);
+                        DesignMatrix_S1R2(BenchCapasity2);
 
                         Arrange_D1();
 
@@ -89,13 +96,13 @@ namespace dashboard
                     else if (Sitting == 1) // DOUBLE SITTING
                     {
                         getOtherRows_R2(RoomNo, RoomNo2);
-                        DesignMatrix_S2R2(BenchCapasity);
-                        DesignMatrix_S2R2(BenchCapasity);
+                        DesignMatrix_S2R1(BenchCapasity);
+                        DesignMatrix_S2R2(BenchCapasity2);
                         Arrange_D1();
                     }
                 }
             }
-            else if(RoomNo!=null && RoomNo2== "0") //SINGLE ROOM CASE
+            else if (RoomNo != null && RoomNo2 == "0") //SINGLE ROOM CASE
             {
                 if (Dept != null && Dept2 != "0")  //DOUBLE DEPT CASE
                 {
@@ -118,7 +125,7 @@ namespace dashboard
                 {
                     if (Sitting == 0)  // SINGLE SITTING
                     {
-                        
+
                         label2.Text = RoomNo;
                         getOtherRows_R1(rmn: RoomNo);
                         DesignMatrix_S1R1(BenchCapasity);
@@ -137,15 +144,15 @@ namespace dashboard
 
         void Arrange_D1()
         {
-            
-           
+
+
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             con.Open();
             string query = "select RegNo,UnivRollNo,Name,Stream from Student where Sem='" + Sem + "' and Stream='" + Dept + "' and (HonsPaper='" + Subject + "' or Pass1='" + Subject + "' or Pass2='" + Subject + "') ORDER BY RegNo ASC";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader dr = cmd.ExecuteReader();
             int pointer = 1;
-            
+
             try
             {
                 while (dr.Read())
@@ -155,14 +162,14 @@ namespace dashboard
                 }
 
                 //for any blank box
-                while(pointer<=BenchCapasity)
+                while (pointer <= BenchCapasity)
                 {
                     NewTextBox(pointer);
                     pointer++;
                 }
 
                 MessageBox.Show("Arrangement Completed!!");
-              
+
             }
             catch (Exception ex)
             {
@@ -176,14 +183,14 @@ namespace dashboard
 
         void Arrange_D2S1()
         {
-           
+
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             con.Open();
             string query = "select RegNo,UnivRollNo,Name,Stream from Student where Sem='" + Sem + "' and Stream='" + Dept + "' and (HonsPaper='" + Subject + "' or Pass1='" + Subject + "' or Pass2='" + Subject + "') ORDER BY RegNo ASC";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader dr = cmd.ExecuteReader();
             int pointer = 1;
-           
+
             try
             {
                 while (dr.Read())
@@ -191,7 +198,7 @@ namespace dashboard
                     NewTextBox(pointer).Text = (dr[0].ToString());
                     pointer++;
                 }
-                
+
 
             }
             catch (Exception ex)
@@ -225,7 +232,7 @@ namespace dashboard
             con.Close();
 
             //for any blank box
-            while (pointer <= BenchCapasity )
+            while (pointer <= BenchCapasity)
             {
                 NewTextBox(pointer);
                 pointer++;
@@ -235,44 +242,87 @@ namespace dashboard
 
         void Arrange_D2S2()
         {
-
+            
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
             con.Open();
             string query = "select RegNo,UnivRollNo,Name,Stream from Student where Sem='" + Sem + "' and Stream='" + Dept + "' and (HonsPaper='" + Subject + "' or Pass1='" + Subject + "' or Pass2='" + Subject + "') ORDER BY RegNo ASC";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader dr = cmd.ExecuteReader();
+
+            //ROOM 1
+
             int pointer = 1;
-            int c =BenchCapasity*2;
-            int n =  BenchCapasity/ColNo;
+            int c = BenchCapasity * 2;
+            int n = BenchCapasity / ColNo;
             int flag = 1;
+            int k = 1;
+           
+
+            while (pointer <= c)
+            {
+               
+                if (pointer > n * flag)
+                {
+                    pointer = pointer + n;
+                    flag = flag + 2;
+                    continue;
+                }
+                a[k] = pointer;
+               // MessageBox.Show("1st"+pointer.ToString());
+                pointer++;
+                k++;
+                
+                
+            }
+            //ROOM 2
+            int pointer2 = c+1;
+            int c2 = BenchCapasity2 * 2;
+            int n2 = BenchCapasity2 / ColNo2;
+            int flag2 = 1;
+            int k2 = BenchCapasity+1;
+
+
+            while (pointer2 <= c+c2)
+            {
+
+                if (pointer2 > c+(n2 * flag2))
+                {
+                    pointer2 = pointer2 + n2;
+                    flag2 = flag2 + 2;
+                    continue;
+                }
+                a[k2] = pointer2;
+               // MessageBox.Show(pointer2.ToString());
+                pointer2++;
+                k2++;
+            }
+
+            //GETTING DATA
             try
             {
+                k = 1;
+               // k2 = 1;
                 while (dr.Read())
                 {
-                    while (pointer <= c)
-                    {
+                    NewTextBox(a[k]).Text = (dr[0].ToString());
+                    //NewTextBox(a[k]);
 
-                        NewTextBox(pointer).Text = (dr[0].ToString());
+                    k++;
 
+                   // NewTextBox(b[k2]).Text = (dr[0].ToString());
+                    //NewTextBox(b[k]);
 
-                        if (pointer == n * flag)
-                        {
-                            pointer = pointer + n;
-                            flag = flag + 2;
-                        }
-                        pointer++;
-                    }
+                   // k2++;
                 }
-                while (pointer <= c)
+
+                for (int i = 1; i <= (BenchCapasity ) + (BenchCapasity2 ); i++)
                 {
-                    NewTextBox(pointer);
-                    if (pointer == n * flag)
-                    {
-                        pointer = pointer + n;
-                        flag = flag + 2;
-                    }
-                    pointer++;
+                    if(a[i].Equals(null))
+                       NewTextBox(i);
                 }
+
+
+
 
             }
             catch (Exception ex)
@@ -287,38 +337,64 @@ namespace dashboard
             string query2 = "select RegNo,UnivRollNo,Name,Stream from Student where Sem='" + Sem2 + "' and Stream='" + Dept2 + "' and (HonsPaper='" + Subject2 + "' or Pass1='" + Subject2 + "' or Pass2='" + Subject2 + "') ORDER BY RegNo ASC";
             SqlCommand cmd2 = new SqlCommand(query2, con);
             SqlDataReader dr2 = cmd2.ExecuteReader();
-           
-             c = BenchCapasity * 2;
-             n = BenchCapasity / ColNo;
-             flag = 2;
-            pointer = n+1;
+
+
+            //ROOM 1
+             pointer  = 1;
+            c = BenchCapasity * 2;
+            n = BenchCapasity / ColNo;
+            flag = 2;
+            pointer = n + 1;
+             k = 1;
+
+            while (pointer <= c)
+            {
+               
+                if (pointer > n * flag)
+                {
+                    pointer = pointer + n;
+                    flag = flag + 2;
+                    continue;
+                }
+                b[k] = pointer;
+               // MessageBox.Show("3rd" + pointer.ToString());
+                pointer++;
+                k++;
+            }
+
+            //RoomNo2
+
+            c2 = BenchCapasity2 * 2;
+            n2 = BenchCapasity2 / ColNo2;
+            flag2 = 2;
+            pointer2 =c+ n2 + 1;
+             k2 = BenchCapasity + 1;
+            while (pointer2 <= c+c2)
+            {
+
+                if (pointer2 >c+ (n2 * flag2))
+                {
+                    pointer2 = pointer2 + n2;
+                    flag2 = flag2 + 2;
+                    continue;
+                }
+                b[k2] = pointer2;
+               // MessageBox.Show("4th" + pointer2.ToString());
+                pointer2++;
+                k2++;
+            }
             try
             {
+                 k = 1;
                 while (dr2.Read())
                 {
-                    while (pointer <= c)
-                    {
-                        NewTextBox(pointer).Text = (dr2[0].ToString());
+                    NewTextBox(b[k]).Text = (dr2[0].ToString());
+                    //NewTextBox(a[k]);
 
-                        if (pointer == n * flag)
-                        {
-                            pointer = pointer + n;
-                            flag = flag + 2;
-                        }
-                        pointer++;
-                    }
-                }
-                while(pointer<=c)
-                {
-                    NewTextBox(pointer);
-                    if (pointer == n * flag)
-                    {
-                        pointer = pointer + n;
-                        flag = flag + 2;
-                    }
-                    pointer++;
+                    k++;
                 }
 
+                
             }
             catch (Exception ex)
             {
@@ -327,9 +403,11 @@ namespace dashboard
             }
             con.Close();
 
-            
+
 
         }
+
+
 
         void getData()
         {
@@ -514,13 +592,13 @@ namespace dashboard
 
         public void DesignMatrix_S2R1(int Lim)// room capasity
         {
-            int R = 33, C = 83, n = 0, col = 0,  flag = 1, a = 64, b = 34;
+            int R = 33, C = 83, n = 0, col = 0,  flag = 1, a = 122, b = 27;
 
             n = Lim / ColNo;
             col = Cola(Lim, n, col);
 
-            
 
+            MessageBox.Show("design s2r1");
             for (int i = 1; i <= col; i++)
             {
                 Lab(a, b, i);
@@ -543,7 +621,7 @@ namespace dashboard
                 }
                 C = 83;
                 R = R + 125;
-                a += 215;
+                a += 300;
             }
 
 
@@ -551,13 +629,13 @@ namespace dashboard
 
         public void DesignMatrix_S2R2(int Lim)// room capasity
         {
-            int R = 33+760, C = 83, n = 0, col = 0, flag = 1, a = 64, b = 34;
+            int R = 820, C = 83, n = 0, col = 0, flag = 1, a = 900, b = 27;
 
-            n = Lim / ColNo;
-            col = Cola(Lim, n, col);
+            n = Lim / ColNo2;
+            col = Cola(Lim, n, ColNo2);
+            
 
-
-
+            MessageBox.Show("design s2r2");
             for (int i = 1; i <= col; i++)
             {
                 Lab(a, b, i);
@@ -580,7 +658,7 @@ namespace dashboard
                 }
                 C = 83;
                 R = R + 125;
-                a += 215;
+                a += 300;
             }
 
 

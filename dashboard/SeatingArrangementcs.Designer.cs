@@ -30,11 +30,11 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 130);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1160, 538);
+            this.panel.Size = new System.Drawing.Size(1250, 555);
             this.panel.TabIndex = 0;
             // 
             // panel1
@@ -59,27 +59,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1160, 130);
+            this.panel1.Size = new System.Drawing.Size(1250, 130);
             this.panel1.TabIndex = 1;
             // 
-            // label2
+            // button1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(186, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 30);
-            this.label2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ROOM NO: ";
+            this.button1.Location = new System.Drawing.Point(38, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -100,22 +91,31 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "ROOM NO: ";
             // 
-            // button1
+            // label2
             // 
-            this.button1.Location = new System.Drawing.Point(340, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(186, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 30);
+            this.label2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ROOM NO: ";
             // 
             // SeatingArrangementcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1160, 668);
+            this.ClientSize = new System.Drawing.Size(1250, 685);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.panel1);
             this.Name = "SeatingArrangementcs";

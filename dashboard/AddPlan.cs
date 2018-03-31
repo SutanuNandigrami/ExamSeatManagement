@@ -983,6 +983,8 @@ namespace dashboard
             {
                 roomdrp2.Enabled = true;
                 Dual2.Text = "Single";
+                roomdrp2.Clear();
+                FillRoom();
             }
             else
             {
