@@ -42,6 +42,7 @@
             this.lbl1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.statuslbl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.blankError = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.blankError);
             this.panel2.Controls.Add(this.addroombtn);
             this.panel2.Controls.Add(this.Textbox4);
             this.panel2.Controls.Add(this.Textbox3);
@@ -250,6 +252,15 @@
             this.statuslbl.Size = new System.Drawing.Size(0, 34);
             this.statuslbl.TabIndex = 0;
             // 
+            // blankError
+            // 
+            this.blankError.AutoSize = true;
+            this.blankError.ForeColor = System.Drawing.Color.Red;
+            this.blankError.Location = new System.Drawing.Point(747, 401);
+            this.blankError.Name = "blankError";
+            this.blankError.Size = new System.Drawing.Size(0, 17);
+            this.blankError.TabIndex = 6;
+            // 
             // tab1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -281,5 +292,6 @@
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuCustomLabel statuslbl;
         private Bunifu.Framework.UI.BunifuFlatButton addroombtn;
+        private System.Windows.Forms.Label blankError;
     }
 }

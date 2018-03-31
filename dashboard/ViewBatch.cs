@@ -96,7 +96,7 @@ namespace dashboard
             try
             {
                 con.Open();
-                string query = "select * from Subject where PaperCode='" + searchbox.Text + "'";
+                string query = "select * from Subject where (PaperCode='" + searchbox.Text + "' or Subject='" + searchbox.Text + "' or Sem='" + searchbox.Text + "')";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);

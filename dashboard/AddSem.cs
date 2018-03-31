@@ -109,28 +109,33 @@ namespace dashboard
         private void addBatchbtn_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
-            
-            try
-            {
-                con.Open();
-                string query = "insert into Subject values('" + Textbox1.Text + "','" + subdrp.selectedValue + "','"+deptdrp.selectedValue+"','"+semdrp.selectedValue+"')";
-                SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                sda.SelectCommand.ExecuteNonQuery();
-                //con.Close();
-                statuslbl.ForeColor = System.Drawing.Color.White;
-                statuslbl.Text = "Batch Added Successfully!!";
-            }
-            catch
-            {
-                statuslbl.ForeColor = System.Drawing.Color.Red;
-                statuslbl.Text = "Duplicate Entry!!";
-            }
 
-            finally
+            if (Textbox1.Text != "" && subdrp.selectedIndex != -1 && deptdrp.selectedIndex != -1 && semdrp.selectedIndex != -1)
             {
+                try
+                {
+                    con.Open();
+                    string query = "insert into Subject values('" + Textbox1.Text + "','" + subdrp.selectedValue + "','" + deptdrp.selectedValue + "','" + semdrp.selectedValue + "')";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                    sda.SelectCommand.ExecuteNonQuery();
+                    //con.Close();
+                    statuslbl.ForeColor = System.Drawing.Color.White;
+                    statuslbl.Text = "Batch Added Successfully!!";
+                }
+                catch
+                {
+                    statuslbl.ForeColor = System.Drawing.Color.Red;
+                    statuslbl.Text = "Duplicate Entry!!";
+                }
 
-                con.Close();
+                finally
+                {
+
+                    con.Close();
+                }
             }
+            else
+                statuslbl.Text = "FILL ALL FIELDS!!";
         }
 
         private void browsebtn_Click(object sender, EventArgs e)

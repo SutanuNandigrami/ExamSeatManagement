@@ -160,6 +160,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TESToneDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TESToneDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TESToneDataSet10.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TESToneDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,6 +199,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TESToneDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TESToneDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TESToneDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="ViewBatch.cs">
       <SubType>UserControl</SubType>
@@ -335,6 +345,17 @@
     <None Include="TESToneDataSet1.xss">
       <DependentUpon>TESToneDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="TESToneDataSet10.xsc">
+      <DependentUpon>TESToneDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="TESToneDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TESToneDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TESToneDataSet10.xss">
+      <DependentUpon>TESToneDataSet10.xsd</DependentUpon>
+    </None>
     <None Include="TESToneDataSet2.xsc">
       <DependentUpon>TESToneDataSet2.xsd</DependentUpon>
     </None>
@@ -411,6 +432,17 @@
     </None>
     <None Include="TESToneDataSet8.xss">
       <DependentUpon>TESToneDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="TESToneDataSet9.xsc">
+      <DependentUpon>TESToneDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="TESToneDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TESToneDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TESToneDataSet9.xss">
+      <DependentUpon>TESToneDataSet9.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

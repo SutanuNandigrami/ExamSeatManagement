@@ -63,8 +63,8 @@ namespace dashboard
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            
-            
+
+            con.Open();
             string query = "update Dept set DeptName='" + Textbox2.Text + "' where DeptId='" + Textbox1.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
 

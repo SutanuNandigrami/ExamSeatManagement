@@ -31,30 +31,41 @@ namespace dashboard
         public tab1()
         {
             InitializeComponent();
+            blankError.Text = "";
+            statuslbl.Text = "";
         }
 
         private void addroombtn_Click(object sender, EventArgs e)
         {
-            try
+            blankError.Text = "";
+            if (Textbox1.Text != null && Textbox2.Text != null && Textbox3.Text != null && Textbox4.Text != null)
             {
-                con.Open();
-                string query = "insert into Room values('" + Textbox1.Text + "','" + Textbox2.Text + "','" + Textbox3.Text + "','" + Textbox4.Text + "')";
-                SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                sda.SelectCommand.ExecuteNonQuery();
-                con.Close();
-                statuslbl.ForeColor = System.Drawing.Color.White;
-                statuslbl.Text="INSERTION SUCCESSFULL";
-            }
-            catch
-            {
-                statuslbl.ForeColor = System.Drawing.Color.Red;
-                statuslbl.Text="Duplicate Entry!!";
-            }
+                try
+                {
+                    con.Open();
+                    string query = "insert into Room values('" + int.Parse(Textbox1.Text) + "','" + Textbox2.Text + "','" + int.Parse(Textbox3.Text) + "','" + int.Parse(Textbox4.Text) + "')";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                    sda.SelectCommand.ExecuteNonQuery();
+                    con.Close();
+                    statuslbl.ForeColor = System.Drawing.Color.White;
+                    statuslbl.Text = "INSERTION SUCCESSFULL";
+                }
+                catch
+                {
+                    statuslbl.ForeColor = System.Drawing.Color.Red;
+                    statuslbl.Text = "Duplicate Entry!!";
+                }
 
-            finally
+                finally
+                {
+                    con.Close();
+
+                }
+            }
+            else
             {
-                con.Close();
-                
+                blankError.ForeColor = Color.Red;
+                blankError.Text = "FILL ALL THE FIELDS!!";
             }
         }
     }

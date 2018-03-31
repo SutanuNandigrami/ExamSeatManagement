@@ -127,7 +127,7 @@
             this.loginbtn.OnHoverTextColor = System.Drawing.Color.White;
             this.loginbtn.selected = false;
             this.loginbtn.Size = new System.Drawing.Size(220, 38);
-            this.loginbtn.TabIndex = 4;
+            this.loginbtn.TabIndex = 3;
             this.loginbtn.Text = "Login";
             this.loginbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.loginbtn.Textcolor = System.Drawing.Color.White;
@@ -142,7 +142,7 @@
             this.label1.Location = new System.Drawing.Point(122, 407);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 23);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Forgot Password?";
             // 
             // label2
@@ -165,7 +165,7 @@
             this.label3.Location = new System.Drawing.Point(422, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 26);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 0;
             this.label3.Text = "X";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -182,10 +182,10 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.term);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Location = new System.Drawing.Point(12, 38);
+            this.panel1.Location = new System.Drawing.Point(12, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(426, 636);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 6;
             // 
             // STextbox2
             // 
@@ -353,7 +353,7 @@
             this.term.Location = new System.Drawing.Point(73, 404);
             this.term.Name = "term";
             this.term.Size = new System.Drawing.Size(301, 21);
-            this.term.TabIndex = 3;
+            this.term.TabIndex = 12;
             this.term.Text = "I Accept the Terms and Conditions";
             // 
             // pictureBox4
@@ -408,7 +408,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(450, 692);
+            this.ClientSize = new System.Drawing.Size(451, 692);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);

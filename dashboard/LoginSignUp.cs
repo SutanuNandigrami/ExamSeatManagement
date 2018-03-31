@@ -74,7 +74,7 @@ namespace dashboard
                         this.Hide();
 
                         LoginInfo.UserId = Textbox1.Text;
-                        MessageBox.Show("Successfull Login");
+                       // MessageBox.Show("Successfull Login");
                         Dashboard a = new Dashboard();
                         a.ShowDialog();
                     }
@@ -119,14 +119,14 @@ namespace dashboard
                     if (check.Checked == true)
                     {
                         term.ForeColor = System.Drawing.Color.FromArgb(255,125,0);
-                        panel1.Visible = false;
+                        
                         try
                         {
                             con.Open();
                             string query = "insert into Account values('" + STextbox3.Text + "','" + STextbox1.Text + "','" + STextbox2.Text + "','" + STextbox4.Text + "')";
                             SqlDataAdapter sda = new SqlDataAdapter(query, con);
                             sda.SelectCommand.ExecuteNonQuery();
-                            MessageBox.Show("Inserted");
+                            panel1.Visible = false;
                             con.Close();
 
                         }

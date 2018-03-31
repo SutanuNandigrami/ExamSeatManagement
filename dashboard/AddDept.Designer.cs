@@ -38,6 +38,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.statuslbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.blankError = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.blankError);
             this.panel2.Controls.Add(this.addDeptbtn);
             this.panel2.Controls.Add(this.Textbox2);
             this.panel2.Controls.Add(this.Textbox1);
@@ -171,9 +173,8 @@
             this.statuslbl.ForeColor = System.Drawing.Color.White;
             this.statuslbl.Location = new System.Drawing.Point(51, 13);
             this.statuslbl.Name = "statuslbl";
-            this.statuslbl.Size = new System.Drawing.Size(460, 34);
+            this.statuslbl.Size = new System.Drawing.Size(0, 34);
             this.statuslbl.TabIndex = 0;
-            this.statuslbl.Text = "Department Added Successfully.";
             // 
             // panel1
             // 
@@ -182,6 +183,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1015, 100);
             this.panel1.TabIndex = 2;
+            // 
+            // blankError
+            // 
+            this.blankError.AutoSize = true;
+            this.blankError.ForeColor = System.Drawing.Color.Red;
+            this.blankError.Location = new System.Drawing.Point(711, 357);
+            this.blankError.Name = "blankError";
+            this.blankError.Size = new System.Drawing.Size(0, 17);
+            this.blankError.TabIndex = 7;
             // 
             // AddDept
             // 
@@ -210,5 +220,6 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Textbox2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private System.Windows.Forms.Label blankError;
     }
 }

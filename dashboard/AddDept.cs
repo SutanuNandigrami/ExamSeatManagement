@@ -30,32 +30,41 @@ namespace dashboard
         public AddDept()
         {
             InitializeComponent();
+            statuslbl.Text = "";
+
         }
 
         private void addDeptbtn_Click(object sender, EventArgs e)
         {
-            try
+            statuslbl.Text = "";
+            if (Textbox1.Text != null && Textbox2.Text != null)
             {
-               
-                string query = "insert into Dept values('" + Textbox2.Text + "','" + Textbox1.Text + "')";
-                SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                sda.SelectCommand.ExecuteNonQuery();
-                con.Close();
-                statuslbl.ForeColor = System.Drawing.Color.White;
-                statuslbl.Text = "INSERTION SUCCESSFULL";
-            }
-            catch(Exception k)
-            {
-                MessageBox.Show(k.ToString());
-                statuslbl.ForeColor = System.Drawing.Color.Red;
-                statuslbl.Text = "Duplicate Entry!!";
+                try
+                {
+                    con.Open();
+                    string query = "insert into Dept values('" + Textbox2.Text + "','" + Textbox1.Text + "','"+1.ToString()+"')";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                    sda.SelectCommand.ExecuteNonQuery();
+                    
+                    statuslbl.ForeColor = System.Drawing.Color.White;
+                    statuslbl.Text = "Department Added Successfully.";
+                }
+                catch (Exception k)
+                {
+                     MessageBox.Show(k.ToString());
+                    statuslbl.ForeColor = System.Drawing.Color.Red;
+                    statuslbl.Text = "Duplicate Entry!!";
+                }
+
+                finally
+                {
+                    con.Close();
+
+                }
             }
 
-            finally
-            {
-                con.Close();
-
-            }
+            else
+                blankError.Text = "FILL ALL THE FIELDS!!";
         }
     }
 }

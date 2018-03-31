@@ -243,26 +243,30 @@ namespace dashboard
         private void studentbtn_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RHFMINC\SQLEXPRESS;Initial Catalog=TESTone;Integrated Security=True");
-            try
-            {
-                con.Open();
-                string query = "insert into Student values('" + textbox1.Text + "','" + textbox2.Text + "','" + textbox3.Text + "','" + deptDrp1.selectedValue + "','" + batchDrp.selectedValue + "','" + ugpgdrp.selectedValue + "','" + hnsdrp.selectedValue+"','"+pass1drp.selectedValue+"','"+pass2drp.selectedValue+"')";
-                SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                sda.SelectCommand.ExecuteNonQuery();
-                con.Close();
-                statuslbl.ForeColor = System.Drawing.Color.White;
-                statuslbl.Text = "INSERTION SUCCESSFULL";
-            }
-            catch
-            {
-                statuslbl.ForeColor = System.Drawing.Color.Red;
-                statuslbl.Text = "Duplicate Entry!!";
-            }
 
-            finally
+            if (deptDrp1.selectedIndex != -1 && batchDrp.selectedIndex != -1 && hnsdrp.selectedIndex != -1 && pass1drp.selectedIndex != -1 && pass2drp.selectedIndex != -1 && textbox1.Text!="" && textbox2.Text!="" && textbox3.Text!="")
             {
+                try
+                {
+                    con.Open();
+                    string query = "insert into Student values('" + textbox1.Text + "','" + textbox2.Text + "','" + textbox3.Text + "','" + deptDrp1.selectedValue + "','" + batchDrp.selectedValue + "','" + ugpgdrp.selectedValue + "','" + hnsdrp.selectedValue + "','" + pass1drp.selectedValue + "','" + pass2drp.selectedValue + "')";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                    sda.SelectCommand.ExecuteNonQuery();
+                    con.Close();
+                    statuslbl.ForeColor = System.Drawing.Color.White;
+                    statuslbl.Text = "INSERTION SUCCESSFULL";
+                }
+                catch
+                {
+                    statuslbl.ForeColor = System.Drawing.Color.Red;
+                    statuslbl.Text = "Duplicate Entry!!";
+                }
 
-                con.Close();
+                finally
+                {
+
+                    con.Close();
+                }
             }
         }
     }
